@@ -1,114 +1,141 @@
 <template>
     <header :class="{ home: route.path === '/'}">
-        <div class="page-container">
-            <div class="row">
-                <div class="col-xs-6 col-sm-3">
-                    <router-link to="/" active-class="active" exact>
-                        <img class="header-logo" src="//codecloud.cdn.speedyrails.net/sites/5a1835f66e6f6422a6650000/image/png/1511803959000/northpark-logo.png"  alt="Northpark Property Logo">
-                    </router-link>
+        <section id="header" class="header">
+            <div class="mobile_menu hidden_now">
+                <i class="fa fa-close close_menu"></i>
+                <ul class="mobile_nav">
+                    <li class="mobile_dropdown">
+                        <a href="#" class="open_submenu">
+                            Shopping
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                        <ul class="mobile_dropdown_menu">
+                            <li><a href="/stores">Stores</a></li>
+                            <li><a href="/pages/ptc-directions-map">Directions</a></li>
+                            <li><a href="/fashions/ptc-holiday-2017-lookbook">Lookbook</a></li>
+                            <li><a href="/hours">Hours</a></li>
+                            <li><a href="/pages/ptc-parking">Parking</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile_dropdown">
+                        <a href="#" class="open_submenu">
+                            Events
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                        <ul class="mobile_dropdown_menu">
+                            <li><a href="/events">All Events</a></li>
+                            <li><a href="/pages/ptc-in-the-community">In the Community</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile_dropdown"><a href="/promotions">Promotions</a></li>
+                    <li class="mobile_dropdown">
+                        <a href="#" class="open_submenu">
+                            Guest Services
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                        <ul class="mobile_dropdown_menu">
+                            <li><a href="/pages/ptc-accessibility">Accessibilty</a></li>
+                            <li><a href="/pages/ptc-mall-services">Mall Services</a></li>
+                            <li><a href="/pages/ptc-gift-cards">Gift Cards</a></li>
+                            <li><a href="/pages/ptc-wifi">WiFi</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile_dropdown"><a href="/pages/ptc-coming-soon">Blog</a></li>
+                    <li class="mobile_dropdown">
+                        <a href="/about-us">About Us</a>
+                    </li>
+                    <li class="mobile_dropdown">
+                        <a href="/leasing">Leasing</a>
+                    </li>
+                    <li class="mobile_dropdown">
+                        <a href="/media-centre">Media Centre</a>
+                    </li>
+                    <li class="mobile_dropdown">
+                        <a href="/pages/ptc-advertising-sponsorship">Advertising & Sponsorship</a>
+                    </li>
+                    <li class="mobile_dropdown">
+                        <a href="/jobs">Careers</a>
+                    </li>
+                    <li class="mobile_dropdown">
+                        <a href="//ptc.mallmaverick.com/login" target="_blank">Tenant Zone</a>
+                    </li>
+                    <li class="mobile_dropdown">
+                        <a href="/pages/ptc-security">Security</a>
+                    </li>
+                    <li class="mobile_dropdown">
+                        <a href="/pages/ptc-contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row main_container">
+                <div class="col-md-3 mobile_text_center position_relative">
+                    <a href="/">
+                        <img alt="logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1469552090000/PTC-Logo-x2.png">
+                    </a>
+                    <img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1470851965000/menu.png" class="open_menu" alt="open menu">
                 </div>
-                <div class="col-xs-6 col-sm-9">
-                    <div class="menu-icons">
-                        <div @click="show_search = !show_search" :class="{ open: show_search, invisible: show_menu }" id="search-icon">
-                            <span class="circle"></span>
-                            <span class="handle"></span>
-                        </div>
-                        <div @click="show_menu = !show_menu" :class="{ open: show_menu, invisible: show_search }" id="menu-icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="header-breadcrumb-container">
-                            <breadcrumbs></breadcrumbs>
-                            <bc-nav></bc-nav>
-                        </div>
-                    </div>
-                    <div v-if="show_menu" class="menu-container" v-on:keyup.esc="show_menu = false">
-                        <div class="menu-content">
-                            <ul class="menu">
-                                <router-link tag="li" to="/stores" active-class="active" exact>
-                                    <a class="main-menu-link"><h1 @click="show_menu = !show_menu">Shops & Dining</h1></a>
-                                </router-link>
-                                <router-link tag="li" to="/events" active-class="active" exact>
-                                    <a class="main-menu-link"><h1 @click="show_menu = !show_menu">Events</h1></a>
-                                </router-link>
-                                <router-link tag="li" to="/art" active-class="active" exact>
-                                    <a class="main-menu-link"><h1 @click="show_menu = !show_menu">Art</h1></a>
-                                </router-link>
-                                <router-link tag="li" to="/news" active-class="active" exact>
-                                    <a class="main-menu-link"><h1 @click="show_menu = !show_menu">News</h1></a>
-                                </router-link>
-                                <router-link tag="li" to="/visit" active-class="active" exact>
-                                    <a class="main-menu-link"><h1 @click="show_menu = !show_menu">Visit</h1></a>
-                                </router-link>
-                                <router-link tag="li" to="/our-story" active-class="active" exact>
-                                    <a class="main-menu-link"><h1 @click="show_menu = !show_menu">Our Story</h1></a>
-                                </router-link>
-                                <router-link tag="li" to="/magazine" active-class="active" exact>
-                                    <a class="main-menu-link"><h1 @click="show_menu = !show_menu">The Magazine</h1></a>
-                                </router-link>
-                                <router-link tag="li" to="/hours" active-class="active" exact>
-                                    <a class="main-menu-link"><h1 @click="show_menu = !show_menu">Hours</h1></a>
-                                </router-link>
-                                <router-link tag="li" to="/holiday" active-class="active" exact>
-                                    <a class="main-menu-link"><h1 @click="show_menu = !show_menu">Holiday</h1></a>
-                                </router-link>
-                            </ul>
-                            <div class="menu-newsletter-container">
-                                <form action="https://mobilefringe.createsend.com/t/d/s/jhithd/" method="post">
-                                    <input class="" id="fieldEmail" name="cm-jhithd-jhithd" type="email" required placeholder="Sign Up for Email Newsletter"/>
-                                    <button class="news-submit" type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                                </form>
-                            </div>
-                            <div class="menu-social-container">
-                                <span v-for="item in social_media">
-                                    <a :href="item.url" target="_blank">
-                                        <i :class="item.iconClass" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="menu-address-container">
-                                <p v-if="property">{{property.address1}}<br>
-                                    {{property.city}}, {{property.province_state}} {{property.postal_code}} <br>
-                                    {{property.contact_phone}}
-                                </p>    
+                <div class="col-md-9 hidden_phone">
+                    <div class="header_social pull-right">
+                        <div class="social_icons">
+                            <a target="_blank" href="//www.facebook.com/Pickeringtowncentre" id="social_fb"></a>
+                            <a target="_blank" href="//www.twitter.com/#!/PickeringTC" id="social_twitter"></a>
+                            <a target="_blank" href="//www.instagram.com/pickeringtowncentre" id="social_insta"></a>
+                            <a href="#" id="social_snap"></a>
+                            <a target="_blank" href="//www.youtube.com/user/PickeringTownCentre" id="social_yt"></a>
+                            <div>
+                                <input id="header_newsletter" class="newsletter_control" type="text" placeholder="Join our newsletter!" />
+                                <input id="header_newsletter_submit" class="newsletter_submit newsletter_header_btn" type="submit" value="Subscribe" />
                             </div>
                         </div>
                     </div>
-                    <div v-if="show_search" class="search-container" v-on:keyup.esc="show_search = false">
-                        <div class="search-content">
-                            <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
-                                <template slot="item" scope="option">
-                                    <article class="media">
-                                        <p>{{ option.data.name }}</p>
-                                    </article>
-                                </template>
-                            </search-component>
-                            <div class="menu-social-container" >
-                                <span v-for="item in social_media">
-                                    <a :href="item.url" target="_blank">
-                                        <i :class="item.iconClass" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="menu-address-container">
-                                <p v-if="property">{{property.address1}}<br>
-                                    {{property.city}}, {{property.province_state}} {{property.postal_code}} <br>
-                                    {{property.contact_phone}}
-                                </p>    
-                            </div>
-                        </div>
+                    <div class="clearfix"></div>
+                    <div class="main_menu pull-right">
+                        <ul class="main_nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Shopping
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/stores">Stores</a></li>
+                                    <li><a href="/pages/ptc-directions-map">Directions</a></li>
+                                    <li><a href="/fashions/ptc-holiday-2017-lookbook">Lookbook</a></li>
+                                    <li><a href="/hours">Hours</a></li>
+                                    <li><a href="/pages/ptc-parking">Parking</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Events
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/events">All Events</a></li>
+                                    <li><a href="/pages/ptc-in-the-community">In the <br />Community</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="/promotions">Promotions</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Guest Services
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/pages/ptc-accessibility">Accessibilty</a></li>
+                                    <li><a href="/pages/ptc-mall-services">Mall Services</a></li>
+                                    <li><a href="/pages/ptc-gift-cards">Gift Cards</a></li>
+                                    <li><a href="/pages/ptc-wifi">WiFi</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="/pages/ptc-coming-soon"  >Blog</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </header>
 </template>
 
 <script>
     define(["Vue", "vuex", "vue_router", "routes", "moment", "moment-timezone", "vue-moment", "vue!bc-nav.vue"], function (Vue, Vuex, VueRouter, appRoutes, moment, tz, VueMoment, BcNavComponent) {
-        return Vue.component("np-header", {
+        return Vue.component("header-component", {
             template: template, // the variable template will be injected,
             data: function () {
                 return {
