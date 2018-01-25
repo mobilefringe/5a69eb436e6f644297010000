@@ -56,7 +56,7 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northpark/messages.json"})]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "banners")]);
                         return results;
                     } catch(e) {
                         console.log("Error loading data: " + e.message);    
