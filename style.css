@@ -126,25 +126,25 @@ header {
 .site_footer {
    margin-top: 110px;
    background: #e6e6e6;
-   .footer_site_map {
-      margin-left: auto;
-      margin-right: auto;
-      padding: 15px 0 25px 0;
-      display: flex;
-      justify-content: space-between;
-      background: url('//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/jpeg/1516902101000/footer_background.jpg');
-      background-size: cover;
-      background-position: 0px -5px;
-      a {
-         padding-left: 13.5px;
-         padding-right: 13.5px;
-         display: block;
-         float: left;
-         color: #666;
-         text-transform: uppercase;
-      }
-      a:first-child {
-         padding-left: 0;
-      }
-   }
+    .footer_site_map {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 0 25px 0;
+        display: flex;
+        justify-content: space-between;
+        background: url('//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/jpeg/1516902101000/footer_background.jpg');
+        background-size: cover;
+        background-position: 0px -5px;
+        a {
+        //  padding-left: 13.5px;
+        //  padding-right: 13.5px;
+            display: block;
+            float: left;
+            color: #666;
+            text-transform: uppercase;
+        }
+    //   a:first-child {
+    //      padding-left: 0;
+    //   }
+    }
 }
