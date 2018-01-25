@@ -47,6 +47,9 @@ header {
       color: #7e7e7e;
       text-transform: uppercase;
    }
+   .dropdown.open {
+      background: #000;
+}
    .dropdown-menu {
       margin: 0;
       min-width: 100%;
