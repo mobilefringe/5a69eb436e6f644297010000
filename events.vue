@@ -6,7 +6,7 @@
                 <div class="events_container" v-for="event in events">
                     <div class="custom_container">
                         <div class="custom_left">
-                            <img src="{{event_image_url_abs}}" alt="Event" class="" />
+                            <!--<img src="{{event_image_url_abs}}" alt="Event" class="" />-->
                         </div>
                         <div class="custom_right">
                             <h3>{{ event.name }}</h3>
