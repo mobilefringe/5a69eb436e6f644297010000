@@ -44,7 +44,7 @@ require.config({
     }
 });
 
-require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue-simple-spinner', ], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, Meta, SearchComponent, Spinner) {
+require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!loading.vue', 'vue!header.vue', 'vue!footer.vue'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, Meta, LoadingComponent, HeaderComponent, FooterComponent) {
 
     Vue.use(Meta);
     Vue.use(VueRouter);
