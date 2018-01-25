@@ -160,6 +160,9 @@ header {
         background: url('//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/jpeg/1516902101000/footer_background.jpg');
         background-size: cover;
         background-position: 0px -5px;
+        li {
+            list-style-type: none;
+        }
         a {
         //  padding-left: 13.5px;
         //  padding-right: 13.5px;
