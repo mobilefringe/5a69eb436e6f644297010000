@@ -2,8 +2,31 @@
     <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
-            <div v-if="currentEvent && dataLoaded" v-cloak>
-                
+            <div v-if="dataLoaded" v-cloak class="main_container margin_30">
+                <div class="event_details_container"
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{event_image_url_abs}}" class="full_width" style="{{promo_image}}" />
+                        </div>
+                        <div class="col-md-6">
+                            <h3>{{name}}</h3>
+                            <p class="dates">{{dates}}</p>
+                            <div class="details_desc">{{{rich_description}}}</div>
+                        </div>
+                    </div>
+                    <div class="row"> 
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <a href="//www.facebook.com/sharer.php?u=https://pickeringtowncentre.com/events/{{slug}}" target="_blank">
+                                    <img id="fb" class="hidden-phone" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/939/original/share_fb_normal.png?1403227481">
+                                </a>
+                                <a href="//twitter.com/share?text={{name}}&url=https://pickeringtowncentre.com/events/{{slug}}" target="_blank">
+                                    <img id="twtr" class="promo_box_social hidden-phone" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/941/original/share_tweet_normal.png?1403227503">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
             </div>
         </transition>
     </div>
