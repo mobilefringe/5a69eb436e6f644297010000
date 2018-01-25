@@ -183,16 +183,11 @@ header {
             list-style-type: none;
         }
         a {
-        //  padding-left: 13.5px;
-        //  padding-right: 13.5px;
             display: block;
             float: left;
             color: #666;
             text-transform: uppercase;
         }
-    //   a:first-child {
-    //      padding-left: 0;
-    //   }
     }
 }
 
