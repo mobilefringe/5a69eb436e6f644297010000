@@ -54,5 +54,14 @@ header {
       border-radius: 0;
       border-top: 1px solid #fff;
       background: #000;
+      li {
+         padding: 0 10px;
+      }
+      a {
+         padding: 3px;
+         font-size: 12px;
+         font-weight: 400 !important;
+         color: #fff !important;
+      }
    }
 }
