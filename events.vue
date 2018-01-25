@@ -6,7 +6,7 @@
                 <div class="events_container" v-for="event in events">
                     <div class="custom_container">
                         <div class="custom_left">
-                            <img v-lazy="event.image_url" alt="{{ event.name }}"/>
+                            <img v-lazy="event.image_url" :alt="event.name"/>
                         </div>
                         <div class="custom_right">
                             <h3>{{ event.name }}</h3>
