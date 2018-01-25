@@ -34,7 +34,10 @@
 </template>
 
 <script>
-	define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
+	define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox", "vue-lazy-load"], function(Vue, Vuex, moment, tz, VueMoment, Meta, Lightbox, VueLazyload) {
+        Vue.use(Meta);
+        Vue.use(Lightbox);
+        Vue.use(VueLazyload);) {
 		return Vue.component("event-details-component", {
 			template: template, // the variable template will be injected,
 			props: ['id'],
