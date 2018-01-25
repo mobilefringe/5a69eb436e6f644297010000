@@ -183,4 +183,16 @@ header {
     border: thin solid #DFDFDF;
     background: #f8f8f8;
     margin-bottom: 63px;
+    .event_left {
+        float: left;
+    width: 286px;
+    height: 286px;
+    overflow: hidden;       
+    }
+    .event_right {
+        float: left;
+    width: calc(100% - 300px);
+    padding-left: 25px;
+    padding-right: 25px;    
+    }
 }
