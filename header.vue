@@ -92,8 +92,7 @@
                             <input id="header_newsletter_submit" class="newsletter_btn" type="submit" value="Subscribe" />
                         </div>
                     </div>
-                    <!--<div class="clearfix"></div>-->
-                    <div class="main_menu pull-right">
+                    <div class="main_menu">
                         <ul class="main_nav">
                             <li class="dropdown" v-on:mouseover="mouseOver" v-bind:class="{ open: active }">
                                 <!--<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
