@@ -72,7 +72,7 @@
                 </ul>
             </div>
             <div class="row main_container">
-                <div class="col-md-3 mobile_text_center position_relative">
+                <div class="col-md-3 mobile_text_center">
                     <a href="/">
                         <img alt="logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1469552090000/PTC-Logo-x2.png">
                     </a>
