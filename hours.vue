@@ -2,8 +2,7 @@
     <div> <!-- without an outer container div this component template will not render -->
         <np-loader v-if="!dataLoaded"></np-loader>
         <transition name="fade">
-            <div v-if="dataLoaded" class="page-container" v-cloak> 
-                <div class="margin-90"></div>
+            <div v-if="dataLoaded" class="main_container margin_30" v-cloak> 
                 <div class="row">
                     <div class="col-md-5 col-sm-5 col-xs-12">
                         <h3 class="hours_heading text-left" >Regular Shopping Hours</h3>
