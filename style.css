@@ -33,33 +33,36 @@ header {
 .site_logo {
    width: 173px;
 }
-.social_icons {
-   a {
-      margin-right: 5px;
-      margin-left: 5px;
-      display: block;
-      float: left;
+.header_social {
+   display: flex;
+   .social_icons {
+      a {
+         margin-right: 5px;
+         margin-left: 5px;
+         display: block;
+         float: left;
+      }
+      .fa {
+         font-size: 28px;
+         line-height: normal;
+      }
    }
-   .fa {
-      font-size: 28px;
-      line-height: normal;
-   }
-}
-.header_newsletter_container {
-   .newsletter_input {
-      margin: 0;
-      margin-left: 5px;
-      padding: 2px;
-      height: 25px;
-      float: left;
-      border-radius: 5px 0px 0px 5px;
-      border: 1px solid #ccc;
-   }  
-   .newsletter_btn {
-      height: 25px;
-      border-radius: 0px 5px 5px 0px;
-      border: 1px solid #ccc;
-      background: #eee;
+   .header_newsletter_container {
+      .newsletter_input {
+         margin: 0;
+         margin-left: 5px;
+         padding: 2px;
+         height: 25px;
+         float: left;
+         border-radius: 5px 0px 0px 5px;
+         border: 1px solid #ccc;
+      }  
+      .newsletter_btn {
+         height: 25px;
+         border-radius: 0px 5px 5px 0px;
+         border: 1px solid #ccc;
+         background: #eee;
+      }
    }
 }
 .main_menu {
