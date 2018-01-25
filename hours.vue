@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" class="main_container margin_30" v-cloak> 
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="hours_heading text-left" >Regular Shopping Hours</h3>
+                        <h4 class="hours_heading text-left">Hours</h4>
                         <div id="hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in hours">
                                 <span>{{hour.day_of_week | moment("dddd", timezone)}}:</span>
@@ -13,7 +13,7 @@
                             </div>
                         </div>
                         <div class="padding_top_20"></div>
-                        <h3 class="hours_heading text-left">Extended Holiday Hours</h3>
+                        <h4 class="hours_heading text-left">We will be open the following Holidays</h4>
                         <div id="holidays_hours_container" class="hours_container">
                             <div class="hours_div text-left"  v-for="hour in reducedHolidays">
                                 <span>{{hour.holiday_name}} <br/>({{hour.holiday_date | moment("MMM D YYYY", timezone)}})</span>
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="padding_top_20"></div>
-                        <h3 class="hours_heading text-left">Holiday Closures</h3>
+                        <h4 class="hours_heading text-left">We will be closed the following Statutory Holidays</h4>
                         <div id="closed_hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in closeHolidays">
                                 <span>{{hour.holiday_name}} ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})</span>
@@ -53,8 +53,23 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'getPropertyHours'
+                    'getPropertyHours',
+                    'getPropertyHolidayHours'
                 ]),
+                hours () {
+                    return this.getPropertyHours;
+                },
+                holidayHours () {
+                    return this.getPropertyHolidayHours;
+                },
+                reducedHolidays () {
+                    var holidayHours = this.holidayHours;
+                    return _.filter(holidayHours, function(o) { return !o.is_closed; });
+                },
+                closeHolidays () {
+                    var holidayHours = this.holidayHours;
+                    return _.sortBy(_.filter(holidayHours, function(o) { return o.is_closed; }), [function(o) { return o.holiday_date; }]);
+                }
             },
             methods: {
                 loadData: async function () {
