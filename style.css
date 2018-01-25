@@ -176,3 +176,11 @@ header {
     //   }
     }
 }
+
+/* *** EVENTS *** */
+.events_container {
+    height: 288px;
+    border: thin solid #DFDFDF;
+    background: #f8f8f8;
+    margin-bottom: 63px;
+}
