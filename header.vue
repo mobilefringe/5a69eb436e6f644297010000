@@ -100,7 +100,7 @@
                     <div class="clearfix"></div>
                     <div class="main_menu pull-right">
                         <ul class="main_nav">
-                            <li class="dropdown">
+                            <li class="dropdown" v-on:mouseover="mouseOver" v-bind:class="{ open: active }">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     Shopping
                                 </a>
@@ -179,6 +179,12 @@
                     'route'
                 ])
             },
+            methods: {
+                mouseOver: function() {
+                    this.active = !this.active;
+                    console.log("flag " + this.active);
+                }
+            }
             // methods: {
             //     onOptionSelect(option) {
             //         console.log('Selected option:', option);
