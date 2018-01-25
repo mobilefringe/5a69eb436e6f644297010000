@@ -206,6 +206,11 @@ header {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    .fa {
+        padding-left: 10px;
+        font-size: 26px;
+        
+    }
 }
 /* *** EVENTS *** */
 .events_container {
