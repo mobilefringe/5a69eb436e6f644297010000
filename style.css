@@ -34,6 +34,7 @@ header {
    width: 173px;
 }
 .header_social {
+   margin-top: 20px;
    display: -webkit-box;
    display: -webkit-flex;
    display: -ms-flexbox;
