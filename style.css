@@ -30,14 +30,17 @@ header {
    margin-top: 20px;
    margin-bottom: 20px; 
 }
-.social_icons a {
-    float: left;
-    margin-right: 5px;
-    margin-left: 5px;
-    display: block;
-    width: 25px;
-    height: 25px;
-    
+.social_icons {
+   a {
+      margin-right: 5px;
+      margin-left: 5px;
+      display: block;
+      float: left;
+   }
+   .fa {
+      font-size: 28px;
+      line-height: normal;
+   }
 }
 .main_menu {
    .main_nav {
