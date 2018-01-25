@@ -10,7 +10,9 @@
                         </div>
                         <div class="custom_right">
                             <h3>{{ event.name }}</h3>
-                            <p class="dates">{{dates}}</p>
+                            <p class="dates" v-if="isMultiDayEvent(event)">{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}} to {{ event.end_date | moment("dddd, MMMM D, YYYY", timezone)}}</p>
+                            <p class="dates" v-else>{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}}</p>
+                            <p class="dates">{{}}</p>
                             <div class="custom_desc">{{ event.description }}</div>
                             <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
                                 <p class="read_more">Read More</p>
