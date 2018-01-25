@@ -13,7 +13,7 @@
     <body>
         <div id="app" v-cloak>
             <loading-spinner v-if="!dataLoaded"></loading-spinner>
-            <header-component  v-if="dataLoaded"></header-component> <!-- :social_media="social_media" -->
+            <header-component :social_media="social_media" v-if="dataLoaded"></header-component>
             <router-view v-if="dataLoaded" class="page-content"></router-view>
             <footer-component :social_media="social_media" v-if="dataLoaded"></footer-component>
         </div>
