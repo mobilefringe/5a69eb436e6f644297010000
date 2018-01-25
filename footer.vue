@@ -1,5 +1,52 @@
 <template>
     <footer v-show="route.path != '/'">
+        <div class="show_phone">
+            <div class="social_icons">
+                <a target="_blank" href="//www.facebook.com/Pickeringtowncentre" id="social_fb"></a>
+                <a target="_blank" href="//www.twitter.com/#!/PickeringTC" id="social_twitter"></a>
+                <a target="_blank" href="//www.instagram.com/pickeringtowncentre" id="social_insta"></a>
+                <a href="#" id="social_snap"></a>
+                <a target="_blank" href="//www.youtube.com/user/PickeringTownCentre" id="social_yt"></a>
+            </div>
+            <a href="/stores" class="home_header">STORE DIRECTORY</a>
+            <div class="home_hours layout_contact_us site_footer show_phone">
+                <div class="main_container">
+                    <h2>HOURS</h2>
+                    <table id="reg_hours_container" class="hours_container no_margin">
+                        <script id="reg_hours_template" type="x-tmpl-mustache/text">
+                            {%raw%}
+                                <tr>
+                                    <td class="hours_left">
+                                        <span>{{day}}</span>
+                                        <span class="dashes"></span>
+                                    </td>   
+                                    <td class="hours_right text-right">
+                                        <span>{{h}}</span>
+                                    </td>
+                                </tr>
+                            {%endraw%}
+                        </script>
+                    </table>
+                </div>
+                
+            </div>
+            <div class="main_container site_footer">
+                <div class="divider"></div>
+            </div>
+            <div class="layout_contact_us show_phone site_footer">
+                <div class="main_container">
+                    <h2>CONTACT US</h2>
+                    <p><strong>905.683.7171</strong></p>
+                    <p><strong>pickeringtowncentre@20vic.com</strong></p>
+                    <p class="main_color no_margin">
+                        1355 Kingston Road <br />
+                        Pickering, Ontario<br />
+                        L1V 1B8
+                    </p>
+                </div>
+            </div>
+            <a href="/pages/ptc-directions-map" class="home_header show_phone">DIRECTIONS</a>
+        </div>
         <section id="footer" class="site_footer">
             <div class="main_container ">
                 <div class="footer_site_map hidden_phone">
