@@ -29,7 +29,7 @@ define([], function () {
                     path: '',
                     component: view('hours'),
                     name: 'hours'
-                },
+                }
             ]
         },
         {
