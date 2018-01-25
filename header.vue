@@ -10,11 +10,12 @@
                             <i class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="mobile_dropdown_menu">
-                            <li><a href="/stores">Stores</a></li>
-                            <li><a href="/pages/ptc-directions-map">Directions</a></li>
-                            <li><a href="/fashions/ptc-holiday-2017-lookbook">Lookbook</a></li>
-                            <li><a href="/hours">Hours</a></li>
-                            <li><a href="/pages/ptc-parking">Parking</a></li>
+                            <router-link tag="li" to="/stores" active-class="active" exact>
+                                <a>Stores</a>
+                            </router-link>
+                            <router-link tag="li" to="/hours" active-class="active" exact>
+                                <a>Hours</a>
+                            </router-link>
                         </ul>
                     </li>
                     <li class="mobile_dropdown">
@@ -34,6 +35,9 @@
                             <i class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="mobile_dropdown_menu">
+                            <router-link tag="li" to="/hours" active-class="active" exact>
+                                <a>Hours</a>
+                            </router-link>
                             <li><a href="/pages/ptc-accessibility">Accessibilty</a></li>
                             <li><a href="/pages/ptc-mall-services">Mall Services</a></li>
                             <li><a href="/pages/ptc-gift-cards">Gift Cards</a></li>
@@ -96,11 +100,12 @@
                                     Shopping
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/stores">Stores</a></li>
-                                    <li><a href="/pages/ptc-directions-map">Directions</a></li>
-                                    <li><a href="/fashions/ptc-holiday-2017-lookbook">Lookbook</a></li>
-                                    <li><a href="/hours">Hours</a></li>
-                                    <li><a href="/pages/ptc-parking">Parking</a></li>
+                                    <router-link tag="li" to="/stores" active-class="active" exact>
+                                        <a>Stores</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/hours" active-class="active" exact>
+                                        <a>Hours</a>
+                                    </router-link>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -112,7 +117,10 @@
                                     <li><a href="/pages/ptc-in-the-community">In the <br />Community</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="/promotions">Promotions</a></li>
+                            <!--<li class="dropdown"><a href="/promotions">Promotions</a></li>-->
+                            <router-link tag="li" to="/promotions" class="dropdown" active-class="active" exact>
+                                <a>Promotions</a>
+                            </router-link>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     Guest Services
