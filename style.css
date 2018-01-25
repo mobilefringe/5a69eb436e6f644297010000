@@ -1,4 +1,17 @@
- [v-cloak] {
+@font-face {
+    font-family: 'NewBodoni';
+    src: url('//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000//1516942408000/NewBodoni-Italic.woff2') format('woff2'),
+        url('//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000//1516942408000/NewBodoni-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: bodoni_italic_lite;
+    src: url('//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/022/699/original/BauerBodoniLT-Italic.ttf?1476975865')
+}
+
+[v-cloak] {
    display:none;
 }
 hr{
