@@ -101,9 +101,9 @@
                     <div class="main_menu pull-right">
                         <ul class="main_nav">
                             <li class="dropdown" v-on:mouseover="mouseOver" v-bind:class="{ open: active }">
-                                <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <!--<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
                                     Shopping
-                                </span>
+                                <!--</span>-->
                                 <ul class="dropdown-menu">
                                     <router-link tag="li" to="/stores" active-class="active" exact>
                                         <a>Stores</a>
