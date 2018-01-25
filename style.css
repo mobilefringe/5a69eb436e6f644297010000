@@ -121,3 +121,9 @@ header {
       }
    }
 }
+
+/* *** FOOTER *** */
+.site_footer {
+   margin-top: 110px;
+   background: #e6e6e6;
+}
