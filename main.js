@@ -22,25 +22,20 @@ require.config({
         'datastore_actions': 'https://mmvue.codecloudapp.com/datastore_actions',
         'datastore_mutations': 'https://mmvue.codecloudapp.com/datastore_mutations',
         'datastore': 'https://mmvue.codecloudapp.com/datastore',
-        
+        'vuex-router-sync': 'https://mmvue.codecloudapp.com/vuex-router-sync',
         //append a dummy query string so requireJS doesn't auto-append .js to the end of the url
-        'today_hours': 'https://mmvue.codecloudapp.com/today_hours.vue?noext', 
-        'search-component': 'https://mmvue.codecloudapp.com/search-component.vue?noext',
-
         'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min',
         'slick': 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min',
         'vue-slick': 'https://mmvue.codecloudapp.com/slick.vue?noext',
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.3/dist/vue-social-sharing.min',
         'lightbox': 'http://5a1835f66e6f6422a6650000.codecloudapp.com/lightbox-mod',
-        
+        'vue-lazy-load': 'https://unpkg.com/vue-lazyload/vue-lazyload',
+        'vee-validate' : 'https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate',
         // Dependencies for Map //
         'Raphael': 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min', //'http://mallmaverick.com/javascripts/mapsvg/raphael',
         'mousewheel': 'https://mallmaverick.com/javascripts/mapsvg/jquery.mousewheel',
         'mm_mapsvg': 'https://mmvue.codecloudapp.com/mallmaverick_svgmap',
-        'svg-map' : 'https://mmvue.codecloudapp.com/svg_map.vue?noext',
-        'vee-validate' : 'https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate',
-        'vuex-router-sync': 'https://mmvue.codecloudapp.com/vuex-router-sync',
-        'vue-lazy-load': 'https://unpkg.com/vue-lazyload/vue-lazyload'
+        'svg-map' : 'https://mmvue.codecloudapp.com/svg_map.vue?noext'
     }
 });
 
