@@ -21,6 +21,9 @@ hr{
 .position_relative {
    position: relative;
 }
+.open_menu{
+    display:none;
+}
 
 /* *** HEADER *** */
 header {
