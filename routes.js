@@ -5,23 +5,6 @@ define([], function () {
             component: view('home')
         },
         {
-            path: '/stores',
-            component: view('default'),
-            children: [
-                {   
-                    path: '',
-                    component: view('stores'),
-                    name: 'storeList'
-                },
-                {
-                    path: ':id',
-                    component: view('store_details'),
-                    name: 'storeDetails',
-                    props: true
-                }
-            ]
-        },
-        {
             path: '/events',
             component: view('default'),
             children: [
@@ -39,6 +22,17 @@ define([], function () {
             ]
         },
         {
+            path: '/hours',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('hours'),
+                    name: 'hours'
+                },
+            ]
+        },
+        {
             path: '/promotions',
             component: view('default'),
             children: [
@@ -51,6 +45,23 @@ define([], function () {
                     path: ':id',
                     component: view('promotion_details'),
                     name: 'promotionDetails',
+                    props: true
+                }
+            ]
+        },
+        {
+            path: '/stores',
+            component: view('default'),
+            children: [
+                {   
+                    path: '',
+                    component: view('stores'),
+                    name: 'storeList'
+                },
+                {
+                    path: ':id',
+                    component: view('store_details'),
+                    name: 'storeDetails',
                     props: true
                 }
             ]
