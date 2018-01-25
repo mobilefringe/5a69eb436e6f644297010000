@@ -93,7 +93,7 @@
                             <!--<a target="_blank" href="//www.youtube.com/user/PickeringTownCentre" id="social_yt"></a>-->
                             <div class="header_newsletter_container">
                                 <input id="header_newsletter" class="newsletter_input" type="text" placeholder="Join our newsletter!" />
-                                <input id="header_newsletter_submit" class="newsletter_submit newsletter_header_btn" type="submit" value="Subscribe" />
+                                <input id="header_newsletter_submit" class="newsletter_btn" type="submit" value="Subscribe" />
                             </div>
                         </div>
                     </div>
