@@ -79,7 +79,7 @@
                     <img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1470851965000/menu.png" class="open_menu" alt="open menu">
                 </div>
                 <div class="col-md-9 hidden_phone">
-                    <div class="header_social pull-right">
+                    <div class="header_social">
                         <div class="social_icons">
                             <span v-for="item in social_media">
                                 <a :href="item.url" target="_blank">
