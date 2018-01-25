@@ -45,6 +45,17 @@ header {
       line-height: normal;
    }
 }
+.header_newsletter_container {
+   .newsletter_input {
+      margin: 0;
+      margin-left: 5px;
+      padding: 2px;
+      height: 25px;
+      float: left;
+      border-radius: 5px 0px 0px 5px;
+      border: 1px solid #ccc;
+   }  
+}
 .main_menu {
    .main_nav {
       margin: 15px -25px 0 -25px;
