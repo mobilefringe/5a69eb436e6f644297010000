@@ -2,7 +2,7 @@
     <div> <!-- without an outer container div this component template will not render -->
         <np-loader v-if="!dataLoaded"></np-loader>
         <transition name="fade">
-            <div v-if="dataLoaded" v-cloak>
+            <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="events_container" v-for="event in events">
                     <div class="custom_container">
                         <div class="custom_left">
@@ -12,7 +12,6 @@
                             <h3>{{ event.name }}</h3>
                             <p class="dates" v-if="isMultiDayEvent(event)">{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}} to {{ event.end_date | moment("dddd, MMMM D, YYYY", timezone)}}</p>
                             <p class="dates" v-else>{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}}</p>
-                            <p class="dates">{{}}</p>
                             <div class="custom_desc">{{ event.description }}</div>
                             <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
                                 <p class="read_more">Read More</p>
@@ -20,7 +19,7 @@
 
                         </div>
                     </div>
-                </div>    
+                </div>  
             </div>
         </transition>
     </div>
