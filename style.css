@@ -26,11 +26,12 @@ html {
     font-size: 16px;
     overflow-x: hidden !important;
 }
-// body {
-//     overflow-x: hidden !important;
-//     font-size: 1rem;
-//     line-height: 1.4rem;
-// }
+body {
+    overflow-x: hidden !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
 #app {
     min-height: 100vh;
     display: -webkit-box;
