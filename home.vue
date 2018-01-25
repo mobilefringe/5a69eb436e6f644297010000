@@ -13,7 +13,7 @@
                         </div>
                     </div>
                 </slick>
-                <div class="hero-text" v-if="currentMessage">{{ currentMessage.title }}</div>
+                
             </div>
         </transition>
     </div>
