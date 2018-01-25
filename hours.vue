@@ -13,9 +13,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7 col-sm-7 hidden_phone">
-                        <img src="//codecloud.cdn.speedyrails.net/sites/5a3967d46e6f6479bf130000/image/jpeg/1516038406000/HOURS 2018.jpg"/>
-                    </div> 
                 </div>
                 <div class="row">
                     <div class="col-md-12 ">
