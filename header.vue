@@ -142,17 +142,12 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue_router", "routes", "moment", "moment-timezone", "vue-moment", "vue!bc-nav.vue"], function (Vue, Vuex, VueRouter, appRoutes, moment, tz, VueMoment, BcNavComponent) {
+    define(["Vue", "vuex", "vue_router", "routes"], function (Vue, Vuex, VueRouter, appRoutes) {
         return Vue.component("header-component", {
             template: template, // the variable template will be injected,
             data: function () {
                 return {
-                    isOpen: false,
-                    show_menu: false,
-                    show_search: false,
-                    breadcrumb: this.$breadcrumbs,
-                    suggestionAttribute: 'name',
-                    search: '',
+                    
                 }
             },
             props:['social_media'],
@@ -179,14 +174,14 @@
                     'route'
                 ])
             },
-            methods: {
-                onOptionSelect(option) {
-                    console.log('Selected option:', option);
-                    this.$router.push("/stores/" + option.slug);
-                    this.show_search = false;
-                    this.search = '';
-                }
-            }
+            // methods: {
+            //     onOptionSelect(option) {
+            //         console.log('Selected option:', option);
+            //         this.$router.push("/stores/" + option.slug);
+            //         this.show_search = false;
+            //         this.search = '';
+            //     }
+            // }
         });
     });
 </script>
