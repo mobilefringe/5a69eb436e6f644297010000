@@ -5,6 +5,7 @@ hr{
    max-width: 100%;
 }
 
+/* *** GENERAL STYLES *** */
 .main_container {
    width: 950px;
    margin-left: auto;
@@ -14,7 +15,14 @@ hr{
 .hidden_now {
    display: none;
 }
+.hidden_phone {
+   display: block;
+}
+.position_relative {
+   position: relative;
+}
 
+/* *** HEADER *** */
 header {
    margin-top: 20px;
    margin-bottom: 20px; 
