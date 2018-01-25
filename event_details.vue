@@ -6,12 +6,12 @@
                 <div v-if="currentEvent" class="event_details_container">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="{{event_image_url_abs}}" :alt="currentEvent.name"/>
+                            <img v-lazy="currentEvent.image_url" :alt="currentEvent.name"/>
                         </div>
                         <div class="col-md-6">
-                            <h3>{{name}}</h3>
+                            <h3>{{ currentEvent.name }}</h3>
                             <p class="dates">{{dates}}</p>
-                            <div class="details_desc">{{{rich_description}}}</div>
+                            <div class="details_desc">{{ currentEvent.description }}</div>
                         </div>
                     </div>
                     <div class="row"> 
