@@ -30,6 +30,9 @@ header {
    margin-top: 20px;
    margin-bottom: 20px; 
 }
+.site_logo {
+   width: 173px;
+}
 .social_icons {
    a {
       margin-right: 5px;
