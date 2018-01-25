@@ -4,20 +4,18 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="events_container" v-for="event in events">
-                    <div class="custom_container">
-                        <div class="custom_left">
-                            <img v-lazy="event.image_url" :alt="event.name"/>
-                        </div>
-                        <div class="custom_right">
-                            <h3>{{ event.name }}</h3>
-                            <p class="dates" v-if="isMultiDayEvent(event)">{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}} to {{ event.end_date | moment("dddd, MMMM D, YYYY", timezone)}}</p>
-                            <p class="dates" v-else>{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}}</p>
-                            <div class="custom_desc">{{ event.description }}</div>
-                            <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
-                                <p class="read_more">Read More</p>
-                            </router-link>
+                    <div class="custom_left">
+                        <img v-lazy="event.image_url" :alt="event.name"/>
+                    </div>
+                    <div class="custom_right">
+                        <h3>{{ event.name }}</h3>
+                        <p class="dates" v-if="isMultiDayEvent(event)">{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}} to {{ event.end_date | moment("dddd, MMMM D, YYYY", timezone)}}</p>
+                        <p class="dates" v-else>{{ event.start_date | moment("dddd, MMMM D, YYYY", timezone)}}</p>
+                        <div class="custom_desc">{{ event.description }}</div>
+                        <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
+                            <p class="read_more">Read More</p>
+                        </router-link>
 
-                        </div>
                     </div>
                 </div>  
             </div>
