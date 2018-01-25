@@ -3,10 +3,10 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <div class="event_details_container"
+                <div v-if="currentEvent" class="event_details_container">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="{{event_image_url_abs}}" class="full_width" style="{{promo_image}}" />
+                            <img src="{{event_image_url_abs}}" :alt="currentEvent.name"/>
                         </div>
                         <div class="col-md-6">
                             <h3>{{name}}</h3>
