@@ -152,7 +152,7 @@
             template: template, // the variable template will be injected,
             data: function () {
                 return {
-                    
+                    active: false,    
                 }
             },
             props:['social_media'],
