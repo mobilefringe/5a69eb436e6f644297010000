@@ -6,9 +6,12 @@
     font-style: italic;
 }
 
-@font-face{
-    font-family: bodoni_italic_lite;
-    src: url('//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/022/699/original/BauerBodoniLT-Italic.ttf?1476975865')
+@font-face {
+    font-family: 'BauerBodoni LT';
+    src: url('//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000//1516942542000/BauerBodoniLT-Italic.woff2') format('woff2'),
+        url('//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000//1516942542000/BauerBodoniLT-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
 }
 
 [v-cloak] {
