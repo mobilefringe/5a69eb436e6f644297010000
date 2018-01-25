@@ -3,16 +3,19 @@
         <np-loader v-if="!dataLoaded"></np-loader>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div id="events_container">
+                <div class="events_container" v-for="event in events">
                     <div class="custom_container">
                         <div class="custom_left">
                             <img src="{{event_image_url_abs}}" alt="Event" class="" />
                         </div>
                         <div class="custom_right">
-                            <h3>{{name}}</h3>
+                            <h3>{{ event.name }}</h3>
                             <p class="dates">{{dates}}</p>
-                            <div class="custom_desc">{{{rich_description}}}</div>
-                            <a href="/events/{{slug}}" class="read_more"> READ MORE</a>
+                            <div class="custom_desc">{{ event.description }}</div>
+                            <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
+                                <p class="read_more">Read More</p>
+                            </router-link>
+
                         </div>
                     </div>
                 </div>    
