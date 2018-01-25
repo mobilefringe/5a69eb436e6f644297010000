@@ -6,7 +6,7 @@
                 <div class="events_container" v-for="event in events">
                     <div class="custom_container">
                         <div class="custom_left">
-                            <!--<img src="{{event_image_url_abs}}" alt="Event" class="" />-->
+                            <img v-lazy="event.image_url" alt="{{ event.name }}"/>
                         </div>
                         <div class="custom_right">
                             <h3>{{ event.name }}</h3>
@@ -25,8 +25,10 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "lightbox", "vue-lazy-load"], function (Vue, Vuex, moment, tz, VueMoment, Meta, Lightbox, VueLazyload) {
         Vue.use(Meta);
+        Vue.use(Lightbox);
+        Vue.use(VueLazyload);
         return Vue.component("events-component", {
             template: template, // the variable template will be injected
             data: function () {
