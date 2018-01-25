@@ -86,15 +86,10 @@
                                     <i :class="item.iconClass" aria-hidden="true"></i>
                                 </a>
                             </span>
-                            <!--<a target="_blank" href="//www.facebook.com/Pickeringtowncentre" id="social_fb"></a>-->
-                            <!--<a target="_blank" href="//www.twitter.com/#!/PickeringTC" id="social_twitter"></a>-->
-                            <!--<a target="_blank" href="//www.instagram.com/pickeringtowncentre" id="social_insta"></a>-->
-                            <!--<a href="#" id="social_snap"></a>-->
-                            <!--<a target="_blank" href="//www.youtube.com/user/PickeringTownCentre" id="social_yt"></a>-->
-                            <div class="header_newsletter_container">
-                                <input id="header_newsletter" class="newsletter_input" type="text" placeholder="Join our newsletter!" />
-                                <input id="header_newsletter_submit" class="newsletter_btn" type="submit" value="Subscribe" />
-                            </div>
+                        </div>
+                        <div class="header_newsletter_container">
+                            <input id="header_newsletter" class="newsletter_input" type="text" placeholder="Join our newsletter!" />
+                            <input id="header_newsletter_submit" class="newsletter_btn" type="submit" value="Subscribe" />
                         </div>
                     </div>
                     <div class="clearfix"></div>
