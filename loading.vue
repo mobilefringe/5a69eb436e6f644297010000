@@ -9,7 +9,7 @@
 <script>
     define(["Vue", "vue-simple-spinner"], function (Vue, Spinner) {
         Vue.component("vue-simple-spinner", Spinner);
-        return Vue.component("np-loader", {
+        return Vue.component("loading-spinner", {
             template: template, // the variable template will be injected,
             data: function () {
                 return {};
