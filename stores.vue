@@ -91,19 +91,18 @@
             created(){
                 this.loadData().then(response => {
                     this.dataLoaded = true;
+                    console.log(this.stores)
                 });
-                
-                // this.$store.dispatch("getData", "categories").then(response => {
-                //     this.dataLoaded = true
-                // }, error => {
-                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                // });
             },
             computed: {
                 ...Vuex.mapGetters([
+                    'stores',
                     'storesByAlphaIndex',
                     'storesByCategoryName'
-                ])
+                ]),
+                stores () {
+                    var 
+                }
             },
             methods: {
                 loadData: async function () {
