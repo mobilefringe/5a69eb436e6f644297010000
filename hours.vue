@@ -7,9 +7,13 @@
                     <div class="col-md-12">
                         <h4 class="hours_heading caps">Hours</h4>
                         <div class="hours_container">
-                            <div class="hours_div text-left" v-for="hour in hours">
-                                <span>{{hour.day_of_week | moment("dddd", timezone)}}:</span>
-                                <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
+                            <div class="row hours_div text-left" v-for="hour in hours">
+                                <div class="col-md-4">
+                                    {{hour.day_of_week | moment("dddd", timezone)}}
+                                </div>
+                                <div class="col-md-4">
+                                    {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}
+                                </div>
                             </div>
                         </div>
                         <div class="padding_top_20"></div>
