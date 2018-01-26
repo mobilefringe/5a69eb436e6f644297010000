@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h4 class="hours_heading caps">Hours</h4>
-                        <div id="hours_container" class="hours_container">
+                        <div class="hours_container">
                             <div class="hours_div text-left" v-for="hour in hours">
                                 <span>{{hour.day_of_week | moment("dddd", timezone)}}:</span>
                                 <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
@@ -14,7 +14,7 @@
                         </div>
                         <div class="padding_top_20"></div>
                         <h4 class="hours_heading caps">We will be open the following Holidays</h4>
-                        <div id="holidays_hours_container" class="hours_container">
+                        <div class="hours_container">
                             <div class="hours_div text-left"  v-for="hour in reducedHolidays">
                                 <span>{{hour.holiday_name}} <br/>({{hour.holiday_date | moment("MMM D YYYY", timezone)}})</span>
                                 <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
@@ -22,9 +22,14 @@
                         </div>
                         <div class="padding_top_20"></div>
                         <h4 class="hours_heading caps">We will be closed the following Statutory Holidays</h4>
-                        <div id="closed_hours_container" class="hours_container">
-                            <div class="hours_div text-left" v-for="hour in closeHolidays">
-                                <span>{{hour.holiday_name}} ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})</span>
+                        <div class="hours_container">
+                            <div class="row hours_div text-left" v-for="hour in closeHolidays">
+                                <div class="col-md-2">
+                                    {{hour.holiday_name}} ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})    
+                                </div>
+                                <div class="col-md-2">
+                                    Closed
+                                </div>
                             </div>
                         </div>
                     </div>
