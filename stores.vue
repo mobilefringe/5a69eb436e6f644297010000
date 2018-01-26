@@ -79,36 +79,45 @@
 </style>
 
 <script>
-  define(["Vue", "vuex"], function(Vue, Vuex) {
-    return Vue.component("stores-component", {
-      template: template, // the variable template will be injected
-      data: function() {
-        return {
-          listMode: "alphabetical",
-          dataLoaded: false
-        }
-      },
-      created(){
-        this.$store.dispatch("getData", "categories").then(response => {
-          this.dataLoaded = true
-        }, error => {
-          console.error("Could not retrieve data from server. Please check internet connection and try again.");
+    define(["Vue", "vuex"], function(Vue, Vuex) {
+        return Vue.component("stores-component", {
+            template: template, // the variable template will be injected
+            data: function() {
+                return {
+                    dataLoaded: false,
+                    listMode: "alphabetical"
+                }
+            },
+            created(){
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                });
+                
+                // this.$store.dispatch("getData", "categories").then(response => {
+                //     this.dataLoaded = true
+                // }, error => {
+                //     console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                // });
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'storesByAlphaIndex',
+                    'storesByCategoryName'
+                ])
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "categories")]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                changeMode (mode) {
+                    this.listMode = mode;
+                }
+            }
         });
-      },
-      mounted(){
-        console.log(this.$store.state);  
-      },
-      methods: {
-        changeMode (mode) {
-          this.listMode = mode;
-        }
-      },
-      computed: {
-        ...Vuex.mapGetters([
-          'storesByAlphaIndex',
-          'storesByCategoryName'
-        ])
-      }
     });
-  });
 </script>
