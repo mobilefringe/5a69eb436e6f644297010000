@@ -1,6 +1,6 @@
 <template>
     <div> <!-- without an outer container div this component template will not render -->
-        <np-loader v-if="!dataLoaded"></np-loader>
+        <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" class="main_container margin_30" v-cloak> 
                 <div class="row">
@@ -12,7 +12,9 @@
                                     {{hour.day_of_week | moment("dddd", timezone)}}
                                 </div>
                                 <div class="col-md-3">
-                                    {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}
+                                    <span class="pull-right">
+                                        {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}    
+                                    </span>
                                 </div>
                             </div>
                         </div>
