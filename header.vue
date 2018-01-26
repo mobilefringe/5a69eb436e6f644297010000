@@ -102,11 +102,6 @@
                                     <router-link tag="li" to="/hours" class="submenu_item" exact>
                                         <a>Hours</a>
                                     </router-link>
-                                    <!--<router-link tag="li" to="/stores" class="submenu_item" exact>-->
-                                    <!--    <a>Stores</a>-->
-                                    <!--</router-link>-->
-                                    <!--<li class="submenu_item"><a href="#">Directory</a></li>-->
-                                    <!--<li class="submenu_item"><a href="#">Center Map</a></li>-->
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="#">Menu 2</a>
@@ -125,7 +120,7 @@
                             </li>
                             <li class="menu_item"><a href="#">Menu 4</a></li>
                             <li class="menu_item"><a href="#">Menu 5</a></li>
-                            <li class="menu_item"><a href="#">Menu 6</a></li>
+                            <!--<li class="menu_item"><a href="#">Menu 6</a></li>-->
                         </ul>
                     </nav>
                     <!--<div class="main_menu">-->
