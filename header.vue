@@ -104,11 +104,17 @@
                                     </router-link>
                                 </ul>
                             </li>
-                            <li class="menu_item"><a href="#">Menu 2</a>
+                            <li class="menu_item">Menu 2
                                 <ul>
-                                    <li class="submenu_item"><a href="#">Sub Menu 1</a></li>
-                                    <li class="submenu_item"><a href="#">Sub Menu 2</a></li>
-                                    <li class="submenu_item"><a href="#">Sub Menu 3</a></li>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>Link 1</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>Link 2</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>Link 3</a>
+                                    </router-link>
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="#">Menu 3</a>
