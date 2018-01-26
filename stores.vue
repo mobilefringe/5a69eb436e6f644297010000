@@ -34,7 +34,7 @@
                             <hr/>
                         </div>
                     </div>
-                    <div class="columns large-12" v-for="(stores, index) in storesByCategoryName" v-if="listMode === 'category'">
+                    <div class="col-md-12" v-for="(stores, index) in storesByCategoryName" v-if="listMode === 'category'">
                         <div class="list_header">
                             <b>{{index}}</b>
                             <hr/>
