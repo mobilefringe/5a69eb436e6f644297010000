@@ -126,6 +126,14 @@ header {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     ul {
     	list-style:none;
     	position:relative;
