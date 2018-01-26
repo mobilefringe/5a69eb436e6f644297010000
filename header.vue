@@ -94,7 +94,7 @@
                     </div>
                     <nav id="primary_nav">
                         <ul>
-                            <li class="menu_item"><a href="#">Shopping</a>
+                            <li class="menu_item">Shopping
                                 <ul>
                                     <li class="submenu_item"><a href="#">Directory</a></li>
                                     <li class="submenu_item"><a href="#">Center Map</a></li>
