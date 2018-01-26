@@ -92,48 +92,75 @@
                             <input id="header_newsletter_submit" class="newsletter_btn" type="submit" value="Subscribe" />
                         </div>
                     </div>
-                    <div class="main_menu">
-                        <ul class="main_nav">
-                            <li class="dropdown" v-on:mouseover="mouseOver" v-bind:class="{ open: active }">
-                                <!--<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
-                                    Shopping
-                                <!--</span>-->
-                                <ul class="dropdown-menu">
-                                    <router-link tag="li" to="/stores" active-class="active" exact>
-                                        <a>Stores</a>
-                                    </router-link>
-                                    <router-link tag="li" to="/hours" active-class="active" exact>
-                                        <a>Hours</a>
-                                    </router-link>
+                    <nav id="primary_nav">
+                        <ul>
+                            <li class="menu_item"><a href="#">Shopping</a>
+                                <ul>
+                                    <li class="submenu_item"><a href="#">Directory</a></li>
+                                    <li class="submenu_item"><a href="#">Center Map</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Events
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/events">All Events</a></li>
-                                    <li><a href="/pages/ptc-in-the-community">In the <br />Community</a></li>
+                            <li class="menu_item"><a href="#">Menu 2</a>
+                                <ul>
+                                    <li class="submenu_item"><a href="#">Sub Menu 1</a></li>
+                                    <li class="submenu_item"><a href="#">Sub Menu 2</a></li>
+                                    <li class="submenu_item"><a href="#">Sub Menu 3</a></li>
                                 </ul>
                             </li>
-                            <!--<li class="dropdown"><a href="/promotions">Promotions</a></li>-->
-                            <router-link tag="li" to="/promotions" class="dropdown" active-class="active" exact>
-                                <a>Promotions</a>
-                            </router-link>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Guest Services
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/pages/ptc-accessibility">Accessibilty</a></li>
-                                    <li><a href="/pages/ptc-mall-services">Mall Services</a></li>
-                                    <li><a href="/pages/ptc-gift-cards">Gift Cards</a></li>
-                                    <li><a href="/pages/ptc-wifi">WiFi</a></li>
+                            <li class="menu_item"><a href="#">Menu 3</a>
+                                <ul>
+                                    <li class="submenu_item"><a href="#">Sub Menu 1</a></li>
+                                    <li class="submenu_item"><a href="#">Sub Menu 2</a></li>
+                                    <li class="submenu_item"><a href="#">Sub Menu 3</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="/pages/ptc-coming-soon"  >Blog</a></li>
+                            <li class="menu_item"><a href="#">Menu 4</a></li>
+                            <li class="menu_item"><a href="#">Menu 5</a></li>
+                            <li class="menu_item"><a href="#">Menu 6</a></li>
                         </ul>
-                    </div>
+                    </nav>
+                    <!--<div class="main_menu">-->
+                    <!--    <ul class="main_nav">-->
+                    <!--        <li class="dropdown" v-on:mouseover="mouseOver" v-bind:class="{ open: active }">-->
+                                <!--<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+                    <!--                Shopping-->
+                                <!--</span>-->
+                    <!--            <ul class="dropdown-menu">-->
+                    <!--                <router-link tag="li" to="/stores" active-class="active" exact>-->
+                    <!--                    <a>Stores</a>-->
+                    <!--                </router-link>-->
+                    <!--                <router-link tag="li" to="/hours" active-class="active" exact>-->
+                    <!--                    <a>Hours</a>-->
+                    <!--                </router-link>-->
+                    <!--            </ul>-->
+                    <!--        </li>-->
+                    <!--        <li class="dropdown">-->
+                    <!--            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+                    <!--                Events-->
+                    <!--            </a>-->
+                    <!--            <ul class="dropdown-menu">-->
+                    <!--                <li><a href="/events">All Events</a></li>-->
+                    <!--                <li><a href="/pages/ptc-in-the-community">In the <br />Community</a></li>-->
+                    <!--            </ul>-->
+                    <!--        </li>-->
+                            <!--<li class="dropdown"><a href="/promotions">Promotions</a></li>-->
+                    <!--        <router-link tag="li" to="/promotions" class="dropdown" active-class="active" exact>-->
+                    <!--            <a>Promotions</a>-->
+                    <!--        </router-link>-->
+                    <!--        <li class="dropdown">-->
+                    <!--            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+                    <!--                Guest Services-->
+                    <!--            </a>-->
+                    <!--            <ul class="dropdown-menu">-->
+                    <!--                <li><a href="/pages/ptc-accessibility">Accessibilty</a></li>-->
+                    <!--                <li><a href="/pages/ptc-mall-services">Mall Services</a></li>-->
+                    <!--                <li><a href="/pages/ptc-gift-cards">Gift Cards</a></li>-->
+                    <!--                <li><a href="/pages/ptc-wifi">WiFi</a></li>-->
+                    <!--            </ul>-->
+                    <!--        </li>-->
+                    <!--        <li class="dropdown"><a href="/pages/ptc-coming-soon"  >Blog</a></li>-->
+                    <!--    </ul>-->
+                    <!--</div>-->
                 </div>
             </div>
         </section>
