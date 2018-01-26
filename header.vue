@@ -124,8 +124,14 @@
                                     <li class="submenu_item"><a href="#">Sub Menu 3</a></li>
                                 </ul>
                             </li>
-                            <li class="menu_item"><a href="#">Menu 4</a></li>
-                            <li class="menu_item"><a href="#">Menu 5</a></li>
+                            <router-link tag="li" to="/" class="submenu_item" exact>
+                                Menu 4
+                            </router-link>
+                            <router-link tag="li" to="/" class="submenu_item" exact>
+                                Menu 5
+                            </router-link>
+                            <!--<li class="menu_item"><a href="#">Menu 4</a></li>-->
+                            <!--<li class="menu_item"><a href="#">Menu 5</a></li>-->
                             <!--<li class="menu_item"><a href="#">Menu 6</a></li>-->
                         </ul>
                     </nav>
