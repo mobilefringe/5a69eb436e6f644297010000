@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
                     <div class="store_nav">
-                        <div class="row">
+                       
                             <div class="col-md-3">
                                 <a class="active_store_nav" href="/stores">DIRECTORY</a>
                             </div>
@@ -19,7 +19,7 @@
                             <div class="col-md-2">
                                 <a v-on:click="changeMode('category')">Category</a>
                             </div>
-                        </div>
+                       
                     </div>    
                 </div>
             
