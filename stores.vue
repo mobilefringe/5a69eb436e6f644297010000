@@ -24,7 +24,9 @@
                 <div class="row">
                     <div class="col-md-12" v-for="(stores, index) in storesByAlphaIndex" v-if="listMode === 'alphabetical'">
                         <div class="list_header">
-                            <span class="store_initial"><span>{{index}}</span></span>
+                            <div class="store_initial">
+                                <span>{{index}}</span>
+                            </div>
                         </div>
                         <div class="store-section" v-for="store in stores">
                             <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">
