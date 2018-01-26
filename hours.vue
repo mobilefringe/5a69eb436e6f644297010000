@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" class="main_container margin_30" v-cloak> 
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 class="hours_heading">Hours</h4>
+                        <h4 class="hours_heading caps">Hours</h4>
                         <div id="hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in hours">
                                 <span>{{hour.day_of_week | moment("dddd", timezone)}}:</span>
@@ -13,7 +13,7 @@
                             </div>
                         </div>
                         <div class="padding_top_20"></div>
-                        <h4 class="hours_heading">We will be open the following Holidays</h4>
+                        <h4 class="hours_heading caps">We will be open the following Holidays</h4>
                         <div id="holidays_hours_container" class="hours_container">
                             <div class="hours_div text-left"  v-for="hour in reducedHolidays">
                                 <span>{{hour.holiday_name}} <br/>({{hour.holiday_date | moment("MMM D YYYY", timezone)}})</span>
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="padding_top_20"></div>
-                        <h4 class="hours_heading">We will be closed the following Statutory Holidays</h4>
+                        <h4 class="hours_heading caps">We will be closed the following Statutory Holidays</h4>
                         <div id="closed_hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in closeHolidays">
                                 <span>{{hour.holiday_name}} ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})</span>
