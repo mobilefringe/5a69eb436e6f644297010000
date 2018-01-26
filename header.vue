@@ -96,8 +96,17 @@
                         <ul>
                             <li class="menu_item">Shopping
                                 <ul>
-                                    <li class="submenu_item"><a href="#">Directory</a></li>
-                                    <li class="submenu_item"><a href="#">Center Map</a></li>
+                                    <router-link tag="li" to="/stores" class="submenu_item" exact>
+                                        <a>Stores</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/hours" class="submenu_item" exact>
+                                        <a>Hours</a>
+                                    </router-link>
+                                    <!--<router-link tag="li" to="/stores" class="submenu_item" exact>-->
+                                    <!--    <a>Stores</a>-->
+                                    <!--</router-link>-->
+                                    <!--<li class="submenu_item"><a href="#">Directory</a></li>-->
+                                    <!--<li class="submenu_item"><a href="#">Center Map</a></li>-->
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="#">Menu 2</a>
