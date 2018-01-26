@@ -5,67 +5,51 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
                     <div class="store_nav">
-                       
-                            <div class="col-md-3">
-                                <a class="active_store_nav" href="/stores">DIRECTORY</a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="/map">CENTER MAP</a>
-                            </div>
-                            <div class="col-md-4">
-                                <span>Sort By: </span>
-                                <a v-on:click="changeMode('alphabetical')">Alphabetical</a>
-                            </div>
-                            <div class="col-md-2">
-                                <a v-on:click="changeMode('category')">Category</a>
-                            </div>
-                       
+                        <div class="col-md-3">
+                            <a class="active_store_nav" href="/stores">DIRECTORY</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/map">CENTER MAP</a>
+                        </div>
+                        <div class="col-md-4">
+                            <span>Sort By: </span>
+                            <a v-on:click="changeMode('alphabetical')">Alphabetical</a>
+                        </div>
+                        <div class="col-md-2">
+                            <a v-on:click="changeMode('category')">Category</a>
+                        </div>
                     </div>    
                 </div>
-            
-            
-  
-    <!--<ul class="menu">-->
-    <!--  <li><a v-on:click="changeMode('alphabetical')">Alphabetical</a></li>-->
-    <!--  <li><a v-on:click="changeMode('category')">Category</a></li>-->
-    <!--</ul>-->
-    
-    
-    <hr/>
-    <div class="columns large-12" v-for="(stores, index) in storesByAlphaIndex" v-if="listMode === 'alphabetical'">
-      <div class="list_header">
-        <b>{{index}}</b>
-        <hr/>
-      </div>
-      <div class="store-section" v-for="store in stores">
-        <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">{{store.name}}</router-link>
-        <hr/>
-      </div>
-      <!-- <div class="card">
-        <div class="card-divider">
-          {{ store.name }}
+                <hr/>
+                <div class="row">
+                    <div class="col-md-12" v-for="(stores, index) in storesByAlphaIndex" v-if="listMode === 'alphabetical'">
+                        <div class="list_header">
+                            <b>{{index}}</b>
+                            <hr/>
+                        </div>
+                        <div class="store-section" v-for="store in stores">
+                            <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">
+                                {{store.name}}
+                            </router-link>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="columns large-12" v-for="(stores, index) in storesByCategoryName" v-if="listMode === 'category'">
+                        <div class="list_header">
+                            <b>{{index}}</b>
+                            <hr/>
+                        </div>
+                        <div class="store-section" v-for="store in stores">
+                            <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">
+                                {{store.name}}
+                            </router-link>
+                            <hr/>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card-section center">
-          <a :href="store.image_url" target="_blank"><img :src="store.image_url"></a>
-        </div>
-        <div class="card-section">
-          <div class="center">
-            <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">View Details</router-link>
-          </div>
-        </div>
-      </div> -->
     </div>
-    <div class="columns large-12" v-for="(stores, index) in storesByCategoryName" v-if="listMode === 'category'">
-      <div class="list_header">
-        <b>{{index}}</b>
-        <hr/>
-      </div>
-      <div class="store-section" v-for="store in stores">
-        <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">{{store.name}}</router-link>
-        <hr/>
-      </div>
-    </div>
-  </div>
 </template>
 
 <style>
