@@ -32,6 +32,9 @@
                             <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">
                                 {{store.name}}
                             </router-link>
+                            <span style="{{new_store}}" class="pull-right new_store">NEW</span>
+                            <span style="{{coming_soon_store}}" class="pull-right coming_soon_store">COMING SOON</span>
+                            <span style="{{promo_exist}}" class="promo_exist pull-right">PROMOTION</span>
                         </div>
                     </div>
                     <div class="col-md-12" v-for="(stores, index) in storesByCategoryName" v-if="listMode === 'category'">
