@@ -104,7 +104,13 @@
                                     </router-link>
                                 </ul>
                             </li>
-                            <li class="menu_item">Menu 2
+                            <router-link tag="li" to="/events" class="menu_item" exact>
+                                Events
+                            </router-link>
+                            <router-link tag="li" to="/promotions" class="menu_item" exact>
+                                Promotions
+                            </router-link>
+                            <li class="menu_item">Guest Services
                                 <ul>
                                     <router-link tag="li" to="/" class="submenu_item" exact>
                                         <a>Link 1</a>
@@ -124,12 +130,6 @@
                                     <li class="submenu_item"><a href="#">Sub Menu 3</a></li>
                                 </ul>
                             </li>
-                            <router-link tag="li" to="/" class="menu_item" exact>
-                                Menu 4
-                            </router-link>
-                            <router-link tag="li" to="/" class="menu_item" exact>
-                                Menu 5
-                            </router-link>
                         </ul>
                     </nav>
                     <!--<div class="main_menu">-->
