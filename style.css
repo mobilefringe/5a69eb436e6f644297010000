@@ -65,6 +65,9 @@ body {
 .position_relative {
    position: relative;
 }
+.caps {
+    text-transform: uppercase;
+}
 .open_menu{
     display:none;
 }
