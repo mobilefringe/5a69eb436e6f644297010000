@@ -206,6 +206,7 @@ header {
         font-size: 26px;
     }
 }
+
 /* *** EVENTS *** */
 .events_container {
     height: 288px;
@@ -235,3 +236,10 @@ header {
         max-width: 100%;
     }
 }
+
+/* *** HOURS *** */
+.hours_heading {
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+/* *** PROMOTIONS *** */
