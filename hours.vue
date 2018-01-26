@@ -24,10 +24,10 @@
                         <h4 class="hours_heading caps">We will be closed the following Statutory Holidays</h4>
                         <div class="hours_container">
                             <div class="row hours_div text-left" v-for="hour in closeHolidays">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     {{hour.holiday_name}} ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})    
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     Closed
                                 </div>
                             </div>
