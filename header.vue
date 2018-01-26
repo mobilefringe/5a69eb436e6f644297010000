@@ -130,9 +130,6 @@
                             <router-link tag="li" to="/" class="menu_item" exact>
                                 Menu 5
                             </router-link>
-                            <!--<li class="menu_item"><a href="#">Menu 4</a></li>-->
-                            <!--<li class="menu_item"><a href="#">Menu 5</a></li>-->
-                            <!--<li class="menu_item"><a href="#">Menu 6</a></li>-->
                         </ul>
                     </nav>
                     <!--<div class="main_menu">-->
