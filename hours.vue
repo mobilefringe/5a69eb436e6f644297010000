@@ -15,15 +15,19 @@
                         <div class="padding_top_20"></div>
                         <h4 class="hours_heading caps">We will be open the following Holidays</h4>
                         <div class="hours_container">
-                            <div class="hours_div text-left"  v-for="hour in reducedHolidays">
-                                <span>{{hour.holiday_name}} <br/>({{hour.holiday_date | moment("MMM D YYYY", timezone)}})</span>
-                                <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
+                            <div class="row hours_div"  v-for="hour in reducedHolidays">
+                                <div class="col-md-4">
+                                    {{hour.holiday_name}} | {{hour.holiday_date | moment("MMM D YYYY", timezone)}}
+                                </div>
+                                <div class="col-md-4">
+                                    {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}
+                                </div>
                             </div>
                         </div>
                         <div class="padding_top_20"></div>
                         <h4 class="hours_heading caps">We will be closed the following Statutory Holidays</h4>
                         <div class="hours_container">
-                            <div class="row hours_div text-left" v-for="hour in closeHolidays">
+                            <div class="row hours_div" v-for="hour in closeHolidays">
                                 <div class="col-md-4">
                                     {{hour.holiday_name}} ({{hour.holiday_date | moment("MMM D, YYYY", timezone)}})    
                                 </div>
