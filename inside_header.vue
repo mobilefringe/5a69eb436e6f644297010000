@@ -3,6 +3,18 @@
         <div class="main_container">
             <div class="hours_container">
                 <h3>Hours</h3>
+                <div>
+                    Monday - Friday:
+                    {{ }}
+                </div>
+                <div>
+                    Saturday:
+                    {{ }}
+                </div>
+                <div>
+                    Sunday:
+                    {{ }}
+                </div>
             </div>
             <div class="stores_container">
                 <router-link tag="h3" to="/stores" exact>
