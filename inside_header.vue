@@ -2,11 +2,11 @@
     <div class="inside_header_background">
         <div class="main_container">
             <div class="hours_container">
-                Hours    
+                <h3>Hours</h3>
             </div>
             <div class="stores_container">
                 <router-link tag="a" to="/stores" exact>
-                    Stores
+                    <h3></h3>Stores</h3>
                 </router-link>
             </div>
             <div class="page_container">
