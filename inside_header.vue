@@ -5,7 +5,7 @@
                 Hours    
             </div>
             <div class="stores_container">
-                <router-link tag="p" to="/stores" exact>
+                <router-link tag="a" to="/stores" exact>
                     Stores
                 </router-link>
             </div>
