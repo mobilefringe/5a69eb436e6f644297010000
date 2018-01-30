@@ -42,6 +42,20 @@ define([], function () {
             ]
         },
         {
+            path: '/map',
+            component: view('default'),
+            children: [
+                {   
+                    path: '',
+                    component: view('map'),
+                    meta: {
+                        pageName: 'Centre Map',
+                    },
+                    name: 'map'
+                }
+            ]
+        },
+        {
             path: '/promotions',
             component: view('default'),
             children: [
@@ -84,20 +98,6 @@ define([], function () {
                     },
                     name: 'storeDetails',
                     props: true
-                }
-            ]
-        },
-        {
-            path: '/map',
-            component: view('default'),
-            children: [
-                {   
-                    path: '',
-                    component: view('map'),
-                    meta: {
-                        pageName: 'Centre Map',
-                    },
-                    name: 'map'
                 }
             ]
         },
