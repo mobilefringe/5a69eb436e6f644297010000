@@ -8,14 +8,13 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    dataLoaded: false,
                     currentMessage: null
                 }
             },
             created(){
                 this.loadData().then(response => {
                     this.currentMessage = response[1].data.messages.welcome[0].messages[0];
-                    this.dataLoaded = true;      
+                    // this.dataLoaded = true;      
                 });
             },
             computed: {
