@@ -10,7 +10,7 @@
                 </router-link>
             </div>
             <div class="page_container">
-                {{ getPageName() }}    
+                <h1>{{ getPageName() }}</h1>
             </div>
         </div>
     </div>
