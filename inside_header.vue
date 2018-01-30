@@ -6,6 +6,9 @@
                 <div>
                     Monday - Friday:
                     {{ }}
+                    <span v-for="hour in weekdayHours"
+                        {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}    
+                    </span>
                 </div>
                 <div>
                     Saturday:
