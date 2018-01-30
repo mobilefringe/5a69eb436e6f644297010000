@@ -71,11 +71,17 @@ define([], function () {
                 {   
                     path: '',
                     component: view('stores'),
+                    meta: {
+                        pageName: 'Stores',
+                    },
                     name: 'storeList'
                 },
                 {
                     path: ':id',
                     component: view('store_details'),
+                    meta: {
+                        pageName: 'Stores',
+                    },
                     name: 'storeDetails',
                     props: true
                 }
