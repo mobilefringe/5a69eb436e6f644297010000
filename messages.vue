@@ -21,7 +21,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property'
-                ]),
+                ])
             },
             methods: {
                 loadData: async function() {
