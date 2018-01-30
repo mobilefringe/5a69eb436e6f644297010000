@@ -19,6 +19,9 @@ define([], function () {
                 {
                     path: ':id',
                     component: view('event_details'),
+                    meta: {
+                        pageName: 'Events',
+                    },
                     name: 'eventDetails',
                     props: true
                 }
@@ -53,6 +56,9 @@ define([], function () {
                 {
                     path: ':id',
                     component: view('promotion_details'),
+                    meta: {
+                        pageName: 'Promotions',
+                    },
                     name: 'promotionDetails',
                     props: true
                 }
