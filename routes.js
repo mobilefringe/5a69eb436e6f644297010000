@@ -56,6 +56,18 @@ define([], function () {
             ]
         },
         {
+            path: '/pages',
+            component: view('default'),
+            children: [
+                {
+                    path: ':id',
+                    component: view('page_details'),
+                    name: 'pageDetails',
+                    props: true
+                }
+            ]
+        },
+        {
             path: '/promotions',
             component: view('default'),
             children: [
