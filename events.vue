@@ -1,8 +1,9 @@
 <template>
     <div> <!-- without an outer container div this component template will not render -->
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
-        <inside-header-component></inside-header-component>
-        <transition name="fade">
+        
+        <transition-group name="fadeLeft" tag="div">
+            <inside-header-component></inside-header-component>
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="events_container" v-for="event in events">
                     <div class="event_left">
