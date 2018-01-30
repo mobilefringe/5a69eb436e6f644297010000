@@ -2,7 +2,10 @@
     <div>
         <div>
             Hours    
-        </div>    
+        </div>
+        <div>
+            Stores
+        </div>
     </div>
 </template>
 
