@@ -28,6 +28,9 @@ define([], function () {
                 {
                     path: '',
                     component: view('hours'),
+                    meta: {
+                        pageName: 'Hours',
+                    },
                     name: 'hours'
                 }
             ]
@@ -39,6 +42,9 @@ define([], function () {
                 {
                     path: '',
                     component: view('promotions'),
+                    meta: {
+                        pageName: 'Promotions',
+                    },
                     name: 'promotions'
                 },
                 {
