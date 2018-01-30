@@ -88,6 +88,20 @@ define([], function () {
             ]
         },
         {
+            path: '/map',
+            component: view('default'),
+            children: [
+                {   
+                    path: '',
+                    component: view('map'),
+                    meta: {
+                        pageName: 'Centre Map',
+                    },
+                    name: 'map'
+                }
+            ]
+        },
+        {
             path: '/404',
             name: '404',
             component: view('notfoundcomponent')
