@@ -123,13 +123,13 @@
                                     </router-link>
                                 </ul>
                             </li>
-                            <li class="menu_item">Menu 3
-                                <ul>
-                                    <li class="submenu_item"><a href="#">Sub Menu 1</a></li>
-                                    <li class="submenu_item"><a href="#">Sub Menu 2</a></li>
-                                    <li class="submenu_item"><a href="#">Sub Menu 3</a></li>
-                                </ul>
-                            </li>
+                            <!--<li class="menu_item">Menu 3-->
+                            <!--    <ul>-->
+                            <!--        <li class="submenu_item"><a href="#">Sub Menu 1</a></li>-->
+                            <!--        <li class="submenu_item"><a href="#">Sub Menu 2</a></li>-->
+                            <!--        <li class="submenu_item"><a href="#">Sub Menu 3</a></li>-->
+                            <!--    </ul>-->
+                            <!--</li>-->
                         </ul>
                     </nav>
                 </div>
