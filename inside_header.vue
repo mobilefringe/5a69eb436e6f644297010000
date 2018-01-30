@@ -1,10 +1,13 @@
 <template>
-    <div>
-        <div>
+    <div class="inside_header_background">
+        <div class="hours_container">
             Hours    
         </div>
-        <div>
+        <div class="stores_container">
             Stores
+        </div>
+        <div class="page_container">
+            
         </div>
     </div>
 </template>
@@ -19,7 +22,9 @@
                 }
             },
             watch: {
-                
+                $route: function () {
+                    console.log(this.$route)
+                }
             },
             computed: {
                 ...Vuex.mapGetters([
