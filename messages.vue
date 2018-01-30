@@ -13,7 +13,7 @@
             },
             created(){
                 this.loadData().then(response => {
-                    this.currentMessage = response[1].data.messages.welcome[0].messages[0];
+                    this.currentMessage = response[0].data.messages.welcome[0].messages[0];
                     this.dataLoaded = true;      
                 });
             },
