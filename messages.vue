@@ -13,6 +13,7 @@
             },
             created(){
                 this.loadData().then(response => {
+                    console.log(this.property)
                     this.currentMessage = response[1].data.messages.welcome[0].messages[0];
                     this.dataLoaded = true;      
                 });
