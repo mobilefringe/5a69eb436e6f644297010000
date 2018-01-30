@@ -14,6 +14,7 @@
             created(){
                 this.loadData().then(response => {
                     this.currentMessage = response[1].data.messages.welcome[0].messages[0];
+                    this.dataLoaded = true;      
                 });
             },
             computed: {
@@ -23,6 +24,7 @@
             },
             methods: {
                 loadData: async function() {
+                    console.log(this)
                     try {
                         let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northpark/messages.json"})]);
                         return results;
