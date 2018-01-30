@@ -1,13 +1,15 @@
 <template>
     <div class="inside_header_background">
-        <div class="hours_container">
-            Hours    
-        </div>
-        <div class="stores_container">
-            Stores
-        </div>
-        <div class="page_container">
-            
+        <div class="main_container">
+            <div class="hours_container">
+                Hours    
+            </div>
+            <div class="stores_container">
+                Stores
+            </div>
+            <div class="page_container">
+                
+            </div>
         </div>
     </div>
 </template>
