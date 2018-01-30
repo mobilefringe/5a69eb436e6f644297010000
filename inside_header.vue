@@ -8,7 +8,7 @@
                 Stores
             </div>
             <div class="page_container">
-                {{ $route }}    
+                {{ getPageName() }}    
             </div>
         </div>
     </div>
@@ -36,7 +36,9 @@
                 ]),
             },
             methods: {
-                
+                getPageName(){
+                    return this.$route.meta.pageName    
+                }    
             }
         });
     });
