@@ -3,7 +3,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue_router", "routes"], function (Vue, Vuex, VueRouter, appRoutes) {
+    define(["Vue", "vuex"], function (Vue, Vuex) {
         return Vue.component("messages-component", {
             template: template, // the variable template will be injected,
             data: function() {
@@ -14,7 +14,6 @@
             created(){
                 this.loadData().then(response => {
                     this.currentMessage = response[0].data.messages.welcome[0].messages[0];
-                    console.log(response)
                     this.dataLoaded = true;      
                 });
             },
