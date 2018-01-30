@@ -8,7 +8,7 @@
                 Stores
             </div>
             <div class="page_container">
-                
+                {{ $route }}    
             </div>
         </div>
     </div>
