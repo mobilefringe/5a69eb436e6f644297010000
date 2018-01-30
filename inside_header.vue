@@ -5,7 +5,6 @@
                 <h3>Hours</h3>
                 <div>
                     Monday - Friday:
-                    {{ }}
                     <span v-for="hour in weekdayHours"
                         {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}    
                     </span>
@@ -52,6 +51,7 @@
                     'getPropertyHours'
                 ]),
                 weekdayHours() {
+                    console.log(_.filter(this.getPropertyHours, function(o) { return o.day_of_week == 1 });)
                     return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 1 });
                 },
                 saturdayHours() {
