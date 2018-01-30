@@ -21,7 +21,7 @@
                     </div>
                 </div>  
             </div>
-        </transition>
+        </transition-group>
     </div>
 </template>
 <script>
