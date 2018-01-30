@@ -26,6 +26,7 @@
             methods: {
                 loadData: async function() {
                     try {
+                        console.log(this.property)
                         let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', { url:this.property.mm_host + "/api/v3/northpark/messages.json"})]);
                         return results;
                     } catch(e) {
