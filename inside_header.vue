@@ -5,8 +5,8 @@
                 <h3>Hours</h3>
             </div>
             <div class="stores_container">
-                <router-link tag="a" to="/stores" exact>
-                    <h3></h3>Stores</h3>
+                <router-link tag="h3" to="/stores" exact>
+                    <a>Stores</a>
                 </router-link>
             </div>
             <div class="page_container">
