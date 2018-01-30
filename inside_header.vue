@@ -5,7 +5,9 @@
                 Hours    
             </div>
             <div class="stores_container">
-                Stores
+                <router-link tag="li" to="/stores" exact>
+                    Stores
+                </router-link>
             </div>
             <div class="page_container">
                 {{ getPageName() }}    
