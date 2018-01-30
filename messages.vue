@@ -14,6 +14,7 @@
             created(){
                 this.loadData().then(response => {
                     this.currentMessage = response[1].data.messages.welcome[0].messages[0];
+                    console.log(this.currentMessage)
                     this.dataLoaded = true;      
                 });
             },
