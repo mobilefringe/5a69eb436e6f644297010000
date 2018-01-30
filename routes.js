@@ -11,6 +11,9 @@ define([], function () {
                 {
                     path: '',
                     component: view('events'),
+                    meta: {
+                        pageName: 'Events',
+                    },
                     name: 'events'
                 },
                 {
