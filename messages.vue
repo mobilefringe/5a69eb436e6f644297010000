@@ -3,17 +3,17 @@
 </template>
 
 <script>
-    define(["Vue", "vuex"], function (Vue, Vuex) {
+    define(["Vue", "vuex"], function(Vue, Vuex){
         return Vue.component("messages-component", {
-            template: template, // the variable template will be injected,
+            template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     currentMessage: null
                 }
             },
             created(){
                 this.loadData().then(response => {
-                    
                     this.currentMessage = response[1].data.messages.welcome[0].messages[0];
                     this.dataLoaded = true;      
                 });
@@ -25,7 +25,6 @@
             },
             methods: {
                 loadData: async function() {
-                    console.log(this.property)
                     try {
                         let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url:this.property.mm_host + "/api/v3/northpark/messages.json"})]);
                         return results;
@@ -34,6 +33,6 @@
                     }
                 }
             }
-        });
+        })
     });
 </script>
