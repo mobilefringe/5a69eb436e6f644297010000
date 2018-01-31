@@ -1,6 +1,6 @@
 <template>
-    <div v-if="currentMessage" class="messages_background">
-        <div class="main_container">
+    <div v-if="currentMessage" class="message_background">
+        <div class="main_container message_content">
             {{currentMessage.title }} 
         </div>
     </div>
