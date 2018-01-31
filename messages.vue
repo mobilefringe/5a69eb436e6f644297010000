@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dataLoaded" class="messages_background">
+    <div v-if="currentMessage" class="messages_background">
         <div class="main_container">
             {{currentMessage.title }} 
         </div>
