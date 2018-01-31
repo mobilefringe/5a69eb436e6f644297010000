@@ -1,7 +1,7 @@
 <template>
-    <div class="messages_background">
+    <div v-if="dataLoaded" class="messages_background">
         <div class="main_container">
-        
+            {{currentMessage.title }} 
         </div>
     </div>
 </template>
