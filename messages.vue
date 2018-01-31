@@ -1,5 +1,9 @@
 <template>
-    
+    <div class="messages_background">
+        <div class="main_container">
+        
+        </div>
+    </div>
 </template>
 
 <script>
