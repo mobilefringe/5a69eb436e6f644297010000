@@ -42,7 +42,8 @@
             },
             created(){
                 this.loadData().then(response => {
-                    this.dataLoaded = true;      
+                    this.dataLoaded = true;  
+                    console.log(this.banners)
                 });
             },
             computed: {
