@@ -2,7 +2,7 @@
     <div><!-- without an outer container div this component template will not render -->
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
-            <div class="home-banner-container" v-if="dataLoaded" v-cloak>
+            <!--<div class="home-banner-container" v-if="dataLoaded" v-cloak>-->
                 <!-- DYNAMIC BANNERS -->
                 <slick ref="slick" :options="slickOptions">
                     <div v-for="banner in homeBanners" v-if="homeBanners">
@@ -14,7 +14,7 @@
                     </div>
                 </slick>
                 
-            </div>
+            <!--</div>-->
         </transition>
     </div>
 </template>
