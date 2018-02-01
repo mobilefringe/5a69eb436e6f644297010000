@@ -6,11 +6,11 @@
                 <!-- DYNAMIC BANNERS -->
                 <slick ref="slick" :options="slickOptions">
                     <div v-for="banner in homeBanners" v-if="homeBanners">
-                        <div class="columns">
+                        <!--<div class="columns">-->
                             <!--<router-link :to="banner.url" class="">-->
                                 <div class="home-banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
                             <!--</router-link>-->
-                        </div>
+                        <!--</div>-->
                     </div>
                 </slick>
                 
