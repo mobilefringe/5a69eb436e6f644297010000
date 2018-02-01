@@ -52,6 +52,7 @@
                     'banners'
                 ]),
                 homeBanners() {
+                    console.log(this.banners)
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 }
             },
