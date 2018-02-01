@@ -51,6 +51,41 @@
                 ]),
                 homeBanners() {
                     console.log(this.$store.state.banners)
+                
+                    var banners = [];
+                    _.forEach(this.$store.state.banners, function (value, key) {
+                        var today = moment();
+                        var start = moment(value.start_date);
+                        if (start <= today){
+                            if (value.end_date){
+                                var end = moment(value.end_date);
+                                if (end >= today){
+                                    banners.push(value);  
+                                }
+                            } else {
+                                banners.push(value);
+                            }
+                        }
+                    });
+                    
+                    console.log(banners)
+                    if(val.url == "" || val.url === null){
+                        val.css = "style=cursor:default;";
+                        val.noLink = "return false";
+                    }
+                   if (start <= today){
+                     if (val.end_date){
+                         end = new Date (val.end_date);
+                         end.setDate(end.getDate() + 1);
+                         if (end >= today){
+                           item_list.push(val);  
+                         }
+                         
+                     } else {
+                         item_list.push(val);
+                     }
+                   }
+       
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 }
             },
