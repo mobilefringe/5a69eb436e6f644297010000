@@ -67,6 +67,7 @@
 				}, error => {
 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
 				});
+				console.log(this.currentJob)
 			},
             computed: {
                 ...Vuex.mapGetters([
