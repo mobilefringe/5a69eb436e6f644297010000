@@ -6,22 +6,21 @@
                 <div v-if="currentJob" class="job_details_container">
                     <div class="row">
                         <div class="col-md-6">
-                            <img class="pull-left" src="//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/jpeg/1517326611000/icon_in.jpg">
+                            <a :href="currentJob.image_url" :data-lightbox="currentJob.name">
+                                <img v-lazy="currentJob.image_url" :alt="currentJob.name"/>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <img class="pull-left" style="margin-right:10px" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/935/original/icon_in.jpg?1403210088">
                             <router-link :to="{ name: 'storeDetails', params: { id: currentJob.store.slug }}">
                                 <span class="promo_store_name">{{ currentJob.store.name }}</span>
                             </router-link>
-                            <div class="job_details">
-                                <h3 class="job_name">{{ currentJob.name }}</h3>
-                                <p class="dates">{{dates}}</p>
-                                <p v-if="currentJob.contact_phone" class="dates">
-                                    Telephone:<br />
-                                    {{ currentJob.contact_phone }}
-                                </p>
-                                <p v-if="currentJob.message" class="dates">{{ currentJob.message }}</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div v-html="currentJob.description" ></div>
+                            <h1>{{ currentJob.name }}</h1>
+                            <p class="promo_date" v-if="isMultiDayEvent(currentJob)">
+                                {{ currentJob.start_date | moment("MMM D, YYYY", timezone)}} to {{ currentJob.end_date | moment("MMM D, YYYY", timezone)}}
+                            </p>
+                            <p class="promo_date" v-else>{{ currentJob.start_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
+                            <div>{{ currentJob.description }}</div>
                             <div class="row"> 
                                 <div class="col-md-12">
                                     <social-sharing v-if="currentJob" :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="truncate(currentJob.body)" twitter-user="PickeringTC" :media="currentJob.image_url" inline-template>
