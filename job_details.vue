@@ -6,9 +6,7 @@
                 <div v-if="currentJob" class="job_details_container">
                     <div class="row">
                         <div class="col-md-6">
-                            <a :href="currentJob.image_url" :data-lightbox="currentJob.name">
-                                <img v-lazy="currentJob.image_url" :alt="currentJob.name"/>
-                            </a>
+                            <img v-lazy="currentJob.image_url" :alt="currentJob.name"/>
                         </div>
                         <div class="col-md-6">
                             <img class="pull-left" style="margin-right:10px" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/935/original/icon_in.jpg?1403210088">
