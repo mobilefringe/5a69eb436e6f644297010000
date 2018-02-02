@@ -6,7 +6,7 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <div class="job_container" v-for="job in jobs">
+                <div class="job_container" v-for="job in processedJobs">
                     <img class="pull-left" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/935/original/icon_in.jpg?1403210088">
                     <!--<a href="/stores/{{store_detail_btn}}" class="promo_store_name">{{store_name}}</a>-->
                     <div class="job_details">
@@ -56,7 +56,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'processedEvents',
+                    'processedJobs'
                 ]),
                 events: function events() {
                     var events = this.processedEvents;
