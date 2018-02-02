@@ -2,6 +2,9 @@
     <div> <!-- without an outer container div this component template will not render -->
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
+            <inside-header-component></inside-header-component>
+        </transition>
+        <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div v-if="currentJob" class="job_details_container">
                     <div class="row">
