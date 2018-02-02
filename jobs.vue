@@ -7,8 +7,11 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="job_container" v-for="job in processedJobs">
-                    <img class="pull-left" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/935/original/icon_in.jpg?1403210088">
+                    <img class="pull-left" src="https://codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/jpeg/1517326611000/icon_in.jpg">
                     <!--<a href="/stores/{{store_detail_btn}}" class="promo_store_name">{{store_name}}</a>-->
+                    <router-link :to="{ name: 'storeDetails', params: { id: job.store.slug }}">
+                        <span class="job_store_name">{{ job.store.name }}</span>
+                    </router-link>
                     <div class="job_details">
                         <div class="row">
                             <div class="col-md-5">
