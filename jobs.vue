@@ -18,7 +18,7 @@
                                 <h3 class="job_name">{{job.name}}</h3>
                             </div>
                             <div class="col-md-4">
-                                <p class="no_margin read_more">{{job.job_type}}</p>
+                                <p class="read_more">{{job.job_type}}</p>
                             </div>
                             <div class="col-md-3">
                                 <!--<p class="no_margin read_more"><a href="/jobs/{{job.slug}}" class="no_margin read_more"> READ MORE</a></p>-->
