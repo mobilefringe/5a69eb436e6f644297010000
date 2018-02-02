@@ -17,7 +17,7 @@
                                     Telephone:<br />
                                     {{ currentJob.contact_phone }}
                                 </p>
-                                <p class="dates">{{ currentJob.message }}</p>
+                                <p v-if="currentJob.message" class="dates">{{ currentJob.message }}</p>
                             </div>
                         </div>
                         <div class="col-md-6">
