@@ -74,12 +74,39 @@
 				});
 				
 			},
+			watch: {
+                currentJob : function (){
+                    if(this.currentJob != null) {
+                        if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
+                            this.currentJob.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5a3967d46e6f6479bf130000/image/png/1516652189884/ES_logo_red2.png";
+                        }
+                        else if (this.currentJob.store == null || this.currentJob.store == undefined) {
+                            this.currentJob.store = {};
+                            this.currentJob.store.store_front_url_abs =  "//codecloud.cdn.speedyrails.net/sites/5a3967d46e6f6479bf130000/image/png/1516652189884/ES_logo_red2.png";
+                        }
+                    var vm = this;
+                    var temp_job = [];
+                    var current_id =_.toNumber(this.currentJob.id);
+                    _.forEach(this.currentJob.store.jobs, function(value, key) {
+                        if(_.toNumber(value) != current_id){
+                            var current_job = vm.findJobById(value);
+                            current_job.description_short = _.truncate(current_job.description, {'length': 70});
+                            temp_job.push(current_job);
+                        }
+                    });
+                        this.storeJobs = temp_job;
+                    }
+                }
+            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
                     'findJobBySlug'
-                ])
+                ]),
+                jobDetails(){
+                    
+                }
             },
             methods: {
 				// getStoreSlug() {
