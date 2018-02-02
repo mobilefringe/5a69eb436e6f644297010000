@@ -14,7 +14,7 @@
                         <div class="col-md-6">
                             <img class="pull-left" style="margin-right:10px" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/935/original/icon_in.jpg?1403210088">
                             <router-link :to="{ name: 'storeDetails', params: { id: currentJob.store.slug }}">
-                                <span class="promo_store_name">{{ currentJob.store.name }}</span>
+                                <span class="job_store_name">{{ currentJob.store.name }}</span>
                             </router-link>
                             <div class="job_details">
                                 <h3 class="job_name">{{ currentJob.name }}</h3>
