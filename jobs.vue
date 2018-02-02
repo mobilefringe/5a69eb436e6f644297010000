@@ -22,6 +22,9 @@
                             </div>
                             <div class="col-md-3">
                                 <!--<p class="no_margin read_more"><a href="/jobs/{{job.slug}}" class="no_margin read_more"> READ MORE</a></p>-->
+                                <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">
+                                    <p class="read_more">Read More</p>
+                                </router-link>
                             </div>
                         </div>
                     </div>
