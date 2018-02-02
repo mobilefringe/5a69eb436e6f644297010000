@@ -78,11 +78,10 @@
                 currentJob : function (){
                     if(this.currentJob != null) {
                         if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
-                            this.currentJob.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5a3967d46e6f6479bf130000/image/png/1516652189884/ES_logo_red2.png";
-                        }
-                        else if (this.currentJob.store == null || this.currentJob.store == undefined) {
+                            this.currentJob.store.store_front_url_abs = "http://placehold.it/400x400";
+                        } else if (this.currentJob.store == null || this.currentJob.store == undefined) {
                             this.currentJob.store = {};
-                            this.currentJob.store.store_front_url_abs =  "//codecloud.cdn.speedyrails.net/sites/5a3967d46e6f6479bf130000/image/png/1516652189884/ES_logo_red2.png";
+                            this.currentJob.store.store_front_url_abs =  "http://placehold.it/400x400";
                         }
                     var vm = this;
                     var temp_job = [];
