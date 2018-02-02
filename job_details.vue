@@ -6,7 +6,7 @@
                 <div v-if="currentJob" class="job_details_container">
                     <div class="row">
                         <div class="col-md-6">
-                            <img v-lazy="currentJob.store.store_front_url_abs" :alt="currentJob.store.name"/>
+                            <img v-lazy="currentJob.store.store_front_url_abs" :alt="currentJob.store.name" class="jobs_logo"/>
                         </div>
                         <div class="col-md-6">
                             <img class="pull-left" style="margin-right:10px" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/935/original/icon_in.jpg?1403210088">
