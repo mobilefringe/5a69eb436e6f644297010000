@@ -34,21 +34,13 @@
             template: template, // the variable template will be injected
             data: function () {
                 return {
-                    dataLoaded: false,
+                    dataLoaded: false
                 }
             },
             created() {
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                 });
-            },
-            watch: {
-                selected: function () {
-                    this.sortByDate();
-                },
-                currentDate: function () {
-                    this.sortByDate();
-                },
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -63,7 +55,7 @@
                         var today = moment.tz(this.timezone).format();
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
-                          showEvents.push(value);
+                            showEvents.push(value);
                         }
                     });
                     var sortedEvents = _.orderBy(showEvents, function (o) { return o.end_date })
