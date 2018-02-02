@@ -9,27 +9,6 @@
                             <img v-lazy="currentJob.store.store_front_url_abs" :alt="currentJob.store.name" class="jobs_logo"/>
                         </div>
                         <div class="col-md-6">
-                            <img class="pull-left" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/935/original/icon_in.jpg?1403210088">
-            <a href="/stores/{{store_detail_btn}}" class="promo_store_name">{{store_name}}</a>
-            <div class="job_details">
-                <h3 class="job_name">{{name}}</h3>
-                <p class="dates">{{dates}}</p>
-                <p class="dates">
-                    Telephone:<br />
-                    {{contact_phone}}
-                </p>
-                <p class="dates">{{message}}</p>
-            </div>
-            <div>{{{rich_description}}}</div>
-            <div class="text-center">
-                <a href="//www.facebook.com/sharer.php?u=https://pickeringtowncentre.com/jobs/{{slug}}" target="_blank">
-                        <img id="fb" class="hidden-phone" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/939/original/share_fb_normal.png?1403227481">
-                </a>
-                <a href="//twitter.com/share?text={{name}}&url=https://pickeringtowncentre.com/jobs/{{slug}}" target="_blank">
-                    <img id="twtr" class="promo_box_social hidden-phone" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/941/original/share_tweet_normal.png?1403227503">
-                </a>
-            </div>
-            
                             <img class="pull-left" style="margin-right:10px" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/935/original/icon_in.jpg?1403210088">
                             <router-link :to="{ name: 'storeDetails', params: { id: currentJob.store.slug }}">
                                 <span class="promo_store_name">{{ currentJob.store.name }}</span>
