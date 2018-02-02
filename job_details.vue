@@ -17,7 +17,7 @@
                                 <span class="job_store_name">{{ currentJob.store.name }}</span>
                             </router-link>
                             <div class="job_details">
-                                <h3 class="job_name">{{ currentJob.name }}</h3>
+                                <p class="job_name">{{ currentJob.name }}</p>
                                 <p class="job_date" v-if="isMultiDayEvent(currentJob)">
                                     {{ currentJob.start_date | moment("MMM D, YYYY", timezone)}} to {{ currentJob.end_date | moment("MMM D, YYYY", timezone)}}
                                 </p>
