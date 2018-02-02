@@ -13,7 +13,7 @@
                             <div class="job_details">
                                 <h3 class="job_name">{{ currentJob.name }}</h3>
                                 <p class="dates">{{dates}}</p>
-                                <p class="dates">
+                                <p v-if="currentJob.contact_phone" class="dates">
                                     Telephone:<br />
                                     {{ currentJob.contact_phone }}
                                 </p>
