@@ -32,7 +32,7 @@
         Vue.use(Meta);
         Vue.use(Lightbox);
         Vue.use(VueLazyload);
-        return Vue.component("events-component", {
+        return Vue.component("jobs-component", {
             template: template, // the variable template will be injected
             data: function () {
                 return {
