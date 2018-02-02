@@ -52,7 +52,6 @@
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-lazy-load", "vue-social-sharing"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VueLazyload, SocialSharing) {
         Vue.use(Meta);
-        Vue.use(Lightbox);
         Vue.use(VueLazyload);
         Vue.component('social-sharing', SocialSharing);
         return Vue.component("job-details-component", {
@@ -67,7 +66,6 @@
             created() {
 				this.$store.dispatch("getData", "jobs").then(response => {
 					this.currentJob = this.findJobBySlug(this.id);
-					console.log(this.currentJob)
 					if (this.currentJob === null || this.currentJob === undefined) {
 						this.$router.replace({ path: '/jobs' });
 					}
@@ -86,17 +84,6 @@
                             this.currentJob.store = {};
                             this.currentJob.store.store_front_url_abs =  "http://placehold.it/400x400";
                         }
-                    var vm = this;
-                    var temp_job = [];
-                    var current_id =_.toNumber(this.currentJob.id);
-                    _.forEach(this.currentJob.store.jobs, function(value, key) {
-                        if(_.toNumber(value) != current_id){
-                            var current_job = vm.findJobById(value);
-                            current_job.description_short = _.truncate(current_job.description, {'length': 70});
-                            temp_job.push(current_job);
-                        }
-                    });
-                        this.storeJobs = temp_job;
                     }
                 }
             },
@@ -105,18 +92,9 @@
                     'property',
                     'timezone',
                     'findJobBySlug'
-                ]),
-                jobDetails(){
-                    
-                }
+                ])
             },
             methods: {
-				// getStoreSlug() {
-				// 	if (this.currentEvent.eventable_type == "Store") {
-				// 		var store_slug = "/stores/" + this.currentEvent.store.slug
-				// 		return store_slug
-				// 	}
-				// },
 				isMultiDayEvent(currentEvent) {
 					var timezone = this.timezone
 					var start_date = moment(currentEvent.start_date).tz(timezone).format("MM-DD-YYYY")
