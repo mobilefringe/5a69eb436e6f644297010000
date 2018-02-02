@@ -19,7 +19,7 @@
                                     {{ currentJob.start_date | moment("MMM D, YYYY", timezone)}} to {{ currentJob.end_date | moment("MMM D, YYYY", timezone)}}
                                 </p>
                                 <p class="promo_date" v-else>{{ currentJob.start_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
-                                <p v-if="currentJob.contact_phone" class="dates">Telephone:<br />{{ currentJob.contact_phone }}</p>
+                                <p v-if="currentJob.contact_phone" class="dates">Telephone: {{ currentJob.contact_phone }}</p>
                                 <p v-if="currentJob.message" class="dates">{{ currentJob.message }}</p>
                             </div>
                             <div v-html="currentJob.description"></div>
