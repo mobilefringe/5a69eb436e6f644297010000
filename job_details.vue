@@ -4,38 +4,41 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div v-if="currentJob" class="job_details_container">
-                    <img class="pull-left" src="//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/jpeg/1517326611000/icon_in.jpg">
-                    <router-link :to="{ name: 'storeDetails', params: { id: currentJob.store.slug }}">
-                        <span class="promo_store_name">{{ currentJob.store.name }}</span>
-                    </router-link>
-                    <div class="job_details">
-                        <h3 class="job_name">{{ currentJob.name }}</h3>
-                        <p class="dates">{{dates}}</p>
-                        <p class="dates">
-                            Telephone:<br />
-                            {{ currentJob.contact_phone }}
-                        </p>
-                        <p class="dates">{{ currentJob.message }}</p>
-                    </div>
-                    <div v-html="currentJob.description" ></div>
-                    <div class="row"> 
-                        <div class="col-md-12">
-                            <social-sharing v-if="currentJob" :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="truncate(currentJob.body)" twitter-user="PickeringTC" :media="currentJob.image_url" inline-template>
-                                <div class="social_share">
-                                    <h5>Share</h5>
-                                    <network network="facebook">
-                                        <i class="fa fa-facebook-square"></i>
-                                    </network>
-                                    <network network="twitter">
-                                        <i class="fa fa-twitter-square"></i>
-                                    </network>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="pull-left" src="//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/jpeg/1517326611000/icon_in.jpg">
+                            <router-link :to="{ name: 'storeDetails', params: { id: currentJob.store.slug }}">
+                                <span class="promo_store_name">{{ currentJob.store.name }}</span>
+                            </router-link>
+                            <div class="job_details">
+                                <h3 class="job_name">{{ currentJob.name }}</h3>
+                                <p class="dates">{{dates}}</p>
+                                <p class="dates">
+                                    Telephone:<br />
+                                    {{ currentJob.contact_phone }}
+                                </p>
+                                <p class="dates">{{ currentJob.message }}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div v-html="currentJob.description" ></div>
+                            <div class="row"> 
+                                <div class="col-md-12">
+                                    <social-sharing v-if="currentJob" :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="truncate(currentJob.body)" twitter-user="PickeringTC" :media="currentJob.image_url" inline-template>
+                                        <div class="social_share">
+                                            <h5>Share</h5>
+                                            <network network="facebook">
+                                                <i class="fa fa-facebook-square"></i>
+                                            </network>
+                                            <network network="twitter">
+                                                <i class="fa fa-twitter-square"></i>
+                                            </network>
+                                        </div>
+                                    </social-sharing>
                                 </div>
-                            </social-sharing>
+                            </div>
                         </div>
                     </div>
-                    
-            
-                    
                 </div>
             </div>
         </transition>
