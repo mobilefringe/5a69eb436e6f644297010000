@@ -18,7 +18,7 @@
                                 <p class="no_margin read_more">{{job.job_type}}</p>
                             </div>
                             <div class="col-md-3">
-                                <p class="no_margin read_more"><a href="/jobs/{{job.slug}}" class="no_margin read_more"> READ MORE</a></p>
+                                <!--<p class="no_margin read_more"><a href="/jobs/{{job.slug}}" class="no_margin read_more"> READ MORE</a></p>-->
                             </div>
                         </div>
                     </div>
