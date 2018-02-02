@@ -60,6 +60,7 @@
             created() {
 				this.$store.dispatch("getData", "jobs").then(response => {
 					this.currentJob = this.findJobBySlug(this.id);
+					console.log(this.currentJob)
 					if (this.currentJob === null || this.currentJob === undefined) {
 						this.$router.replace({ path: '/jobs' });
 					}
@@ -67,7 +68,7 @@
 				}, error => {
 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
 				});
-				console.log(this.currentJob)
+				
 			},
             computed: {
                 ...Vuex.mapGetters([
