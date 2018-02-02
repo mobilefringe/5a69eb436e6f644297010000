@@ -42,6 +42,29 @@ define([], function () {
             ]
         },
         {
+            path: '/jobs',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('jobs'),
+                    meta: {
+                        pageName: 'Careers',
+                    },
+                    name: 'jobs'
+                },
+                {
+                    path: ':id',
+                    component: view('job_details'),
+                    meta: {
+                        pageName: 'Careers',
+                    },
+                    name: 'jobDetails',
+                    props: true
+                }
+            ]
+        },
+        {
             path: '/map',
             component: view('default'),
             children: [
