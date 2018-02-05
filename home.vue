@@ -85,7 +85,7 @@
                 //      }
                 //   }
        
-                    // return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
+                    return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 }
             },
             methods: {
