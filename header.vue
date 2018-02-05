@@ -10,9 +10,9 @@
                 </div>
                 <div class="col-md-9 hidden_phone">
                     <div class="language_select">
-                        <a v-on:click="changeLocale('fr-ca')">FR</a>
-                        <span> | </span>
                         <a v-on:click="changeLocale('en-ca')">EN</a>
+                        <span> | </span>
+                        <a v-on:click="changeLocale('fr-ca')">FR</a>
                         <!--v-if="locale === 'fr-ca'"-->
                     </div>
                     <div class="header_social">
