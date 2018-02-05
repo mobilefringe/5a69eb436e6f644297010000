@@ -33,7 +33,7 @@
                         fade: false,
                         infinite: true,
                         slidesToShow: 1,
-                        speed: 500
+                        speed: 1000
                     }
                 }
             },
