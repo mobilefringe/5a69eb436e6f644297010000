@@ -98,6 +98,10 @@
                             <input id="header_newsletter_submit" class="newsletter_btn" type="submit" :value='$t("header.newsletter-subscribe")' />
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row main_container">
+                <div class="col-md-12">
                     <nav id="primary_nav">
                         <ul>
                             <li class="menu_item">{{ $t("menu.store-directory") }}
