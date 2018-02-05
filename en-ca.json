@@ -1,8 +1,4 @@
 {
-    "message": {
-        "hello": "hello",
-        "date": "Date: {date}"
-    },
     "footer": {
         "menu-link1": "Link 1",
         "menu-link2": "Link 2",
