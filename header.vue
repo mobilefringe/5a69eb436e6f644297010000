@@ -81,6 +81,7 @@
                 <div class="col-md-9 hidden_phone">
                     <div class="">
                         <a v-on:click="changeLocale('fr-ca')">FR</a>
+                        <span> | </span>
                         <a v-on:click="changeLocale('en-ca')">EN</a>
                         <!--v-if="locale === 'fr-ca'"-->
                     </div>
