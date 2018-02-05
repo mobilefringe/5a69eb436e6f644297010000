@@ -79,7 +79,7 @@
                     <img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1470851965000/menu.png" class="open_menu" alt="open menu">
                 </div>
                 <div class="col-md-9 hidden_phone">
-                    <div class="top-bar-right">
+                    <div class="">
                         <a v-on:click="changeLocale('fr-ca')" v-if="locale === 'en-ca'">FR</a>
                         <a v-on:click="changeLocale('en-ca')" v-if="locale === 'fr-ca'">EN</a>
                     </div>
