@@ -27,13 +27,13 @@
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
-                        autoplaySpeed: 1000,
+                        autoplaySpeed: 6000,
                         cssEase: 'linear',
                         dots: true,
                         fade: false,
                         infinite: true,
                         slidesToShow: 1,
-                        speed: 1600
+                        speed: 500
                     }
                 }
             },
