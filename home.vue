@@ -80,7 +80,8 @@
                 },
                 featureItems() {
                     console.log(this.$store.state.feature_items)
-                    return this.$store.state.feature_items
+                    return _.slice(this.$store.state.feature_items, 0, 2);
+                    // return this.$store.state.feature_items
                 }
             },
             methods: {
