@@ -23,6 +23,8 @@
                                 </a>
                             </span>
                         </div>
+                    </div>
+                    <div class="header_newsletter">
                         <div class="header_newsletter_container">
                             <input id="header_newsletter" class="newsletter_input" type="text" :placeholder='$t("header.newsletter-join")' />
                             <input id="header_newsletter_submit" class="newsletter_btn" type="submit" :value='$t("header.newsletter-subscribe")' />
