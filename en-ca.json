@@ -5,6 +5,8 @@
         "menu-link3": "Three",
         "menu-link4": "Four",
         "menu-link5": "Five",
-        "menu-link6": "Six"
+        "menu-link6": "Six",
+        "powered-by": "Powered By ",
+        "privacy-policy": "Privacy Policy"
     }
 }
