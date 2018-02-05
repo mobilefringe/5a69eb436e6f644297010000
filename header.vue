@@ -127,6 +127,13 @@
                                     </router-link>
                                 </ul>
                             </li>
+                            <!--<li class="menu_item">Menu 3-->
+                            <!--    <ul>-->
+                            <!--        <li class="submenu_item"><a href="#">Sub Menu 1</a></li>-->
+                            <!--        <li class="submenu_item"><a href="#">Sub Menu 2</a></li>-->
+                            <!--        <li class="submenu_item"><a href="#">Sub Menu 3</a></li>-->
+                            <!--    </ul>-->
+                            <!--</li>-->
                         </ul>
                     </nav>
                 </div>
@@ -146,11 +153,26 @@
             },
             props:['social_media'],
             watch: {
-                
+                show_menu: function() {
+                    if(this.show_menu == true){
+                        document.body.classList.add("no-scroll");
+                    } else if (this.show_menu == false) {
+                        document.body.classList.remove("no-scroll");
+                    }
+                },
+                show_search: function(){
+                    if(this.show_search == true){
+                        document.body.classList.add("no-scroll");
+                    } else if (this.show_search == false) {
+                        document.body.classList.remove("no-scroll");
+                    } 
+                }
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
+                    'property',
+                    'processedStores',
+                    'route'
                 ]),
                 locale: {
                     get () {
