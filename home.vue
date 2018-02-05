@@ -3,14 +3,11 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div class="home-banner-container" v-if="dataLoaded" v-cloak>
-                <!-- DYNAMIC BANNERS -->
                 <slick ref="slick" :options="slickOptions">
                     <div v-for="banner in homeBanners" v-if="homeBanners">
-                        <!--<div class="columns">-->
-                            <!--<router-link :to="banner.url" class="">-->
-                                <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
-                            <!--</router-link>-->
-                        <!--</div>-->
+                        <!--<router-link :to="banner.url" class="">-->
+                            <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+                        <!--</router-link>-->
                     </div>
                 </slick>
                 
