@@ -80,8 +80,9 @@
                 </div>
                 <div class="col-md-9 hidden_phone">
                     <div class="">
-                        <a v-on:click="changeLocale('fr-ca')" v-if="locale === 'en-ca'">FR</a>
-                        <a v-on:click="changeLocale('en-ca')" v-if="locale === 'fr-ca'">EN</a>
+                        <a v-on:click="changeLocale('fr-ca')">FR</a>
+                        <a v-on:click="changeLocale('en-ca')">EN</a>
+                        <!--v-if="locale === 'fr-ca'"-->
                     </div>
                     <div class="header_social">
                         <div class="social_icons">
