@@ -141,10 +141,10 @@
                                     <router-link tag="li" to="/" class="submenu_item" exact>
                                         <a>{{ $t("menu.about") }}</a>
                                     </router-link>
-                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                    <router-link tag="li" to="/jobs" class="submenu_item" exact>
                                         <a>{{ $t("menu.jobs") }}</a>
                                     </router-link>
-                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                    <router-link tag="li" to="/hours" class="submenu_item" exact>
                                         <a>{{ $t("menu.hours") }}</a>
                                     </router-link>
                                     <router-link tag="li" to="/" class="submenu_item" exact>
