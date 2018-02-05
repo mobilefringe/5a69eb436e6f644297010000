@@ -67,7 +67,7 @@
                     return banners
                 },
                 featureItems() {
-                    console.log(this.feature_items)
+                    console.log(this.$store.state.feature_items)
                 }
             },
             methods: {
