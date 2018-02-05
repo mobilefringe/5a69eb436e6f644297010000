@@ -10,12 +10,7 @@
                 </div>
                 <div class="col-md-9 hidden_phone">
                     <div class="">
-                        <div class="language_select">
-                            <a v-on:click="changeLocale('en-ca')">EN</a>
-                            <span> | </span>
-                            <a v-on:click="changeLocale('fr-ca')">FR</a>
-                            <!--v-if="locale === 'fr-ca'"-->
-                        </div>
+                        
                         <div class="header_social">
                             <div class="social_icons">
                                 <span v-for="item in social_media">
@@ -24,6 +19,12 @@
                                     </a>
                                 </span>
                             </div>
+                        </div>
+                        <div class="language_select">
+                            <a v-on:click="changeLocale('en-ca')">EN</a>
+                            <span> | </span>
+                            <a v-on:click="changeLocale('fr-ca')">FR</a>
+                            <!--v-if="locale === 'fr-ca'"-->
                         </div>
                     </div>
                     <div class="header_newsletter">
