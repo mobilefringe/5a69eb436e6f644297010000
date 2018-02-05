@@ -1,4 +1,11 @@
 {
+    "header": {
+        "newsletter-join": "Join Our Newsletter!",
+        "subscribe-btn": "Subscribe"
+    },
+    "hours": {
+        
+    },
     "footer": {
         "menu-link1": "One",
         "menu-link2": "Two",
