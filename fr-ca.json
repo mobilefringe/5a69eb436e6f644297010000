@@ -3,6 +3,20 @@
         "newsletter-join": "Rejoignez notre newsletter!",
         "newsletter-subscribe": "Souscrire"
     },
+    "menu": {
+        "store-directory": "Répertoire de magasins",
+        "centre-map": "Carte du Centre",
+        "events": "Événements",
+        "promotions": "Promotions",
+        "leasing": "Location",
+        "photos": "Photos",
+        "contact": "Contactez nous",
+        "find": "Trouve nous",
+        "about": "À propos de nous",
+        "jobs": "Emplois",
+        "hours": "Heures de magasinage",
+        "community": "Communauté"
+    },
     "hours": {
         "hours-title": "Heures",
         "hours-mon": "Lundi - Vendredi",
