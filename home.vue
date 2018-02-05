@@ -73,6 +73,7 @@
                 },
                 featureItems() {
                     console.log(this.$store.state.feature_items)
+                    return this.$store.state.feature_items
                 }
             },
             methods: {
