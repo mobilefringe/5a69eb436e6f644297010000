@@ -29,8 +29,8 @@
                         autoplay: true,
                         autoplaySpeed: 6000,
                         cssEase: 'linear',
-                        dots: false,
-                        fade: true,
+                        dots: true,
+                        fade: false,
                         infinite: true,
                         slidesToShow: 1,
                         speed: 1600
