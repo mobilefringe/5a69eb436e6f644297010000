@@ -64,6 +64,9 @@
                         }
                     });
                     return banners
+                },
+                featureItems() {
+                    console.log(this.feature_items)
                 }
             },
             methods: {
