@@ -26,7 +26,6 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    
                     slickOptions: {
                         arrows: false,
                         autoplay: true,
@@ -68,23 +67,23 @@
                         }
                     });
                     
-                    console.log(banners)
-                    if(val.url == "" || val.url === null){
-                        val.css = "style=cursor:default;";
-                        val.noLink = "return false";
-                    }
-                   if (start <= today){
-                     if (val.end_date){
-                         end = new Date (val.end_date);
-                         end.setDate(end.getDate() + 1);
-                         if (end >= today){
-                           item_list.push(val);  
-                         }
+                //     console.log(banners)
+                //     if(val.url == "" || val.url === null){
+                //         val.css = "style=cursor:default;";
+                //         val.noLink = "return false";
+                //     }
+                //   if (start <= today){
+                //      if (val.end_date){
+                //          end = new Date (val.end_date);
+                //          end.setDate(end.getDate() + 1);
+                //          if (end >= today){
+                //           item_list.push(val);  
+                //          }
                          
-                     } else {
-                         item_list.push(val);
-                     }
-                   }
+                //      } else {
+                //          item_list.push(val);
+                //      }
+                //   }
        
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 }
