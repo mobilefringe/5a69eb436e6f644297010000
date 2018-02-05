@@ -46,7 +46,8 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
+                    'property',
+                    'banners'
                 ]),
                 homeBanners() {
                     console.log(this.$store.state.banners)
