@@ -1,4 +1,12 @@
 {
+    "header": {
+        "newsletter-join": "Join Our Newsletter!",
+        "newsletter-subscribe": "Subscribe"
+    },
+    "hours": {
+        "hours-title": "Heures",
+        "stores-title": "Magasins"
+    },
     "footer": {
         "menu-link1": "Un",
         "menu-link2": "Deux",
