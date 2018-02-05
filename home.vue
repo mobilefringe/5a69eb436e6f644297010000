@@ -8,6 +8,7 @@
                         <router-link v-if="banner.url" :to="banner.url" class="">
                             <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
                         </router-link>
+                        <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
                     </div>
                 </slick>
                 
