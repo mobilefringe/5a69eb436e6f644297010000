@@ -13,6 +13,7 @@
                 </slick>
                 
             </div>
+            <div v-if="featureItems"></div>
         </transition>
     </div>
 </template>
