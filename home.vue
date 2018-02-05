@@ -11,9 +11,12 @@
                         <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
                     </div>
                 </slick>
-                
             </div>
-            <div v-if="featureItems"></div>
+            <div v-if="featureItems" class="row">
+                <div v-for="item in featureItems" class="col-md-6">
+                    
+                </div>
+            </div>
         </transition>
     </div>
 </template>
