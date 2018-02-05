@@ -9,19 +9,21 @@
                     <!--<img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1470851965000/menu.png" class="open_menu" alt="open menu">-->
                 </div>
                 <div class="col-md-9 hidden_phone">
-                    <div class="language_select">
-                        <a v-on:click="changeLocale('en-ca')">EN</a>
-                        <span> | </span>
-                        <a v-on:click="changeLocale('fr-ca')">FR</a>
-                        <!--v-if="locale === 'fr-ca'"-->
-                    </div>
-                    <div class="header_social">
-                        <div class="social_icons">
-                            <span v-for="item in social_media">
-                                <a :href="item.url" target="_blank">
-                                    <i :class="item.iconClass" aria-hidden="true"></i>
-                                </a>
-                            </span>
+                    <div class="">
+                        <div class="language_select">
+                            <a v-on:click="changeLocale('en-ca')">EN</a>
+                            <span> | </span>
+                            <a v-on:click="changeLocale('fr-ca')">FR</a>
+                            <!--v-if="locale === 'fr-ca'"-->
+                        </div>
+                        <div class="header_social">
+                            <div class="social_icons">
+                                <span v-for="item in social_media">
+                                    <a :href="item.url" target="_blank">
+                                        <i :class="item.iconClass" aria-hidden="true"></i>
+                                    </a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div class="header_newsletter">
