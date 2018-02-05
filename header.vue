@@ -150,8 +150,7 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property',
-                    'route'
+                    'property'
                 ]),
                 locale: {
                     get () {
