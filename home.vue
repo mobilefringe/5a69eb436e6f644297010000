@@ -67,7 +67,7 @@
                         }
                     });
                     
-                //     console.log(banners)
+                    console.log(banners)
                 //     if(val.url == "" || val.url === null){
                 //         val.css = "style=cursor:default;";
                 //         val.noLink = "return false";
