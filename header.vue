@@ -143,6 +143,9 @@
                                     <router-link tag="li" to="/" class="submenu_item" exact>
                                         <a>{{ $t("menu.hours") }}</a>
                                     </router-link>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>{{ $t("menu.community") }}</a>
+                                    </router-link>
                                 </ul>
                             </li>
                         </ul>
