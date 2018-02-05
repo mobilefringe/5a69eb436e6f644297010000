@@ -27,7 +27,7 @@
                     slickOptions: {
                         arrows: true,
                         autoplay: true,
-                        autoplaySpeed: 6000,
+                        autoplaySpeed: 1000,
                         cssEase: 'linear',
                         dots: true,
                         fade: false,
