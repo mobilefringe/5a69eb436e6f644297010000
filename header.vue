@@ -100,13 +100,13 @@
                     </div>
                     <nav id="primary_nav">
                         <ul>
-                            <li class="menu_item">Shopping
+                            <li class="menu_item">{{ $t("menu.store-directory") }}
                                 <ul>
                                     <router-link tag="li" to="/stores" class="submenu_item" exact>
-                                        <a>Stores</a>
+                                        <a>{{ $t("menu.store-directory") }}</a>
                                     </router-link>
                                     <router-link tag="li" to="/hours" class="submenu_item" exact>
-                                        <a>Hours</a>
+                                        <a>{{ $t("menu.hours") }}</a>
                                     </router-link>
                                 </ul>
                             </li>
