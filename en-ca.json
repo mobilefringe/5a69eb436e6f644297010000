@@ -3,6 +3,20 @@
         "newsletter-join": "Join Our Newsletter!",
         "newsletter-subscribe": "Subscribe"
     },
+    "menu": {
+        "store-directory": "Store Directory",
+        "centre-map": "Centre Map",
+        "events": "Events",
+        "promotions": "Promotions",
+        "leasing": "Leasing",
+        "photos": "Photos",
+        "contact": "Contact Us",
+        "find": "Find Us",
+        "about": "About Us",
+        "jobs": "Jobs",
+        "hours": "Shopping Hours",
+        "community": "Community"
+    },
     "hours": {
         "hours-title": "Hours",
         "hours-mon": "Monday - Friday",
