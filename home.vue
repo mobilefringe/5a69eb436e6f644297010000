@@ -20,7 +20,7 @@
                             <p>{{item.description}}</p>
                         </div> 
                         <div class="">
-                            {{item.image_url}}
+                            <img :src="item.image_url" />
                         </div>
                     </div>
                 </div>
