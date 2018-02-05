@@ -40,6 +40,7 @@
             created(){
                 this.loadData().then(response => {
                     this.dataLoaded = true;  
+                    console.log("feature_items")
                 });
             },
             computed: {
