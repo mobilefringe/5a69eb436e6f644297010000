@@ -173,7 +173,15 @@
                     'property',
                     'processedStores',
                     'route'
-                ])
+                ]),
+                locale: {
+                    get () {
+                        return this.$store.state.locale
+                    },
+                    set (value) {
+                        this.$store.commit('SET_LOCALE', { lang: value })
+                    }
+                }
             },
             methods: {
                 changeLocale: function(val) {
