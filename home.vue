@@ -5,9 +5,9 @@
             <div class="home-banner-container" v-if="dataLoaded" v-cloak>
                 <slick ref="slick" :options="slickOptions">
                     <div v-if="homeBanners" v-for="banner in homeBanners">
-                        <!--<router-link :to="banner.url" class="">-->
+                        <router-link v-if="banner.url" :to="banner.url" class="">
                             <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
-                        <!--</router-link>-->
+                        </router-link>
                     </div>
                 </slick>
                 
@@ -46,8 +46,6 @@
                     'property'
                 ]),
                 homeBanners() {
-                    // console.log(this.$store.state.banners)
-                
                     var banners = [];
                     _.forEach(this.$store.state.banners, function (value, key) {
                         var today = new Date();
