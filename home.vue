@@ -2,22 +2,24 @@
     <div><!-- without an outer container div this component template will not render -->
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
-            <div class="home-banner-container" v-if="dataLoaded" v-cloak>
-                <slick ref="slick" :options="slickOptions">
-                    <div v-if="homeBanners" v-for="banner in homeBanners">
-                        <router-link v-if="banner.url" :to="banner.url" class="">
-                            <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
-                        </router-link>
-                        <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+            <div v-if="dataLoaded" v-cloak>
+                <div class="home-banner-container" >
+                    <slick ref="slick" :options="slickOptions">
+                        <div v-if="homeBanners" v-for="banner in homeBanners">
+                            <router-link v-if="banner.url" :to="banner.url" class="">
+                                <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+                            </router-link>
+                            <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+                        </div>
+                    </slick>
+                </div>
+                <div v-if="featureItems" class="row">
+                    <div v-for="item in featureItems" class="col-md-6">
+                        <div class="">
+                            <h2>{{item.name}}</h2>
+                            <p>{{item.description}}</p>
+                        </div>    
                     </div>
-                </slick>
-            </div>
-            <div v-if="featureItems" class="row">
-                <div v-for="item in featureItems" class="col-md-6">
-                    <div class="">
-                        <h2>{{item.name}}</h2>
-                        <p>{{item.description}}</p>
-                    </div>    
                 </div>
             </div>
         </transition>
