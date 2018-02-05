@@ -37,7 +37,7 @@
                             <li class="menu_item">{{ $t("menu.store-directory") }}
                                 <ul>
                                     <router-link tag="li" to="/stores" class="submenu_item" exact>
-                                        <a>{{ $t("menu.store-directory") }}</a>
+                                        <a>{{ $t("menu.stores") }}</a>
                                     </router-link>
                                     <router-link tag="li" to="/map" class="submenu_item" exact>
                                         <a>{{ $t("menu.centre-map") }}</a>
