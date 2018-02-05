@@ -62,10 +62,7 @@
                             }
                         }
                     });
-                    
-                    console.log(banners)
                     return banners
-                    // return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 }
             },
             methods: {
