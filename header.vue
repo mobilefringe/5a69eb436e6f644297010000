@@ -1,7 +1,7 @@
 <template>
     <header>
-        <section id="header" class="header">
-            <div class="row main_container logo_container">
+        <section id="header" class="header main_container">
+            <div class="row logo_container">
                 <div class="col-md-3 mobile_text_center">
                     <a href="/">
                         <img alt="Property Logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1469552090000/PTC-Logo-x2.png">
@@ -30,62 +30,60 @@
                     </div>
                 </div>
             </div>
-            <div class="main_container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <nav id="primary_nav">
-                            <ul>
-                                <li class="menu_item">{{ $t("menu.store-directory") }}
-                                    <ul>
-                                        <router-link tag="li" to="/stores" class="submenu_item" exact>
-                                            <a>{{ $t("menu.store-directory") }}</a>
-                                        </router-link>
-                                        <router-link tag="li" to="/map" class="submenu_item" exact>
-                                            <a>{{ $t("menu.centre-map") }}</a>
-                                        </router-link>
-                                    </ul>
-                                </li>
-                                <router-link tag="li" to="/events" class="menu_item" exact>
-                                    {{ $t("menu.events") }}
-                                </router-link>
-                                <router-link tag="li" to="/promotions" class="menu_item" exact>
-                                    {{ $t("menu.promotions") }}
-                                </router-link>
-                                <li class="menu_item">{{ $t("menu.leasing") }}
-                                    <ul>
-                                        <router-link tag="li" to="/" class="submenu_item" exact>
-                                            <a>{{ $t("menu.leasing") }}</a>
-                                        </router-link>
-                                        <router-link tag="li" to="/" class="submenu_item" exact>
-                                            <a>{{ $t("menu.photos") }}</a>
-                                        </router-link>
-                                    </ul>
-                                </li>
-                                <li class="menu_item">{{ $t("menu.contact") }}
-                                    <ul>
-                                        <router-link tag="li" to="/" class="submenu_item" exact>
-                                            <a>{{ $t("menu.contact") }}</a>
-                                        </router-link>
-                                        <router-link tag="li" to="/" class="submenu_item" exact>
-                                            <a>{{ $t("menu.find") }}</a>
-                                        </router-link>
-                                        <router-link tag="li" to="/" class="submenu_item" exact>
-                                            <a>{{ $t("menu.about") }}</a>
-                                        </router-link>
-                                        <router-link tag="li" to="/jobs" class="submenu_item" exact>
-                                            <a>{{ $t("menu.jobs") }}</a>
-                                        </router-link>
-                                        <router-link tag="li" to="/hours" class="submenu_item" exact>
-                                            <a>{{ $t("menu.hours") }}</a>
-                                        </router-link>
-                                        <router-link tag="li" to="/" class="submenu_item" exact>
-                                            <a>{{ $t("menu.community") }}</a>
-                                        </router-link>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <nav id="primary_nav">
+                        <ul>
+                            <li class="menu_item">{{ $t("menu.store-directory") }}
+                                <ul>
+                                    <router-link tag="li" to="/stores" class="submenu_item" exact>
+                                        <a>{{ $t("menu.store-directory") }}</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/map" class="submenu_item" exact>
+                                        <a>{{ $t("menu.centre-map") }}</a>
+                                    </router-link>
+                                </ul>
+                            </li>
+                            <router-link tag="li" to="/events" class="menu_item" exact>
+                                {{ $t("menu.events") }}
+                            </router-link>
+                            <router-link tag="li" to="/promotions" class="menu_item" exact>
+                                {{ $t("menu.promotions") }}
+                            </router-link>
+                            <li class="menu_item">{{ $t("menu.leasing") }}
+                                <ul>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>{{ $t("menu.leasing") }}</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>{{ $t("menu.photos") }}</a>
+                                    </router-link>
+                                </ul>
+                            </li>
+                            <li class="menu_item">{{ $t("menu.contact") }}
+                                <ul>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>{{ $t("menu.contact") }}</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>{{ $t("menu.find") }}</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>{{ $t("menu.about") }}</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/jobs" class="submenu_item" exact>
+                                        <a>{{ $t("menu.jobs") }}</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/hours" class="submenu_item" exact>
+                                        <a>{{ $t("menu.hours") }}</a>
+                                    </router-link>
+                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <a>{{ $t("menu.community") }}</a>
+                                    </router-link>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>
