@@ -18,7 +18,10 @@
                         <div class="">
                             <h2>{{item.name}}</h2>
                             <p>{{item.description}}</p>
-                        </div>    
+                        </div> 
+                        <div class="">
+                            {{item.image_url}}
+                        </div>
                     </div>
                 </div>
             </div>
