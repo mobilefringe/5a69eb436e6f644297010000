@@ -15,7 +15,7 @@
                 </div>
                 <div class="main_container">
                     <div v-if="featureItems" class="row">
-                        <div v-for="item in featureItems" class="col-md-6">
+                        <div v-for="item in featureItems" class="col-md-6 feature_item">
                             <div class="">
                                 <h2>{{item.name}}</h2>
                                 <p>{{item.description}}</p>
