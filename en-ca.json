@@ -5,6 +5,9 @@
     },
     "hours": {
         "hours-title": "Hours",
+        "hours-mon": "Monday - Friday",
+        "hours-sat": "Saturday",
+        "hours-sun": "Sunday",
         "stores-title": "Stores"
     },
     "footer": {
