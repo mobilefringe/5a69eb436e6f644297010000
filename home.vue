@@ -49,10 +49,10 @@
                     'property'
                 ]),
                 homeBanners() {
-                    console.log(this.$store.state.banners)
+                    // console.log(this.$store.state.banners)
                 
                     var banners = [];
-                    _.forEach(this.banners, function (value, key) {
+                    _.forEach(this.$store.state.banners, function (value, key) {
                         var today = moment();
                         var start = moment(value.start_date);
                         if (start <= today){
