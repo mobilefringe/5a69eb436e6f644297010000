@@ -25,7 +25,7 @@
                 return {
                     dataLoaded: false,
                     slickOptions: {
-                        arrows: false,
+                        arrows: true,
                         autoplay: true,
                         autoplaySpeed: 6000,
                         cssEase: 'linear',
