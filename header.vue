@@ -4,9 +4,9 @@
             <div class="row main_container logo_container">
                 <div class="col-md-3 mobile_text_center">
                     <a href="/">
-                        <img alt="logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1469552090000/PTC-Logo-x2.png">
+                        <img alt="Property Logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1469552090000/PTC-Logo-x2.png">
                     </a>
-                    <img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1470851965000/menu.png" class="open_menu" alt="open menu">
+                    <!--<img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1470851965000/menu.png" class="open_menu" alt="open menu">-->
                 </div>
                 <div class="col-md-9 hidden_phone">
                     <div class="language_select">
