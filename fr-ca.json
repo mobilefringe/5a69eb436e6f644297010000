@@ -4,7 +4,8 @@
         "newsletter-subscribe": "Souscrire"
     },
     "menu": {
-        "store-directory": "Répertoire de magasins",
+        "store-directory": "Commercial",
+        "stores": "Magasins",
         "centre-map": "Carte du Centre",
         "events": "Événements",
         "promotions": "Promotions",
