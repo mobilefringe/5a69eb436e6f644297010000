@@ -1,5 +1,5 @@
 <template>
-    <header :class="{ home: route.path === '/'}">
+    <header>
         <section id="header" class="header">
             <div class="mobile_menu hidden_now">
                 <i class="fa fa-close close_menu"></i>
