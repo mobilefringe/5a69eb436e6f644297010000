@@ -10,7 +10,7 @@
                     <div class="col-md-9">
                         <div class="row">
                             <form class="form-horizontal" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
-                                <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('name')}">
+                                <div class="col-xs-12" :class="{'has-error': errors.has('name')}">
                                     <label for="name">Name</label>
                                     <input v-model="form_data.name" v-validate="'required|alpha_spaces'" class="form-control" :class="{'input': true}" name="name" type="text" data-vv-delay="1000">
                                     <span v-show="errors.has('name')" class="form-control-feedback">{{ errors.first('name') }}</span>
@@ -25,7 +25,7 @@
                                     <input v-model="form_data.phone" v-validate="'required|alpha_dash'" class="form-control" :class="{'input': true}" name="phone" type="phone" data-vv-delay="1000">
                                     <span v-show="errors.has('phone')" class="form-control-feedback">{{ errors.first('phone') }}</span>
                                 </div>
-                                <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('subject')}">
+                                <div class="col-xs-12" :class="{'has-error': errors.has('subject')}">
                                     <label for="subject">Subject</label>
                                     <input v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" data-vv-delay="1000">
                                     <span v-show="errors.has('subject')" class="form-control-feedback">{{ errors.first('subject') }}</span>
