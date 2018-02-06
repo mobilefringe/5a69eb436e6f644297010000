@@ -31,9 +31,12 @@
                     'property',
                     'timezone',
                     'repos',
-                    'getReposByName'
+                    'findRepoByName'
                     
-                ])
+                ]),
+                images() {
+                    return this.findRepoByName("photos").images
+                },
             },
             methods: {
                 loadData: async function () {
