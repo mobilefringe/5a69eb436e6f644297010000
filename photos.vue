@@ -35,6 +35,7 @@
                     
                 ]),
                 images() {
+                    console.log(this.findRepoByName("photos").images)
                     return this.findRepoByName("photos").images
                 },
             },
