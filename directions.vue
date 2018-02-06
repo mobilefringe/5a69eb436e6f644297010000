@@ -6,7 +6,7 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <iframe src="https://www.google.com/maps/place/Milton+Mall" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>    
+                <iframe class="hidden-xs" src="https://maps.google.nl/maps?q={{name}} {{address1}} {{city}} {{Country}} {{province_state}} {{postal_code}}&amp;hl=en&amp;ie=UTF8&amp;t=v&amp;hnear={{name}} {{address1}} {{city}} {{Country}} {{province_state}} {{postal_code}}&amp;z=13&amp;output=embed" width="100%" height="405" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </transition>
     </div>
