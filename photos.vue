@@ -7,7 +7,7 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
-                    <div v-for="image in images" class="col-md-6 photo-container">
+                    <div v-for="image in images" class="col-md-6 leasing_photo_container">
                         <a :href="image.image_url" :data-lightbox="image.name">
                             <div class="leasing_img" v-lazy:background-image="image.image_url"></div>
                             <!--<img v-lazy="image.image_url" :alt="image.name"/>-->
