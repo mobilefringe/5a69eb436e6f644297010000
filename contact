@@ -68,7 +68,7 @@
     define(["Vue", "vuex", "vue-meta", "vee-validate"], function (Vue, Vuex, Meta, VeeValidate) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
-        return Vue.component("visit-component", {
+        return Vue.component("contact-component", {
             template: template, // the variable template will be injected
             data: function data() {
                 return {
