@@ -6,7 +6,7 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                    
+                <iframe src="https://www.google.com/maps/place/MiltonMall" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>    
             </div>
         </transition>
     </div>
@@ -15,7 +15,7 @@
 <script>
 	define(["Vue", "vuex", "vue-meta"], function(Vue, Vuex, Meta) {
         Vue.use(Meta);
-		return Vue.component("events-component", {
+		return Vue.component("directions-component", {
             template: template, // the variable template will be injected
             data: function () {
                 return {
