@@ -41,7 +41,20 @@
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
+                },
+                getPropertyAddress() {
+                    return property.name property.address1 property.city property.country property.province_state property.postal_code
                 }
+				isMultiDayEvent(currentEvent) {
+					var timezone = this.timezone
+					var start_date = moment(currentEvent.start_date).tz(timezone).format("MM-DD-YYYY")
+					var end_date = moment(currentEvent.end_date).tz(timezone).format("MM-DD-YYYY")
+					if (start_date === end_date) {
+						return false
+					} else {
+						return true
+					}
+				},
             }
         });
 	});
