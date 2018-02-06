@@ -55,17 +55,17 @@
                                     <router-link tag="li" to="/" class="submenu_item" exact>
                                         <a>{{ $t("menu.leasing") }}</a>
                                     </router-link>
-                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                    <router-link tag="li" to="/photos" class="submenu_item" exact>
                                         <a>{{ $t("menu.photos") }}</a>
                                     </router-link>
                                 </ul>
                             </li>
                             <li class="menu_item">{{ $t("menu.contact") }}
                                 <ul>
-                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                    <router-link tag="li" to="/contact-us" class="submenu_item" exact>
                                         <a>{{ $t("menu.contact") }}</a>
                                     </router-link>
-                                    <router-link tag="li" to="/" class="submenu_item" exact>
+                                    <router-link tag="li" to="/directions" class="submenu_item" exact>
                                         <a>{{ $t("menu.find") }}</a>
                                     </router-link>
                                     <router-link tag="li" to="/" class="submenu_item" exact>
