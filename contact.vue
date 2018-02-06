@@ -36,7 +36,7 @@
                                     <span v-show="errors.has('message')" class="form-control-feedback">{{ errors.first('message') }}</span>
                                 </div>
                                 <div class="col-xs-12">
-                                    <button class="submit button button--quidel button--round-s" type="submit" :disabled="formSuccess">
+                                    <button class="submit animated_btn" type="submit" :disabled="formSuccess">
                                         Send <i class="fa fa-angle-right" aria-hidden="true"></i>
                                     </button>
                                 </div>
