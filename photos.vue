@@ -14,7 +14,7 @@
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
         Vue.use(Meta);
-        return Vue.component("jobs-component", {
+        return Vue.component("photos-component", {
             template: template, // the variable template will be injected
             data: function () {
                 return {
