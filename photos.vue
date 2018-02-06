@@ -19,8 +19,10 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
+    define(["Vue", "vuex", "vue-meta", "lightbox", "vue-lazy-load"], function(Vue, Vuex, Meta, Lightbox, VueLazyload) {
         Vue.use(Meta);
+        Vue.use(Lightbox);
+        Vue.use(VueLazyload);
         return Vue.component("photos-component", {
             template: template, // the variable template will be injected
             data: function () {
