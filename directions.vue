@@ -26,6 +26,7 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                 });
+                console.log(this.property)
             },
             computed: {
                 ...Vuex.mapGetters([
