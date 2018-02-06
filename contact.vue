@@ -7,58 +7,60 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
-                    
-                    <form class="form-horizontal" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
-                        <div class="form-group ">
-                            <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('name')}">
-                                <label for="name">Name</label>
-                                <input v-model="form_data.name" v-validate="'required|alpha_spaces'" class="form-control" :class="{'input': true}" name="name" type="text" data-vv-delay="1000">
-                                <span v-show="errors.has('name')" class="form-control-feedback">{{ errors.first('name') }}</span>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <form class="form-horizontal" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
+                                <div class="form-group ">
+                                    <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('name')}">
+                                        <label for="name">Name</label>
+                                        <input v-model="form_data.name" v-validate="'required|alpha_spaces'" class="form-control" :class="{'input': true}" name="name" type="text" data-vv-delay="1000">
+                                        <span v-show="errors.has('name')" class="form-control-feedback">{{ errors.first('name') }}</span>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('email')}">
+                                        <label for="email">Email</label>
+                                        <input v-model="form_data.email" v-validate="'required|email'" class="form-control" :class="{'input': true}" name="email" type="email" data-vv-delay="1000">
+                                        <span v-show="errors.has('email')" class="form-control-feedback">{{ errors.first('email') }}</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('phone')}">
+                                        <label for="phone">Phone</label>
+                                        <input v-model="form_data.phone" v-validate="'required|alpha_dash'" class="form-control" :class="{'input': true}" name="phone" type="phone" data-vv-delay="1000">
+                                        <span v-show="errors.has('phone')" class="form-control-feedback">{{ errors.first('phone') }}</span>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('subject')}">
+                                        <label for="subject">Subject</label>
+                                        <input v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" data-vv-delay="1000">
+                                        <span v-show="errors.has('subject')" class="form-control-feedback">{{ errors.first('subject') }}</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12" :class="{'has-error': errors.has('message')}">
+                                        <label for="message">Message</label>
+                                        <input v-model="form_data.message" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="message" type="text" data-vv-delay="1000">
+                                        <span v-show="errors.has('message')" class="form-control-feedback">{{ errors.first('message') }}</span>
+                                    </div>
+                                </div>
+                                <div class="form-group account-btn text-left m-t-10">
+                                    <div class="col-xs-12">
+                                        <button class="submit" type="submit" :disabled="formSuccess">
+                                            Send <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                <span class="sr-only">Success</span>
+                                Thank you for contacting us. A member from our team will contact you shortly.
                             </div>
-                            <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('email')}">
-                                <label for="email">Email</label>
-                                <input v-model="form_data.email" v-validate="'required|email'" class="form-control" :class="{'input': true}" name="email" type="email" data-vv-delay="1000">
-                                <span v-show="errors.has('email')" class="form-control-feedback">{{ errors.first('email') }}</span>
-                            </div>
+                            <div id="send_contact_error" class="alert alert-danger" role="alert" v-show="formError">
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                <span class="sr-only">Error:</span>
+                                There was an error when trying to submit your request. Please try again later.
+                            </div>    
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('phone')}">
-                                <label for="phone">Phone</label>
-                                <input v-model="form_data.phone" v-validate="'required|alpha_dash'" class="form-control" :class="{'input': true}" name="phone" type="phone" data-vv-delay="1000">
-                                <span v-show="errors.has('phone')" class="form-control-feedback">{{ errors.first('phone') }}</span>
-                            </div>
-                            <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('subject')}">
-                                <label for="subject">Subject</label>
-                                <input v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" data-vv-delay="1000">
-                                <span v-show="errors.has('subject')" class="form-control-feedback">{{ errors.first('subject') }}</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-xs-12" :class="{'has-error': errors.has('message')}">
-                                <label for="message">Message</label>
-                                <input v-model="form_data.message" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="message" type="text" data-vv-delay="1000">
-                                <span v-show="errors.has('message')" class="form-control-feedback">{{ errors.first('message') }}</span>
-                            </div>
-                        </div>
-                        <div class="form-group account-btn text-left m-t-10">
-                            <div class="col-xs-12">
-                                <button class="submit" type="submit" :disabled="formSuccess">
-                                    Send <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
-                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                        <span class="sr-only">Success</span>
-                        Thank you for contacting us. A member from our team will contact you shortly.
                     </div>
-                    <div id="send_contact_error" class="alert alert-danger" role="alert" v-show="formError">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span class="sr-only">Error:</span>
-                        There was an error when trying to submit your request. Please try again later.
-                    </div>
-                        
                 </div>
             </div>
         </transition>
