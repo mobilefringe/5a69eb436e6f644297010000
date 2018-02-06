@@ -6,7 +6,7 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <iframe src="https://www.google.com/maps/place/MiltonMall" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>    
+                <iframe src="https://www.google.com/maps/place/Milton+Mall" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>    
             </div>
         </transition>
     </div>
