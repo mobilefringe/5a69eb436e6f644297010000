@@ -5,6 +5,20 @@ define([], function () {
             component: view('home')
         },
         {
+            path: '/contact-us',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('contact'),
+                    meta: {
+                        pageName: 'Contact Us',
+                    },
+                    name: 'contact'
+                }
+            ]
+        },
+        {
             path: '/events',
             component: view('default'),
             children: [
@@ -100,7 +114,7 @@ define([], function () {
                     meta: {
                         pageName: 'Photos',
                     },
-                    name: 'map'
+                    name: 'photos'
                 }
             ]
         },
