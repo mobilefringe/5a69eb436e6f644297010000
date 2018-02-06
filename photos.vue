@@ -6,7 +6,7 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                
+                {{images}}    
             </div>
         </transition>
     </div>
