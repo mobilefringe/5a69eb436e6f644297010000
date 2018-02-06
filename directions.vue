@@ -6,7 +6,7 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <iframe class="hidden-xs" :src="https://maps.google.com/maps?q= + property.name property.address1 property.city property.country property.province_state property.postal_code + &amp;hl=en&amp;ie=UTF8&amp;t=v&amp;hnear= + property.name property.address1 property.city property.country property.province_state property.postal_code + &amp;z=13&amp;output=embed " width="100%" height="405" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe class="hidden-xs" src="https://maps.google.com/maps?q= + property.name property.address1 property.city property.country property.province_state property.postal_code + &amp;hl=en&amp;ie=UTF8&amp;t=v&amp;hnear= + property.name property.address1 property.city property.country property.province_state property.postal_code + &amp;z=13&amp;output=embed " width="100%" height="405" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </transition>
     </div>
