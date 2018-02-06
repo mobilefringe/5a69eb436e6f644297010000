@@ -26,12 +26,11 @@
         "stores-title": "Stores"
     },
     "footer": {
-        "menu-link1": "One",
-        "menu-link2": "Two",
-        "menu-link3": "Three",
-        "menu-link4": "Four",
-        "menu-link5": "Five",
-        "menu-link6": "Six",
+        "menu-link1": "Store Directory",
+        "menu-link2": "Events",
+        "menu-link3": "Promotions",
+        "menu-link4": "Leasing",
+        "menu-link5": "Contact Us",
         "powered-by": "Powered By ",
         "privacy-policy": "Privacy Policy"
     }
