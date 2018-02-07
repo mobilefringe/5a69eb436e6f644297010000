@@ -163,7 +163,7 @@ define([], function () {
                     path: '',
                     component: view('stores'),
                     meta: {
-                        pageName: 'Stores',
+                        pageName: 'Store Directory',
                     },
                     name: 'storeList'
                 },
