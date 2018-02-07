@@ -1,78 +1,17 @@
 <template>
     <div> <!-- without an outer container div this component template will not render -->
-        <np-loader v-if="!dataLoaded"></np-loader>
+        <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
-            <div v-if="currentPage && dataLoaded" class="page-container" v-cloak>
-                <div class="margin-90"></div>
-                <div v-if="currentPage">
-                    <div class="row">
-                        <div class="col-md-4 col-md-push-8">
-                            <div class="sidebar">
-                                <div class="sidebar-container">
-                                    <h5>Hours</h5>
-                                    <ul class="sidebar-hours-list">
-                                        <li v-if="getPropertyHours" v-for="hour in getPropertyHours">
-                                            {{hour.day_of_week | moment('dddd', timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h
-                                            A", timezone)}}
-                                        </li>
-                                    </ul>
-                                    <br>
-                                    <router-link to="/hours" active-class="active" exact>
-                                        <a class="details-link">View Detailed Hours
-                                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                        </a>
-                                    </router-link>
-                                </div>
-                                <div class="sidebar-container">
-                                    <h5 class="">Find Us</h5>
-                                    <p class="uppercase">
-                                        {{property.name}}
-                                        <br> {{property.address1}}
-                                        <br> {{property.city}}, {{property.province_state}} {{property.postal_code}}
-                                        <br> {{property.contact_phone}}
-                                    </p>
-                                    <p class="uppercase">
-                                        Northpark Center Concierge
-                                        <br> {{property.contact_fax}}
-                                    </p>
-                                </div>
-                                <div class="sidebar-container">
-                                    <a class="details-link" href="https://www.google.com/maps/place/NorthPark+Center/@32.868225,-96.773204,15z/data=!4m5!3m4!1s0x0:0x95fc10ba98f7aad4!8m2!3d32.8680671!4d-96.7735128?hl=en-US"
-                                        target="_blank">Get Directions
-                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-md-pull-4">
-                            <h2 class="page_title" v-html="currentPage.title"></h2>
-                            <hr>
-                            <div class="" v-html="currentPage.body"></div>
-                        </div>
+            <inside-header-component></inside-header-component>
+        </transition>
+        <transition name="fade">
+            <div v-if="dataLoaded" class="main_container margin_30" v-cloak> 
+                <div class="row" v-if="currentPage">
+                    <div class="col-md-12">
+                        <h2 class="page_title" v-html="currentPage.title"></h2>
+                        <hr>
+                        <div class="" v-html="currentPage.body"></div>
                     </div>
-                    <div v-if="visitSubPage" class="row">
-                        <div class="col-md-12">
-                            <p class="page-breadcrumb">
-                                {{property.name}}
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                <router-link tag="a" to="/visit" active-class="active" exact>
-                                    Visit
-                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </router-link>
-                                <span v-if="currentPage">{{currentPage.title}}</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div v-if="!visitSubPage" class="row">
-                        <div class="col-md-12">
-                            <p class="page-breadcrumb">
-                                {{property.name}}
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                <span v-if="currentPage">{{currentPage.title}}</span>
-                            </p>
-                        </div>
-                    </div>
-                    <!--<page-breadcrumb></page-breadcrumb>-->
                 </div>
             </div>
         </transition>
@@ -80,15 +19,14 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function (Vue, Vuex, moment, tz, VueMoment, Meta) {
+    define(["Vue", "vuex", "vue-meta"], function (Vue, Vuex, Meta) {
         return Vue.component("page-details-component", {
             template: template, // the variable template will be injected,
             props: ['id'],
             data: function data() {
                 return {
                     dataLoaded: false,
-                    currentPage: null,
-                    visitSubPage: false
+                    currentPage: null
                 }
             },
             created() {
@@ -106,9 +44,7 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property',
-                    'timezone',
-                    'getPropertyHours'
+                    'property'
                 ])
             },
             methods: {
