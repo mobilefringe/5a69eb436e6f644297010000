@@ -8,7 +8,7 @@
             <div v-if="dataLoaded" class="main_container margin_30" v-cloak> 
                 <div class="row" v-if="currentPage">
                     <div class="col-md-12">
-                        <h2 class="page_title" v-html="currentPage.title"></h2>
+                        <h3 class="page_title" v-html="currentPage.title"></h3>
                         <hr>
                         <div class="" v-html="currentPage.body"></div>
                     </div>
