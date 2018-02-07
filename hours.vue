@@ -15,7 +15,7 @@
                                     {{hour.day_of_week | moment("dddd", timezone)}}
                                 </div>
                                 <div class="col-md-3">
-                                    <span class="pull-right">
+                                    <span class="">
                                         {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}    
                                     </span>
                                 </div>
@@ -29,7 +29,7 @@
                                     {{ hour.holiday_name }}, {{ hour.holiday_date | moment("MMM D", timezone) }}
                                 </div>
                                 <div class="col-md-3">
-                                    <span class="pull-right">
+                                    <span class="">
                                         {{ hour.open_time | moment("h:mm A", timezone) }} - {{ hour.close_time | moment("h:mm A", timezone) }}
                                     </span>
                                 </div>
@@ -43,7 +43,7 @@
                                     {{ hour.holiday_name }}, {{ hour.holiday_date | moment("MMM D", timezone) }}   
                                 </div>
                                 <div class="col-md-3">
-                                    <span class="pull-right">
+                                    <span class="">
                                         Closed
                                     </span>
                                 </div>
