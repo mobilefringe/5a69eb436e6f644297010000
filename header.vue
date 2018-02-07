@@ -100,9 +100,6 @@
                 }
             },
             props:['social_media'],
-            watch: {
-                
-            },
             computed: {
                 ...Vuex.mapGetters([
                     'property'
