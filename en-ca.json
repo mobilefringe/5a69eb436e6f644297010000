@@ -18,6 +18,9 @@
         "hours": "Shopping Hours",
         "community": "Community"
     },
+    "home": {
+        "stores-title": "Map & Store Directory"    
+    }
     "hours": {
         "hours-title": "Hours",
         "hours-mon": "Monday - Friday",
