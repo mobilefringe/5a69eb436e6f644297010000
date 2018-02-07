@@ -14,7 +14,31 @@
                     </slick>
                     <div class="home_banner_wrapper">
                         <div class="home_hours">
-                            HOURS
+                            <h3>{{ $t("hours.hours-title") }}</h3>
+                            <div>
+                                <p>
+                                    {{ $t("hours.hours-mon") }}:<br/>
+                                    <span v-for="hour in weekdayHours">
+                                        {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                    </span>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    {{ $t("hours.hours-sat") }}:<br/>
+                                    <span v-for="hour in saturdayHours">
+                                        {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                    </span>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    {{ $t("hours.hours-sun") }}:<br/>  
+                                    <span v-for="hour in sundayHours">
+                                        {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                    </span>
+                                </p>
+                            </div>
                         </div>
                         <div class="home_stores">
                             STORES
