@@ -8,7 +8,7 @@
             <div v-if="dataLoaded" class="main_container margin_30" v-cloak> 
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 class="hours_heading caps">Hours</h4>
+                        <h3 class="hours_heading caps">Hours</h3>
                         <div class="hours_container">
                             <div class="row hours_div" v-for="hour in hours">
                                 <div class="col-md-4">
@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <div class="padding_top_20"></div>
-                        <h4 class="hours_heading caps">We will be open the following Holidays</h4>
+                        <h3 class="hours_heading caps">We will be open the following Holidays</h3>
                         <div class="hours_container">
                             <div class="row hours_div"  v-for="hour in reducedHolidays">
                                 <div class="col-md-4">
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="padding_top_20"></div>
-                        <h4 class="hours_heading caps">We will be closed the following Statutory Holidays</h4>
+                        <h3 class="hours_heading caps">We will be closed the following Statutory Holidays</h3>
                         <div class="hours_container">
                             <div class="row hours_div" v-for="hour in closeHolidays">
                                 <div class="col-md-4">
