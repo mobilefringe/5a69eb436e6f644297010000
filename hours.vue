@@ -26,7 +26,7 @@
                         <div class="hours_container">
                             <div class="row hours_div"  v-for="hour in reducedHolidays">
                                 <div class="col-md-4">
-                                    {{ hour.holiday_name }} | {{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}
+                                    {{ hour.holiday_name }}, {{ hour.holiday_date | moment("MMM D", timezone) }}
                                 </div>
                                 <div class="col-md-3">
                                     <span class="pull-right">
@@ -40,7 +40,7 @@
                         <div class="hours_container">
                             <div class="row hours_div" v-for="hour in closeHolidays">
                                 <div class="col-md-4">
-                                    {{ hour.holiday_name }} | {{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}   
+                                    {{ hour.holiday_name }}, {{ hour.holiday_date | moment("MMM D", timezone) }}   
                                 </div>
                                 <div class="col-md-3">
                                     <span class="pull-right">
