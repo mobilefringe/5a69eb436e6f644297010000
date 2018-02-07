@@ -25,7 +25,7 @@
                                 <p v-if="currentJob.contact_phone" class="dates">Telephone: {{ currentJob.contact_phone }}</p>
                                 <p v-if="currentJob.message" class="dates">Message: {{ currentJob.message }}</p>
                             </div>
-                            <div class="job_desc" v-html="currentJob.description"></div>
+                            <div class="job_desc" v-html="currentJob.rich_description"></div>
                             <div class="row"> 
                                 <div class="col-md-12">
                                     <social-sharing v-if="currentJob" :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="truncate(currentJob.body)" twitter-user="PickeringTC" :media="currentJob.image_url" inline-template>
