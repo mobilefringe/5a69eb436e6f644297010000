@@ -11,7 +11,7 @@
                         <img v-lazy="event.image_url" :alt="event.name"/>
                     </div>
                     <div class="event_right">
-                        <h3>{{ event.name }}</h3>
+                        <h2>{{ event.name }}</h2>
                         <p class="dates" v-if="isMultiDayEvent(event)">{{ event.start_date | moment("ddd, MMM D, YYYY", timezone)}} to {{ event.end_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
                         <p class="dates" v-else>{{ event.start_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
                         <div class="custom_desc">{{ event.description }}</div>
@@ -55,6 +55,7 @@
                         var today = moment.tz(this.timezone).format();
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
+                            value.description = _.truncate(value.description, 100);
                             showEvents.push(value);
                         }
                     });
