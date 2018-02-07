@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        
+                        <div class="page_body" v-html="currentPage.body"></div>
                     </div>
                 </div>
             </div>
@@ -80,6 +80,7 @@
             },
             created() {
                 this.loadData().then(response => {
+                    this.currentPage = response[0].data;
                     this.dataLoaded = true;
                 });
             },
@@ -91,12 +92,12 @@
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/milton-directions.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
+                }
                 validateBeforeSubmit() {
                     this.$validator.validateAll().then((result) => {
                         if (result) {
