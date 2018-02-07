@@ -12,7 +12,14 @@
                             <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
                         </div>
                     </slick>
-                    <div class=""
+                    <div class="">
+                        <div class="home_hours">
+                            
+                        </div>
+                        <div class="home_stores">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div class="main_container">
                     <div v-if="featureItems" class="feature_item_container">
