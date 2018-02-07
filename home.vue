@@ -14,10 +14,10 @@
                     </slick>
                     <div class="">
                         <div class="home_hours">
-                            
+                            HOURS
                         </div>
                         <div class="home_stores">
-                            
+                            STORES
                         </div>
                     </div>
                 </div>
