@@ -3,7 +3,7 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div class="home-banner-container" >
+                <div class="home_banner_container" >
                     <slick ref="slick" :options="slickOptions">
                         <div v-if="homeBanners" v-for="banner in homeBanners">
                             <router-link v-if="banner.url" :to="banner.url" class="">
@@ -12,6 +12,7 @@
                             <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
                         </div>
                     </slick>
+                    <div class=""
                 </div>
                 <div class="main_container">
                     <div v-if="featureItems" class="feature_item_container">
