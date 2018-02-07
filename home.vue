@@ -33,7 +33,7 @@
                 return {
                     dataLoaded: false,
                     slickOptions: {
-                        arrows: true,
+                        arrows: false,
                         autoplay: true,
                         autoplaySpeed: 6000,
                         cssEase: 'linear',
