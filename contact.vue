@@ -7,8 +7,9 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                         <div class="row">
+                            <p>We value your feedback. Send us your comments or questions by completing the contact form below.</p>
                             <form class="form-horizontal" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
                                 <div class="col-xs-12" :class="{'has-error': errors.has('name')}">
                                     <label for="name">Name</label>
@@ -52,6 +53,9 @@
                                 There was an error when trying to submit your request. Please try again later.
                             </div>    
                         </div>
+                    </div>
+                    <div class="col-md-4">
+                        
                     </div>
                 </div>
             </div>
