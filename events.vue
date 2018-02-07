@@ -18,7 +18,6 @@
                         <router-link :to="{ name: 'eventDetails', params: { id: event.slug }}">
                             <p class="read_more">Read More</p>
                         </router-link>
-
                     </div>
                 </div>  
             </div>
