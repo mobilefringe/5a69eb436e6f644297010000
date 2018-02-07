@@ -88,6 +88,15 @@
                     'timezone',
                     'getPropertyHours'
                 ]),
+                weekdayHours() {
+                    return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 1 });
+                },
+                saturdayHours() {
+                    return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 6 });
+                },
+                sundayHours() {
+                    return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 0 });
+                }
                 homeBanners() {
                     var banners = [];
                     _.forEach(this.$store.state.banners, function (value, key) {
