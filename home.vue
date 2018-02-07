@@ -84,7 +84,9 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
+                    'property',
+                    'timezone',
+                    'getPropertyHours'
                 ]),
                 homeBanners() {
                     var banners = [];
