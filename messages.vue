@@ -17,12 +17,12 @@
             },
             created(){
                 this.loadData().then(response => {
-                    if(this.response != undefined){
+                    // if(this.response != undefined){
                         this.currentMessage = response[0].data.messages.welcome[0].messages[0];
                         console.log(this.currentMessage)
-                    } else {
-                        console.log("No message at this time.");       
-                    }
+                    // } else {
+                        // console.log("No message at this time.");       
+                    // }
                 });
             },
             computed: {
