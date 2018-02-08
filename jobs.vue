@@ -11,7 +11,7 @@
                         <span class="job_store_name">{{ job.store.name }}</span>
                     </router-link>
                     <h3 class="job_name">{{ job.name }}</h3>
-                    
+                    <p class="read_more">{{job.job_type}}</p>-->
                     <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">
                         <span class="promo_read_more">Read More</span>
                     </router-link>
@@ -29,7 +29,7 @@
                 <!--                <h3 class="job_name">{{job.name}}</h3>-->
                 <!--            </div>-->
                 <!--            <div class="col-md-4">-->
-                <!--                <p class="read_more">{{job.job_type}}</p>-->
+                <!--                
                 <!--            </div>-->
                 <!--            <div class="col-md-3">-->
                 <!--                <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">-->
