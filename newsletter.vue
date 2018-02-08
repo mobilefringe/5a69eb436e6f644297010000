@@ -24,7 +24,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue-meta", "vee-validate"], function (Vue, Vuex, Meta, VeeValidate) {
+    define(["Vue", "vuex", "vue-meta", "jquery", "vee-validate"], function (Vue, Vuex, Meta, $, VeeValidate) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
         return Vue.component("newsletter-component", {
