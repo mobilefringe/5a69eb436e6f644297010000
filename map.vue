@@ -28,10 +28,6 @@
             },
             created (){
                 window.Raphael = Raphael; // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
-                this.$store.dispatch("getData", "categories");
-            },
-            mounted () {
-                this.filteredStores = this.storesByAlphaIndex;
             },
             methods: {
                 // loadData: async function() {
@@ -50,14 +46,12 @@
                 updateSVGMap (map) {
                     this.map = map;
                 },
-                dropPin(store) {
+                dropPin (store) {
                     this.svgMapRef.hideMarkers();
                     console.log(store);
                     this.svgMapRef.addMarker(store,'//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
                     this.svgMapRef.setViewBox(store)
-                },
-                
-                
+                }
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -77,13 +71,10 @@
                     var regions = {}
                     _.forEach( this.processedStores , function( val, key ) {
                         if(val.svgmap_region != null && typeof(val.svgmap_region)  != 'undefined'){
-                            if(!val.store_front_url_abs ||  val.store_front_url_abs.indexOf('missing.png') > -1 || val.store_front_url_abs.length === 0){
-                                val.store_front_url_abs = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg';
-                            }
                             obj = {};
-                            obj["tooltip"] = "<p class='tooltip_name'>"+val.name+"</p>";
+                            obj["tooltip"] = "<p class='tooltip_name'>" + val.name + "</p>";
                             obj["attr"] = {};
-                            obj["attr"]["href"] = "/stores/"+val.slug;
+                            obj["attr"]["href"] = "/stores/" + val.slug;
                             regions[val.svgmap_region] = obj;
                         }
                     });
