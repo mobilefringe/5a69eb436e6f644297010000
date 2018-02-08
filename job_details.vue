@@ -23,6 +23,7 @@
                             <p v-if="currentJob.contact_name" class="job_date">Contact Name: {{ currentJob.contact_name }}</p>
                             <p v-if="currentJob.contact_phone" class="job_date">Telephone: {{ currentJob.contact_phone }}</p>
                             <p v-if="currentJob.contact_email" class="job_date">Email: {{ currentJob.contact_email }}</p>
+                            <p v-if="currentJob.contact_website" class="job_date">Website: {{ currentJob.contact_website }}</p>
                             <p v-if="currentJob.message" class="job_date">Message: {{ currentJob.message }}</p>
                             
                    
