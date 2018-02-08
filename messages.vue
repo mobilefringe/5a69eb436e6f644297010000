@@ -1,7 +1,7 @@
 <template>
     <div v-if="currentMessage" class="message_background">
         <div class="main_container message_content">
-            <span> {{currentMessage.description }} </span> 
+            <span> {{currentMessage.body }} </span> 
         </div>
     </div>
 </template>
