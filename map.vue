@@ -8,6 +8,11 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
                     <div class="col-md-12">
+                        <v-select :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
                         <svg-map v-bind:svg-map-url="getSVGurl" :zoom="true" :pan="true" :zoomLimit="[0,10]" :regions="regions"></svg-map>
                     </div>
                 </div>
