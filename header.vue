@@ -98,7 +98,8 @@
             template: template, // the variable template will be injected,
             data: function () {
                 return {
-                    active: false,    
+                    active: false, 
+                    newsletter_email: ""
                 }
             },
             props:['social_media'],
