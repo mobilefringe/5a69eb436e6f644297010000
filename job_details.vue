@@ -12,19 +12,18 @@
                             <img v-lazy="currentJob.store.store_front_url_abs" :alt="currentJob.store.name" class="jobs_logo"/>
                         </div>
                         <div class="col-md-6">
-                            <img class="pull-left" style="margin-right:10px" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/935/original/icon_in.jpg?1403210088">
                             <router-link :to="{ name: 'storeDetails', params: { id: currentJob.store.slug }}">
                                 <span class="job_store_name">{{ currentJob.store.name }}</span>
                             </router-link>
-                            <div class="job_details">
-                                <p class="job_name">{{ currentJob.name }}</p>
-                                <p class="job_date" v-if="isMultiDayEvent(currentJob)">
-                                    {{ currentJob.start_date | moment("MMM D, YYYY", timezone)}} to {{ currentJob.end_date | moment("MMM D, YYYY", timezone)}}
-                                </p>
-                                <p class="job_date" v-else>{{ currentJob.start_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
-                                <p v-if="currentJob.contact_phone" class="dates">Telephone: {{ currentJob.contact_phone }}</p>
-                                <p v-if="currentJob.message" class="dates">Message: {{ currentJob.message }}</p>
-                            </div>
+
+                            <h2 class="job_name">{{ currentJob.name }}</h2>
+                            <p class="job_date" v-if="isMultiDayEvent(currentJob)">
+                                {{ currentJob.start_date | moment("MMM D, YYYY", timezone)}} to {{ currentJob.end_date | moment("MMM D, YYYY", timezone)}}
+                            </p>
+                            <p class="job_date" v-else>{{ currentJob.start_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
+                            <p v-if="currentJob.contact_phone" class="dates">Telephone: {{ currentJob.contact_phone }}</p>
+                            <p v-if="currentJob.message" class="dates">Message: {{ currentJob.message }}</p>
+                   
                             <div class="job_desc" v-html="currentJob.rich_description"></div>
                             <div class="row"> 
                                 <div class="col-md-12">
