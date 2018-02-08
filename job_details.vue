@@ -22,8 +22,8 @@
                             <p class="job_date" v-else>{{ currentJob.start_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
                             <p v-if="currentJob.contact_name" class="job_date">Contact Name: {{ currentJob.contact_name }}</p>
                             <p v-if="currentJob.contact_phone" class="job_date">Telephone: {{ currentJob.contact_phone }}</p>
-                            <p v-if="currentJob.contact_email" class="job_date">Email: <a :href="'mailto:' + currentJob.contact_email"</a></p>
-                            <p v-if="currentJob.contact_website" class="job_date">Website: {{ currentJob.contact_website }}</p>
+                            <p v-if="currentJob.contact_email" class="job_date">Email: <a :href="'mailto:' + currentJob.contact_email">{{ currentJob.contact_email }}</a></p>
+                            <p v-if="currentJob.contact_website" class="job_date">Website: <a :href=" currentJob.contact_website ">{{ currentJob.contact_website }} </a></p>
                             <p v-if="currentJob.message" class="job_date">Message: {{ currentJob.message }}</p>
                             
                    
