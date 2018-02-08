@@ -39,6 +39,16 @@
                     time: new Date()
                 }
             },
+            mounted () {
+                this.form_data.email = this.$route.query.email;
+                $("#newsletter_email").val(this.form_data.email);
+            },
+            watch : {
+                $route () {
+                    this.form_data.email = this.$route.query.email;
+                    $("#newsletter_email").val(this.form_data.email);
+                }
+            },
             created() {
                 this.loadData().then(response => {
                     this.dataLoaded = true;
