@@ -24,7 +24,7 @@
                             <p v-if="currentJob.contact_name" class="job_date">Contact Name: {{ currentJob.contact_name }}</p>
                             <p v-if="currentJob.contact_phone" class="job_date">Telephone: {{ currentJob.contact_phone }}</p>
                             <p v-if="currentJob.contact_email" class="job_date">Email: <a :href="'mailto:' + currentJob.contact_email">{{ currentJob.contact_email }}</a></p>
-                            <p v-if="currentJob.contact_website" class="job_date">Website: <a :href=" currentJob.contact_website ">{{ currentJob.contact_website }} </a></p>
+                            <p v-if="currentJob.contact_website" class="job_date">Website: <a :href="currentJob.contact_website">{{ currentJob.contact_website }} </a></p>
                             <p v-if="currentJob.message" class="job_date">Message: {{ currentJob.message }}</p>
                             <div class="margin_20"></div>
                             <div class="job_desc" v-html="currentJob.rich_description"></div>
@@ -72,7 +72,6 @@
 						this.$router.replace({ path: '/jobs' });
 					}
 					this.dataLoaded = true;
-					console.log(this.currentJob)
 				}, error => {
 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
 				});
