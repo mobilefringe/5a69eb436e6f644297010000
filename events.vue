@@ -54,7 +54,11 @@
                         var today = moment.tz(this.timezone).format();
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
-                            value.description = _.truncate(value.description, { 'length': 100, 'separator': ' ' });
+                            if(window.width > 768) {
+                                value.description = _.truncate(value.description, { 'length': 100, 'separator': ' ' });
+                            } else {
+                                value.description = _.truncate(value.description, { 'length': 50, 'separator': ' ' });    
+                            }
                             showEvents.push(value);
                         }
                     });
