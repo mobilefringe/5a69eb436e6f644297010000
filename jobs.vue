@@ -59,8 +59,9 @@
             created() {
                 this.loadData().then(response => {
                     this.dataLoaded = true;
+                    console.log(this.processedJobs)
                 });
-                console.log(this.jobs)
+                
             },
             computed: {
                 ...Vuex.mapGetters([
