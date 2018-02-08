@@ -22,35 +22,33 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    dataLoaded: true,
+                    dataLoaded: false,
                 }
             },
             created (){
-                window.Raphael = Raphael; // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                    window.Raphael = Raphael; // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
+                });
             },
             methods: {
-                // loadData: async function() {
-                //     try {
-                //         await this.$store.dispatch('initializeApi', {
-                //             site: "canyoncrest",
-                //             version: "v4"
-                //         });
-                //         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                //         let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "property"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores")]);
-                //     } catch (e) {
-                //         console.log("Error loading data: " + e.message);
-                //     }
-                // },
-                
-                updateSVGMap (map) {
-                    this.map = map;
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
                 },
-                dropPin (store) {
-                    this.svgMapRef.hideMarkers();
-                    console.log(store);
-                    this.svgMapRef.addMarker(store,'//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
-                    this.svgMapRef.setViewBox(store)
-                }
+                // updateSVGMap (map) {
+                //     this.map = map;
+                // },
+                // dropPin (store) {
+                //     this.svgMapRef.hideMarkers();
+                //     console.log(store);
+                //     this.svgMapRef.addMarker(store,'//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
+                //     this.svgMapRef.setViewBox(store)
+                // }
             },
             computed: {
                 ...Vuex.mapGetters([
