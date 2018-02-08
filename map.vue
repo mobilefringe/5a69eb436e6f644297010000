@@ -23,6 +23,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: true,
                     listMode: "alphabetical",
                     filteredStores: null,
                     mobileAlphabet : ['All',
