@@ -20,13 +20,13 @@
                                 {{ currentJob.start_date | moment("MMM D, YYYY", timezone)}} to {{ currentJob.end_date | moment("MMM D, YYYY", timezone)}}
                             </p>
                             <p class="job_date" v-else>{{ currentJob.start_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
+                            <div class="margin_20"></div>
                             <p v-if="currentJob.contact_name" class="job_date">Contact Name: {{ currentJob.contact_name }}</p>
                             <p v-if="currentJob.contact_phone" class="job_date">Telephone: {{ currentJob.contact_phone }}</p>
                             <p v-if="currentJob.contact_email" class="job_date">Email: <a :href="'mailto:' + currentJob.contact_email">{{ currentJob.contact_email }}</a></p>
                             <p v-if="currentJob.contact_website" class="job_date">Website: <a :href=" currentJob.contact_website ">{{ currentJob.contact_website }} </a></p>
                             <p v-if="currentJob.message" class="job_date">Message: {{ currentJob.message }}</p>
-                            
-                   
+                            <div class="margin_20"></div>
                             <div class="job_desc" v-html="currentJob.rich_description"></div>
                             <div class="row"> 
                                 <div class="col-md-12">
