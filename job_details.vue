@@ -69,6 +69,7 @@
 						this.$router.replace({ path: '/jobs' });
 					}
 					this.dataLoaded = true;
+					console.log(this.currentJob)
 				}, error => {
 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
 				});
