@@ -38,12 +38,10 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                 });
-                
             },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'timezone',
                     'processedJobs'
                 ])
             },
