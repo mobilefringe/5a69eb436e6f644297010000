@@ -11,10 +11,7 @@
                         <span class="promo_store_name">{{ job.store.name }}</span>
                     </router-link>
                     <h3 class="promo_name">{{ job.name }}</h3>
-                    <p class="promo_date" v-if="isMultiDayEvent(job)">
-                        {{ job.start_date | moment("MMM D, YYYY", timezone)}} to {{ job.end_date | moment("MMM D, YYYY", timezone)}}
-                    </p>
-                    <p class="promo_date" v-else>{{ job.start_date | moment("MMM D, YYYY", timezone)}}</p>
+                    
                     <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">
                         <span class="promo_read_more">Read More</span>
                     </router-link>
