@@ -7,26 +7,41 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="job_container" v-for="job in processedJobs">
-                    <img class="pull-left" src="https://codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/jpeg/1517326611000/icon_in.jpg">
                     <router-link :to="{ name: 'storeDetails', params: { id: job.store.slug }}">
-                        <span class="job_store_name">{{ job.store.name }}</span>
+                        <span class="promo_store_name">{{ job.store.name }}</span>
                     </router-link>
-                    <div class="job_details">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <h3 class="job_name">{{job.name}}</h3>
-                            </div>
-                            <div class="col-md-4">
-                                <p class="read_more">{{job.job_type}}</p>
-                            </div>
-                            <div class="col-md-3">
-                                <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">
-                                    <p class="read_more">Read More</p>
-                                </router-link>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
+                    <h3 class="promo_name">{{ job.name }}</h3>
+                    <p class="promo_date" v-if="isMultiDayEvent(job)">
+                        {{ job.start_date | moment("MMM D, YYYY", timezone)}} to {{ job.end_date | moment("MMM D, YYYY", timezone)}}
+                    </p>
+                    <p class="promo_date" v-else>{{ job.start_date | moment("MMM D, YYYY", timezone)}}</p>
+                    <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">
+                        <span class="promo_read_more">Read More</span>
+                    </router-link>
+                </div>
+                
+                
+                <!--<div class="job_container" v-for="job in processedJobs">-->
+                <!--    <img class="pull-left" src="https://codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/jpeg/1517326611000/icon_in.jpg">-->
+                <!--    <router-link :to="{ name: 'storeDetails', params: { id: job.store.slug }}">-->
+                <!--        <span class="job_store_name">{{ job.store.name }}</span>-->
+                <!--    </router-link>-->
+                <!--    <div class="job_details">-->
+                <!--        <div class="row">-->
+                <!--            <div class="col-md-5">-->
+                <!--                <h3 class="job_name">{{job.name}}</h3>-->
+                <!--            </div>-->
+                <!--            <div class="col-md-4">-->
+                <!--                <p class="read_more">{{job.job_type}}</p>-->
+                <!--            </div>-->
+                <!--            <div class="col-md-3">-->
+                <!--                <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">-->
+                <!--                    <p class="read_more">Read More</p>-->
+                <!--                </router-link>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>  -->
             </div>
         </transition>
     </div>
