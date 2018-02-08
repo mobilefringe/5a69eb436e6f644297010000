@@ -28,8 +28,8 @@
                     </div>
                     <div class="header_newsletter">
                         <div class="header_newsletter_container">
-                            <input id="header_newsletter" class="newsletter_input" type="text" :placeholder='$t("header.newsletter-join")' />
-                            <router-link style="background-color:transparent;" :to="'/newsletter?email='+ newsletter_email" >
+                            <input id="header_newsletter" class="newsletter_input" type="text" :placeholder='$t("header.newsletter-join")' v-model="newsletter_email"/>
+                            <router-link :to="'/newsletter?email='+ newsletter_email" >
                                 <input id="header_newsletter_submit" class="newsletter_btn" type="submit" :value='$t("header.newsletter-subscribe")' />
                             </router-link>
                         </div>
