@@ -9,7 +9,7 @@
                 <div v-if="currentJob" class="job_details_container">
                     <div class="row">
                         <div class="col-md-6">
-                            <img v-lazy="currentJob.store.store_front_url_abs" :alt="currentJob.store.name" class="jobs_logo"/>
+                            <img v-lazy="currentJob.store.store_front_url_abs" :alt="currentJob.store.name" class="jobs_logo center-block"/>
                         </div>
                         <div class="col-md-6">
                             <router-link :to="{ name: 'storeDetails', params: { id: currentJob.store.slug }}">
