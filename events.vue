@@ -48,6 +48,7 @@
                     'processedEvents',
                 ]),
                 events: function events() {
+                    console.log(window.width)
                     var events = this.processedEvents;
                     var showEvents = [];
                     _.forEach(events, function (value, key) {
