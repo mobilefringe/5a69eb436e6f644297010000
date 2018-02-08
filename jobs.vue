@@ -7,11 +7,14 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="job_container" v-for="job in processedJobs">
+                    <div class="promo_img_container">
+                        <img v-lazy="promo.image_url" :alt="promo.name" />
+                    </div>
                     <router-link :to="{ name: 'storeDetails', params: { id: job.store.slug }}">
                         <span class="job_store_name">{{ job.store.name }}</span>
                     </router-link>
                     <h3 class="job_name">{{ job.name }}</h3>
-                    <p class="read_more">{{job.job_type}}</p>-->
+                    <p class="read_more">{{job.job_type}}</p>
                     <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">
                         <span class="read_more">Read More</span>
                     </router-link>
