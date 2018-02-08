@@ -15,14 +15,16 @@
                             <router-link :to="{ name: 'storeDetails', params: { id: currentJob.store.slug }}">
                                 <span class="job_store_name">{{ currentJob.store.name }}</span>
                             </router-link>
-
                             <h2 class="job_name">{{ currentJob.name }}</h2>
                             <p class="job_date" v-if="isMultiDayEvent(currentJob)">
                                 {{ currentJob.start_date | moment("MMM D, YYYY", timezone)}} to {{ currentJob.end_date | moment("MMM D, YYYY", timezone)}}
                             </p>
                             <p class="job_date" v-else>{{ currentJob.start_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
-                            <p v-if="currentJob.contact_phone" class="dates">Telephone: {{ currentJob.contact_phone }}</p>
-                            <p v-if="currentJob.message" class="dates">Message: {{ currentJob.message }}</p>
+                            <p v-if="currentJob.contact_name" class="job_date">Contact Name: {{ currentJob.contact_name }}</p>
+                            <p v-if="currentJob.contact_phone" class="job_date">Telephone: {{ currentJob.contact_phone }}</p>
+                            <p v-if="currentJob.contact_email" class="job_date">Email: {{ currentJob.contact_email }}</p>
+                            <p v-if="currentJob.message" class="job_date">Message: {{ currentJob.message }}</p>
+                            
                    
                             <div class="job_desc" v-html="currentJob.rich_description"></div>
                             <div class="row"> 
