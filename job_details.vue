@@ -13,7 +13,7 @@
                         </div>
                         <div class="col-md-6">
                             <router-link :to="{ name: 'storeDetails', params: { id: currentJob.store.slug }}">
-                                <span class="job_store_name">{{ currentJob.store.name }}</span>
+                                <span class="job_store_name hidden_phone">{{ currentJob.store.name }}</span>
                             </router-link>
                             <h2 class="job_name">{{ currentJob.name }}</h2>
                             <p class="job_date" v-if="isMultiDayEvent(currentJob)">
