@@ -19,6 +19,8 @@
                 this.loadData().then(response => {
                     if(response != undefined){
                         this.currentMessage = response[0].data.messages.welcome[0].messages[0];
+                    } else {
+                        console.log("No message at this time");       
                     }
                     console.log(this.currentMessage)
                 });
