@@ -8,9 +8,9 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="job_container" v-for="job in processedJobs">
                     <router-link :to="{ name: 'storeDetails', params: { id: job.store.slug }}">
-                        <span class="promo_store_name">{{ job.store.name }}</span>
+                        <span class="job_store_name">{{ job.store.name }}</span>
                     </router-link>
-                    <h3 class="promo_name">{{ job.name }}</h3>
+                    <h3 class="job_name">{{ job.name }}</h3>
                     
                     <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">
                         <span class="promo_read_more">Read More</span>
