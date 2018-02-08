@@ -31,25 +31,6 @@
                     window.Raphael = Raphael; // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
                 });
             },
-            methods: {
-                loadData: async function () {
-                    try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
-                        return results;
-                    } catch (e) {
-                        console.log("Error loading data: " + e.message);
-                    }
-                },
-                // updateSVGMap (map) {
-                //     this.map = map;
-                // },
-                // dropPin (store) {
-                //     this.svgMapRef.hideMarkers();
-                //     console.log(store);
-                //     this.svgMapRef.addMarker(store,'//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
-                //     this.svgMapRef.setViewBox(store)
-                // }
-            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
@@ -57,12 +38,6 @@
                 ]),
                 getSVGurl () {
                     return "https://www.mallmaverick.com" + this.property.svgmap_url;
-                },
-                allStores () {
-                    return this.processedStores;
-                },
-                svgMapRef () {
-                    return _.filter(this.$children, function(o) { return (o.$el.className == "svg-map") })[0];
                 },
                 regions () {
                     var regions = {}
@@ -76,6 +51,16 @@
                         }
                     });
                     return regions;
+                }
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
                 }
             }
         });
