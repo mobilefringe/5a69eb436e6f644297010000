@@ -17,7 +17,7 @@
             },
             created(){
                 this.loadData().then(response => {
-                    // if(this.response != undefined){
+                    if(this.response[0].data.messages.welcome[0].messages != undefined){
                         this.currentMessage = response[0].data.messages.welcome[0].messages[0];
                         console.log(this.currentMessage)
                     // } else {
