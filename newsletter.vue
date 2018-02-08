@@ -41,6 +41,7 @@
             },
             mounted () {
                 this.form_data.email = this.$route.query.email;
+                console.log(this.form_data.email)
                 $("#newsletter_email").val(this.form_data.email);
             },
             watch : {
