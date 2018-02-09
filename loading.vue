@@ -1,5 +1,5 @@
 <template>
-    <div id="overlay">
+    <div v-if="dataLoaded" id="overlay">
         <div class="loading-container">
             <vue-simple-spinner size="huge" :message="property.name + ' is Loading...'"></vue-simple-spinner>
         </div>
