@@ -11,7 +11,7 @@
                         <h3 class="hours_heading caps">Hours</h3>
                         <div class="hours_container">
                             <div class="row hours_div" v-for="hour in hours">
-                                <div class="col-xs-7 col-md-3">
+                                <div class="col-xs-7 col-sm-4 col-md-3">
                                     {{hour.day_of_week | moment("dddd", timezone)}}
                                 </div>
                                 <div class="col-xs-5 col-xmd-3">
@@ -25,7 +25,7 @@
                         <h3 class="hours_heading caps">We will be open the following Holidays</h3>
                         <div class="hours_container">
                             <div class="row hours_div"  v-for="hour in reducedHolidays">
-                                <div class="col-xs-7 col-md-3">
+                                <div class="col-xs-7 col-sm-4 col-md-3">
                                     {{ hour.holiday_name }}, {{ hour.holiday_date | moment("MMM D", timezone) }}
                                 </div>
                                 <div class="col-xs-5 col-md-3">
@@ -39,7 +39,7 @@
                         <h3 class="hours_heading caps">We will be closed the following Statutory Holidays</h3>
                         <div class="hours_container">
                             <div class="row hours_div" v-for="hour in closeHolidays">
-                                <div class="col-xs-7 col-md-3">
+                                <div class="col-xs-7 col-sm-4 col-md-3">
                                     {{ hour.holiday_name }}, {{ hour.holiday_date | moment("MMM D", timezone) }}   
                                 </div>
                                 <div class="col-xs-5 col-md-3">
