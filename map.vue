@@ -1,23 +1,23 @@
 <template>
     <div> <!-- without an outer container div this component template will not render -->
-        <loading-spinner v-if="!dataLoaded"></loading-spinner>
-        <transition name="fade">
-            <inside-header-component></inside-header-component>
-        </transition>
-        <transition name="fade">
-            <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <div class="row hidden-lg hidden-md visible-sm-block visible-xs-block">
-                    <div class="col-md-12 mobile_store_select">
-                        <v-select :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select> 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <svg-map ref="svgRef" v-bind:svgMapUrl="getSVGurl" :regions="regions"></svg-map>
-                    </div>
-                </div>
-            </div>
-        </transition>
+        <!--<loading-spinner v-if="!dataLoaded"></loading-spinner>-->
+        <!--<transition name="fade">-->
+        <!--    <inside-header-component></inside-header-component>-->
+        <!--</transition>-->
+        <!--<transition name="fade">-->
+        <!--    <div v-if="dataLoaded" v-cloak class="main_container margin_30">-->
+        <!--        <div class="row hidden-lg hidden-md visible-sm-block visible-xs-block">-->
+        <!--            <div class="col-md-12 mobile_store_select">-->
+        <!--                <v-select :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select> -->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="row">-->
+        <!--            <div class="col-md-12">-->
+        <!--                <svg-map ref="svgRef" v-bind:svgMapUrl="getSVGurl" :regions="regions"></svg-map>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</transition>-->
     </div>
 </template>
 
