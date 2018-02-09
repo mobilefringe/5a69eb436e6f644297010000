@@ -22,7 +22,7 @@
 </template>
 
 <script>
-    define(["Vue","vuex", "jquery", "Raphael", "mm_mapsvg","mousewheel", "vue!svg-map"], function(Vue, Vuex, $, Raphael, mapSvg,mousewheel,SVGMapComponent) {
+    define(["Vue","vuex", "vue-select", "jquery", "Raphael", "mm_mapsvg","mousewheel", "vue!svg-map"], function(Vue, Vuex, VueSelect, $, Raphael, mapSvg,mousewheel,SVGMapComponent) {
         return Vue.component("stores-component", {
             template: template, // the variable template will be injected
             data: function() {
