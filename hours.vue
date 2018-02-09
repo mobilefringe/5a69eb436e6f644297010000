@@ -11,10 +11,10 @@
                         <h3 class="hours_heading caps">Hours</h3>
                         <div class="hours_container">
                             <div class="row hours_div" v-for="hour in hours">
-                                <div class="col-md-3">
+                                <div class="col-xs-3">
                                     {{hour.day_of_week | moment("dddd", timezone)}}
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-xs-3">
                                     <span class="">
                                         {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}    
                                     </span>
