@@ -40,7 +40,8 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
+                    'property',
+                    'processedStores'
                 ]),
                 allStores() {
                     return this.processedStores;
