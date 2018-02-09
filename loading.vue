@@ -13,14 +13,14 @@
             template: template, // the variable template will be injected,
             data: function () {
                 return {
-                    // dataLoaded: false
+                    dataLoaded: false
                 };
             },
-            // created (){
-            //     this.loadData().then(response => {
-            //         this.dataLoaded = true;
-            //     });
-            // },
+            created (){
+                // this.loadData().then(response => {
+                    this.dataLoaded = true;
+                // });
+            },
             computed: {
                 ...Vuex.mapGetters([
                     'property'
