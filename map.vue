@@ -13,7 +13,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <svg-map v-bind:svg-map-url="getSVGurl" :zoom="true" :pan="true" :zoomLimit="[0,10]" :regions="regions"></svg-map>
+                        <svg-map ref="svgRef" v-bind:svgMapUrl="getSVGurl" :regions="regions"></svg-map>
                     </div>
                 </div>
             </div>
