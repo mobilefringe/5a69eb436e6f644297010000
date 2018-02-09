@@ -48,6 +48,9 @@
                 getSVGurl () {
                     return "https://www.mallmaverick.com" + this.property.svgmap_url;
                 },
+                svgMapRef() {
+                    return _.filter(this.$children, function(o) { return (o.$el.className == "svg-map") })[0];
+                },
                 regions () {
                     var regions = {}
                     _.forEach( this.processedStores , function( val, key ) {
