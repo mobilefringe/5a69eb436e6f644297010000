@@ -61,6 +61,7 @@
                             obj["attr"]["href"] = "/stores/" + val.slug;
                             regions[val.svgmap_region] = obj;
                         }
+                        console.log(obj)
                     });
                     return regions;
                 }
