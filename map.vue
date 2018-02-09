@@ -34,7 +34,7 @@
             },
             created (){
                 this.loadData().then(response => {
-                    this.dataLoaded = true;
+                    this.dataLoaded = false;
                     window.Raphael = Raphael; // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
                 });
             },
@@ -68,14 +68,14 @@
                 }
             },
             methods: {
-                // loadData: async function () {
-                //     try {
-                //         let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
-                //         return results;
-                //     } catch (e) {
-                //         console.log("Error loading data: " + e.message);
-                //     }
-                // },
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
                 dropPin(store) {
                     this.svgMapRef.hideMarkers();
                     this.svgMapRef.addMarker(store, '//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
