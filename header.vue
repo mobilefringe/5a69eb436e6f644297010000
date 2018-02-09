@@ -7,6 +7,12 @@
                         <img alt="Property Logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/5a69eb436e6f644297010000/image/png/1517945546000/Group 4@2x.png">
                     </a>
                     <!--<img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1470851965000/menu.png" class="open_menu" alt="open menu">-->
+                    <div @click="show_menu = !show_menu" :class="{ open: show_menu, invisible: show_search }" id="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
                 <div class="col-md-10">
                     <div class="header_social_container">
