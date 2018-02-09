@@ -63,7 +63,7 @@
             template: template, // the variable template will be injected
             data: function data() {
                 return {
-                    dataLoaded: false,
+                    dataLoaded: false
                 }
             },
             created() {
