@@ -105,7 +105,9 @@
             data: function () {
                 return {
                     active: false, 
-                    newsletter_email: ""
+                    newsletter_email: "",
+                    isOpen: false,
+                    show_menu: false,
                 }
             },
             props:['social_media'],
