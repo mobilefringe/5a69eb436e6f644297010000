@@ -1,7 +1,7 @@
 <template>
     <div id="overlay">
         <div class="loading-container">
-            <vue-simple-spinner size="huge" message="Loading..."></vue-simple-spinner>
+            <vue-simple-spinner size="huge" :message="property.name + 'is Loading...'"></vue-simple-spinner>
         </div>
     </div>
 </template>
@@ -13,7 +13,12 @@
             template: template, // the variable template will be injected,
             data: function () {
                 return {};
-            }
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property'
+                ])
+            },
         });
     });
 </script>
