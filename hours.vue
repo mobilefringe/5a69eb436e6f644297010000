@@ -14,7 +14,7 @@
                                 <div class="col-xs-7 col-sm-4 col-md-3">
                                     {{hour.day_of_week | moment("dddd", timezone)}}
                                 </div>
-                                <div class="col-xs-5 col-xmd-3">
+                                <div class="col-xs-5 col-md-3">
                                     <span class="">
                                         {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}    
                                     </span>
