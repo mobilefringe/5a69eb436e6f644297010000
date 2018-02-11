@@ -22,26 +22,27 @@
                     </div>
                     <div class="col-md-6">
                         <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/irudui/" method="post" @submit.prevent="validateBeforeSubmit">
-
-                            <div class="col-xs-12" >
-                                <label for="cm-name">Name</label>
-                                <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
-                            </div>
-                            <div class="col-xs-12">
-                                <label for="cm-irudui-irudui">Email</label>
-                                <input v-model="form_data.email" required class="form-control" name="cm-irudui-irudui" type="email" placeholder="Email" id="newsletter_email">
-                            </div>
-                            <div class="col-xs-12">
-                                <div style="margin-left: 20px">
-                                    <label class="checkbox">
-                                        <input name="agree_newsletter" required  type="checkbox">
-                                            I agree to receive communications from {{ property.name }}.
-                                    </label>
+                            <div class="row">
+                                <div class="col-xs-12" >
+                                    <label for="cm-name">Name</label>
+                                    <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
                                 </div>
-    					    </div>
-    					    <div class="margin_20 clearfix"></div>
-                            <div class="col-xs-12">
-                                <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>
+                                <div class="col-xs-12">
+                                    <label for="cm-irudui-irudui">Email</label>
+                                    <input v-model="form_data.email" required class="form-control" name="cm-irudui-irudui" type="email" placeholder="Email" id="newsletter_email">
+                                </div>
+                                <div class="col-xs-12">
+                                    <div style="margin-left: 20px">
+                                        <label class="checkbox">
+                                            <input name="agree_newsletter" required  type="checkbox">
+                                                I agree to receive communications from {{ property.name }}.
+                                        </label>
+                                    </div>
+        					    </div>
+        					    <div class="margin_20 clearfix"></div>
+                                <div class="col-xs-12">
+                                    <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>
+                                </div>
                             </div>
                         </form>    
                     </div>
