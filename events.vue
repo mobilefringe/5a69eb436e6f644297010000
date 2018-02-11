@@ -7,7 +7,7 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div v-if="events.length == 0">
-                    <p>Sorry, there are no job postings at this time. Please check back soon.</p>
+                    <p>Sorry, there are no event postings at this time. Please check back soon.</p>
                 </div>
                 <div class="events_container" v-if="events.length >= 1" v-for="event in events">
                     <div class="event_left">
