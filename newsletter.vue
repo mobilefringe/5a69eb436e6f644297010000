@@ -5,7 +5,7 @@
             <inside-header-component></inside-header-component>
         </transition>
         <transition name="fade">
-            <div v-if="dataLoaded" v-cloak class="main_container margin_30">
+            <div v-cloak class="main_container margin_30">
                 <div class="row">
                     <div class="col-md-6">
                         <h3 class="contact_page_title">Centre Information</h3>
