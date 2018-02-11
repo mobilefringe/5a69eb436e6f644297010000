@@ -39,6 +39,7 @@
                                     </label>
                                 </div>
     					    </div>
+    					    <br/>
                             <div class="col-xs-12">
                                 <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>
                             </div>
