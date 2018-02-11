@@ -77,7 +77,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'timezone',
+                    'timezone'
                 ])
             },
             methods: {
@@ -88,8 +88,7 @@
                             
                             if(errors.length > 0) {
                                 console.log("Error");
-                            }
-                            else {
+                            } else {
                                 console.log("No Error");
                                 // return true;
                                 form.target.submit();
