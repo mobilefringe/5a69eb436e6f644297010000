@@ -27,7 +27,7 @@
                                 <label for="cm-name">Name</label>
                                 <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
                             </div>
-                            <div class="col-sm-6 col-xs-12">
+                            <div class="col-xs-12">
                                 <label for="cm-irudui-irudui">Email</label>
                                 <input v-model="form_data.email" required class="form-control" name="cm-irudui-irudui" type="email" placeholder="Email" id="newsletter_email">
                             </div>
