@@ -15,6 +15,11 @@
                             {{ property.city }}, {{ property.province_state }} {{ property.postal_code }}
                         </p>
                     </div>
+                    <div class="hidden-lg hidden-md visible-sm-block visible-xs-block">
+                        <div class="col-md-12">
+                            <hr>    
+                        </div>
+                    </div>
                     <div class="col-md-6">
                         <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/irudui/" method="post" @submit.prevent="validateBeforeSubmit">
                             <div class="form-group ">
