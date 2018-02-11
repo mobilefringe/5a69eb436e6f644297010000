@@ -24,13 +24,13 @@
                         <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/irudui/" method="post" @submit.prevent="validateBeforeSubmit">
                             <div class="form-group ">
                                 <div class="col-sm-6 col-xs-12" >
-                                    <label class="label" for="cm-name">Name</label>
+                                    <label for="cm-name">Name</label>
                                     <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-6 col-xs-12">
-                                    <label class="label" for="cm-irudui-irudui">Email</label>
+                                    <label for="cm-irudui-irudui">Email</label>
                                     <input v-model="form_data.email" required class="form-control" name="cm-irudui-irudui" type="email" placeholder="Email" id="newsletter_email">
                                 </div>
                             </div>
