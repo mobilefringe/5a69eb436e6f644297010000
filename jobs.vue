@@ -6,7 +6,10 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <div class="job_container" v-if="processedJobs.length > 0" v-for="job in processedJobs">
+                <div v-if="processedJobs.length == 0">
+                    <p>Sorry, there are no job postings at this time. Please check back soon.</p>
+                </div>
+                <div class="job_container" v-if="processedJobs.length >= 1" v-for="job in processedJobs">
                     <div class="job_image_container">
                         <img v-lazy="job.store.store_front_url_abs" :alt="job.name" />
                     </div>
@@ -19,9 +22,7 @@
                         <span class="read_more">Read More</span>
                     </router-link>
                 </div>
-                <div v-else>
-                    <p>Sorry, there are no job postings at this time. Please check back soon.</p>
-                </div>
+                
             </div>
         </transition>
     </div>
