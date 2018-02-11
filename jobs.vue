@@ -22,7 +22,6 @@
                         <span class="read_more">Read More</span>
                     </router-link>
                 </div>
-                
             </div>
         </transition>
     </div>
