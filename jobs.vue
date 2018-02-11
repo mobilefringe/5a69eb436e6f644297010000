@@ -40,7 +40,7 @@
             created() {
                 this.loadData().then(response => {
                     this.dataLoaded = true;
-                    console.log(processedJobs)
+                    console.log(this.processedJobs)
                 });
             },
             computed: {
