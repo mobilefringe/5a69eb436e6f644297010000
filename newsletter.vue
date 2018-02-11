@@ -33,10 +33,12 @@
                             </div>
                             <!--<div class="form-group account-btn text-left m-t-10">-->
                                 <div class="col-xs-12">
-        					        <label class="checkbox">
-                                        <input name="agree_newsletter" required  type="checkbox">
-                                            Yes, I would like to receive ongoing news related to events, promotions and special announcements from Eastgate Square. 
-                                    </label>
+                                    <div>
+                                        <label class="checkbox">
+                                            <input name="agree_newsletter" required  type="checkbox">
+                                                Yes, I would like to receive ongoing news related to events, promotions and special announcements from Eastgate Square. 
+                                        </label>
+                                    </div>
         					    </div>
                                 <div class="col-xs-12">
                                     <button class="feature-readmore" type="submit" :disabled="formSuccess">Subscribe</button>
