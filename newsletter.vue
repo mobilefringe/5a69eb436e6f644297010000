@@ -31,7 +31,7 @@
                                 <label for="cm-irudui-irudui">Email</label>
                                 <input v-model="form_data.email" required class="form-control" name="cm-irudui-irudui" type="email" placeholder="Email" id="newsletter_email">
                             </div>
-                            <div class="form-group account-btn text-left m-t-10">
+                            <!--<div class="form-group account-btn text-left m-t-10">-->
                                 <div class="col-xs-12">
         					        <label class="checkbox">
                                         <input name="agree_newsletter" required  type="checkbox">
@@ -41,7 +41,7 @@
                                 <div class="col-xs-12">
                                     <button class="feature-readmore" type="submit" :disabled="formSuccess">Subscribe</button>
                                 </div>
-                            </div>
+                            <!--</div>-->
                         </form>    
                     </div>
                 </div>
