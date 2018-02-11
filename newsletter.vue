@@ -39,7 +39,7 @@
                                     </label>
                                 </div>
     					    </div>
-    					    <div class="margin_20"></div>
+    					    <div class="margin_20 clearfix"></div>
                             <div class="col-xs-12">
                                 <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>
                             </div>
