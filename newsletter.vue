@@ -51,7 +51,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', 'jquery'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate, $) {
+    define(["Vue", "vuex", "vue-meta", "jquery", "moment", "moment-timezone", "vue-moment", "vee-validate"], function(Vue, Vuex, Meta, $, moment, tz, VueMoment, VeeValidate) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
         return Vue.component("newsletter-component", {
