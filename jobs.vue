@@ -19,6 +19,9 @@
                         <span class="read_more">Read More</span>
                     </router-link>
                 </div>
+                <div v-else>
+                    <p>Sorry, there are no job postings at this time. Please check back soon.</p>
+                </div>
             </div>
         </transition>
     </div>
