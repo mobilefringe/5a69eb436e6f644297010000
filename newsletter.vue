@@ -16,7 +16,31 @@
                         </p>
                     </div>
                     <div class="col-md-6">
-                        
+                        <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/irudui/" method="post" @submit.prevent="validateBeforeSubmit">
+                        <div class="form-group ">
+                            <div class="col-sm-6 col-xs-12" >
+                                <label class="label" for="cm-name">Name</label>
+                                <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-6 col-xs-12">
+                                <label class="label" for="cm-irudui-irudui">Email</label>
+                                <input v-model="form_data.email" required class="form-control" name="cm-irudui-irudui" type="email" placeholder="Email" id="newsletter_email">
+                            </div>
+                        </div>
+                        <div class="form-group account-btn text-left m-t-10">
+                            <div class="col-xs-12">
+    					        <label class="checkbox">
+                                    <input name="agree_newsletter" required  type="checkbox">
+                                        Yes, I would like to receive ongoing news related to events, promotions and special announcements from Eastgate Square. 
+                                </label>
+    					    </div>
+                            <div class="col-xs-12">
+                                <button class="feature-readmore" type="submit" :disabled="formSuccess">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>    
                     </div>
                 </div>
             </div>
