@@ -17,9 +17,9 @@
                             </router-link>
                             <h2 class="job_name">{{ currentJob.name }}</h2>
                             <p class="job_date" v-if="isMultiDayEvent(currentJob)">
-                                {{ currentJob.start_date | moment("MMM D, YYYY", timezone)}} to {{ currentJob.end_date | moment("MMM D, YYYY", timezone)}}
+                                {{ currentJob.start_date | moment("MMM D", timezone)}} to {{ currentJob.end_date | moment("MMM D", timezone)}}
                             </p>
-                            <p class="job_date" v-else>{{ currentJob.start_date | moment("ddd, MMM D, YYYY", timezone)}}</p>
+                            <p class="job_date" v-else>{{ currentJob.start_date | moment("MMM D", timezone)}}</p>
                             <div class="margin_20"></div>
                             <p v-if="currentJob.contact_name" class="job_date">Contact Name: {{ currentJob.contact_name }}</p>
                             <p v-if="currentJob.contact_phone" class="job_date">Telephone: {{ currentJob.contact_phone }}</p>
