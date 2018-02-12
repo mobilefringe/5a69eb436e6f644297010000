@@ -45,6 +45,13 @@
                 images() {
                     console.log(this.findRepoByName("photos").images)
                     return this.findRepoByName("photos").images
+                    
+                    var images = _.filter(this.findRepoByName("photos").images, function(o) {
+                        if(_.includes(o.image_url, ".png") || _.includes(o.image_url, ".jpg")){
+                            return images
+                        }    
+                    });
+                    console.log(images)
                 },
             },
             methods: {
