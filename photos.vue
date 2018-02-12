@@ -49,7 +49,7 @@
                     var images = _.filter(this.findRepoByName("photos").images, function(o) {
                         if(_.includes(o.image_url, ".png") || _.includes(o.image_url, ".jpg")){
                             console.log(o.image_url)
-                            return value
+                            return o
                         }    
                     });
                     console.log(images)
