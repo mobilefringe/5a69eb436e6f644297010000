@@ -40,7 +40,7 @@
                         <div class="hours_container">
                             <div class="row hours_div" v-for="hour in closeHolidays">
                                 <div class="col-xs-6 col-sm-4 col-md-3">
-                                    {{ hour.holiday_name }},<br class="hidden-lg hidden-md hidden-sm-block visible-xs-block"/>{{ hour.holiday_date | moment("MMM D", timezone) }}   
+                                    {{ hour.holiday_name }},<br class="hidden-lg hidden-md hidden-sm-block visible-xs-block"/> {{ hour.holiday_date | moment("MMM D", timezone) }}   
                                 </div>
                                 <div class="col-xs-6 col-md-3">
                                     <span class="">
