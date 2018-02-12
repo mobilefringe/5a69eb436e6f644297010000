@@ -21,15 +21,15 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/irudui/" method="post" @submit.prevent="validateBeforeSubmit">
+                        <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/iljuii/" method="post" @submit.prevent="validateBeforeSubmit">
                             <div class="row">
                                 <div class="col-xs-12" >
                                     <label for="cm-name">Name</label>
                                     <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
                                 </div>
                                 <div class="col-xs-12">
-                                    <label for="cm-irudui-irudui">Email</label>
-                                    <input v-model="form_data.email" required class="form-control" name="cm-irudui-irudui" type="email" placeholder="Email" id="newsletter_email">
+                                    <label for="cm-iljuii-iljuii">Email</label>
+                                    <input v-model="form_data.email" required class="form-control" name="cm-iljuii-iljuii" type="email" placeholder="Email" id="newsletter_email">
                                 </div>
                                 <div class="col-xs-12">
                                     <div style="margin-left: 20px">
@@ -44,7 +44,9 @@
                                     <button class="animated_btn" type="submit" :disabled="formSuccess">Subscribe</button>
                                 </div>
                             </div>
-                        </form>    
+                        </form>  
+                        
+            
                     </div>
                 </div>
             </div>
