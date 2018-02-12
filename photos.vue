@@ -53,6 +53,7 @@
                         }    
                     });
                     console.log(images)
+                    return images
                 },
             },
             methods: {
