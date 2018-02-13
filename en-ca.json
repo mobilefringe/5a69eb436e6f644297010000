@@ -1,6 +1,6 @@
 {
-  "message": {
-    "hello": "hello",
-    "date": "Date: {date}"
-  }
+    "message": {
+        "hello": "hello",
+        "date": "Date: {date}"
+    } 
 }
