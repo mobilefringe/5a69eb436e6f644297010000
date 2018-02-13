@@ -46,51 +46,51 @@
                                 </span>
                             </div>
                             <ul>
-                                <li id="dropDown1" @click="toggleSubMenu('dropDown1')" class="menu_item">{{ $t("menu.store-directory") }}
+                                <li id="dropDown1" @click="toggleSubMenu('dropDown1')" class="menu_item">Shopping
                                     <ul :class="'submenu' + { show_submenu: showSubMenu1 }">
                                         <router-link tag="li" to="/stores" class="submenu_item" exact>
-                                            <a>{{ $t("menu.stores") }}</a>
+                                            <a>Stores</a>
                                         </router-link>
                                         <router-link tag="li" to="/map" class="submenu_item" exact>
-                                            <a>{{ $t("menu.centre-map") }}</a>
+                                            <a>Centre Map</a>
                                         </router-link>
                                     </ul>
                                 </li>
                                 <router-link tag="li" to="/events" class="menu_item" exact>
-                                    {{ $t("menu.events") }}
+                                    Events
                                 </router-link>
                                 <router-link tag="li" to="/promotions" class="menu_item" exact>
-                                    {{ $t("menu.promotions") }}
+                                    Promotions
                                 </router-link>
-                                <li id="dropDown2" @click="toggleSubMenu('dropDown2')" class="menu_item">{{ $t("menu.leasing") }}
+                                <li id="dropDown2" @click="toggleSubMenu('dropDown2')" class="menu_item">Leasing
                                     <ul :class="'submenu' + { show_submenu: showSubMenu2 }">
                                         <router-link tag="li" to="/pages/milton-leasing" class="submenu_item" exact>
-                                            <a>{{ $t("menu.leasing") }}</a>
+                                            <a>Leasing</a>
                                         </router-link>
                                         <router-link tag="li" to="/photos" class="submenu_item" exact>
-                                            <a>{{ $t("menu.photos") }}</a>
+                                            <a>Photos</a>
                                         </router-link>
                                     </ul>
                                 </li>
-                                <li id="dropDown3" @click="toggleSubMenu('dropDown3')" class="menu_item">{{ $t("menu.contact") }}
+                                <li id="dropDown3" @click="toggleSubMenu('dropDown3')" class="menu_item">Contact Us
                                     <ul :class="'submenu' + { show_submenu: showSubMenu3 }">
                                         <router-link tag="li" to="/contact-us" class="submenu_item" exact>
-                                            <a>{{ $t("menu.contact") }}</a>
+                                            <a>Contact Us</a>
                                         </router-link>
                                         <router-link tag="li" to="/directions" class="submenu_item" exact>
-                                            <a>{{ $t("menu.find") }}</a>
+                                            <a>Find Us</a>
                                         </router-link>
                                         <router-link tag="li" to="/" class="submenu_item" exact>
-                                            <a>{{ $t("menu.about") }}</a>
+                                            <a>About Us</a>
                                         </router-link>
                                         <router-link tag="li" to="/jobs" class="submenu_item" exact>
-                                            <a>{{ $t("menu.jobs") }}</a>
+                                            <a>Jobs</a>
                                         </router-link>
                                         <router-link tag="li" to="/hours" class="submenu_item" exact>
-                                            <a>{{ $t("menu.hours") }}</a>
+                                            <a>Hours</a>
                                         </router-link>
                                         <router-link tag="li" to="/" class="submenu_item" exact>
-                                            <a>{{ $t("menu.community") }}</a>
+                                            <a>Community</a>
                                         </router-link>
                                     </ul>
                                 </li>
