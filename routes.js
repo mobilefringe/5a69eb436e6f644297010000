@@ -93,6 +93,20 @@ define([], function () {
             ]
         },
         {
+            path: '/leasing',
+            component: view('default'),
+            children: [
+                {   
+                    path: '',
+                    component: view('page_details'),
+                    meta: {
+                        pageName: 'Leasing',
+                    },
+                    name: 'pageDetails'
+                }
+            ]
+        },
+        {
             path: '/map',
             component: view('default'),
             children: [
