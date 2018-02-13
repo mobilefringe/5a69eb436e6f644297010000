@@ -30,7 +30,7 @@
             </div>
             <div class="stores_container">
                 <router-link tag="h3" to="/stores" exact>
-                    <a>{{ $t("hours.stores-title") }}</a>
+                    <a>Map & Store Directory</a>
                 </router-link>
             </div>
             <div class="page_container">
