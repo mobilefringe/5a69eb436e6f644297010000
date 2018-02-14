@@ -122,20 +122,6 @@
                     this.map = map;
                     this.dropPin();
                 },
-                // checkReady () {
-                //     console.log("Check")
-                //     var vm = this;
-                //     var svg = document.getElementById("mapsvg")
-                //     console.log(svg)
-                //     // if (this.map == null && this.map == undefined) {
-                //     if (svg == null && svg == undefined) {
-                //         setTimeout(function () {
-                //             vm.checkReady();
-                //         }, 300);
-                //     } else {
-                //         this.dropPin();
-                //     }
-                // },
                 dropPin () {
                     // console.log("this.currentStore.svgmap_region", this.currentStore.svgmap_region);
                     this.svgMapRef.addMarker(this.currentStore,'//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
