@@ -71,10 +71,6 @@
                     this.dataLoaded = true;
                     this.updateCurrentStore(this.id);
                 });
-            
-                    this.checkReady();
-        
-                
             },
             watch: {
                 $route: function () {
