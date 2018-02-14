@@ -120,6 +120,7 @@
                 },
                 updateSVGMap (map) {
                     this.map = map;
+                    this.dropPin();
                 },
                 // checkReady () {
                 //     console.log("Check")
