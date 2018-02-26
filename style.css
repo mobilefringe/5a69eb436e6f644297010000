@@ -533,6 +533,7 @@ footer {
     font-size: 0;
     line-height: 0;
     cursor: pointer;
+    z-index: 99;
     li {
         padding: 0 5px;
         display: inline-block;
