@@ -1359,6 +1359,7 @@ footer {
         z-index: 999;
         overflow-x: scroll;
         background: #FFF;
+        font-size: 18px;
     }
     #primary_nav ul {
         color: $primary;
@@ -1368,12 +1369,9 @@ footer {
     }
     #primary_nav ul .menu_item {
         margin: 0 auto;
-    // 	padding: 5px 0;
-        // width: 130px;
+        padding: 0;
+        padding-bottom: 20px;
         display: block;
-    // 	position: relative;
-        // text-align: center;
-        // text-transform: uppercase;
     }
     #primary_nav ul .menu_item:hover {
     	background: none;
@@ -1384,25 +1382,24 @@ footer {
     	display: none;
     	position: initial;
     	top: 100%;
-    // 	left: 0;
+    	left: auto;
+    	transform: none;
     	background: none;
-    // 	font-size: 14px;
-    // 	text-transform: none;
+    	a {
+    	    padding: 12px 0;
+    	    color: $secondary;
+    	}
     }
     #primary_nav ul ul.show_submenu {
+        padding: 0;
+        padding-top: 20px;
         display: block;
+        font-size: 18px;
     }
-    // #primary_nav ul ul .submenu_item {
-    // 	width: 130px;
-    // }
-    // #primary_nav ul ul a {
-    // 	padding: 10px 15px;
-    // 	line-height: 120%;
-    // }
-    // #primary_nav ul .menu_item:hover > ul {
-    // 	display: block;
-    // 	z-index: 99;
-    // }
+    #primary_nav ul ul .submenu_item {
+    	margin: 0 auto;
+    	min-width: 150px;
+    }
     .inside_header_background {
         margin-bottom: 20px;
         height: 100px;
