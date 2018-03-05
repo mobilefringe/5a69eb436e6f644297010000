@@ -47,7 +47,7 @@
                             </div>
                             <ul>
                                 <li id="dropDown1" @click="toggleSubMenu('dropDown1')" class="menu_item">Shopping
-                                    <ul :class="'submenu' + { show_submenu: showSubMenu1 }">
+                                    <ul :class="{ show_submenu: showSubMenu1 }">
                                         <router-link tag="li" to="/stores" class="submenu_item" exact>
                                             <a>Stores</a>
                                         </router-link>
@@ -63,7 +63,7 @@
                                     Promotions
                                 </router-link>
                                 <li id="dropDown2" @click="toggleSubMenu('dropDown2')" class="menu_item">Leasing
-                                    <ul :class="'submenu' + { show_submenu: showSubMenu2 }">
+                                    <ul :class="{ show_submenu: showSubMenu2 }">
                                         <router-link tag="li" to="/pages/milton-leasing" class="submenu_item" exact>
                                             <a>Leasing</a>
                                         </router-link>
@@ -73,7 +73,7 @@
                                     </ul>
                                 </li>
                                 <li id="dropDown3" @click="toggleSubMenu('dropDown3')" class="menu_item">Contact Us
-                                    <ul :class="'submenu' + { show_submenu: showSubMenu3 }">
+                                    <ul :class="{ show_submenu: showSubMenu3 }">
                                         <router-link tag="li" to="/contact-us" class="submenu_item" exact>
                                             <a>Contact Us</a>
                                         </router-link>
